@@ -1,7 +1,7 @@
 package xpath.abczww.bjcar.crawler.entrance;
 
 import xpath.abczww.bjcar.crawler.controller.AutohomeController;
-import xpath.abczww.bjcar.crawler.core.CawlerController;
+import xpath.abczww.bjcar.crawler.core.CrawlerController;
 import xpath.abczww.bjcar.crawler.core.ExecutorPool;
 
 public class AutohomeEntrance {
@@ -12,7 +12,7 @@ public class AutohomeEntrance {
 	public int run() throws Exception {
 		int count = 0;
 		for (; count < 10; count++) {
-			CawlerController cc = new AutohomeController();
+			CrawlerController cc = new AutohomeController();
 
 			cc.setEntranceUrl(webSite, AUTOHOME_URL, true);
 			cc.execute();

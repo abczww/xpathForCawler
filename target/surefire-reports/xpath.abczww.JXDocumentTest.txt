@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: xpath.abczww.JXDocumentTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.007 sec <<< FAILURE!
+xpath.abczww.JXDocumentTest.testSeeds()  Time elapsed: 0.006 sec  <<< FAILURE!
+java.lang.NullPointerException
+	at xpath.abczww.JXDocumentTest.testSeeds(JXDocumentTest.java:39)
+
