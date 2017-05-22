@@ -8,7 +8,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import xpath.abczww.Seeds;
 import xpath.abczww.bjcar.crawler.core.Article;
 import xpath.abczww.bjcar.crawler.core.Observer;
 import xpath.abczww.bjcar.crawler.core.Processor;

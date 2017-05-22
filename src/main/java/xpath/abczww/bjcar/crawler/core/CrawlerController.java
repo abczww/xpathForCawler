@@ -17,24 +17,13 @@ import java.util.List;
  */
 public interface CrawlerController {
 
-
-	/**
-	 * @param webSite,
-	 *            the webstie name, e.g: www.163.com.
-	 * @param url,
-	 *            the url which we want to analysis.
-	 * @param isNeedForward,
-	 *            if the url need to analysis the forward pages.
-	 */
-	public void setEntranceUrl(String webSite, String url, boolean isNeedForward) ;
-
 	/**
 	 * the core method of Controller, the method should analysis the url and put
 	 * the processor to thread pool.
 	 * 
 	 * @throws IOException
 	 */
-	public void execute() throws IOException;
+	public void execute() throws Exception;
 
 	/**
 	 * if load page success.

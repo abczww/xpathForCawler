@@ -7,10 +7,10 @@ import java.util.List;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
-import xpath.abczww.bjcar.crawler.core.CrawlerController;
-import xpath.abczww.bjcar.crawler.core.ExecutorPool;
+import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
+import cn.wanghaomiao.xpath.model.JXDocument;
+import xpath.abczww.bjcar.crawler.core.AbsController;
 import xpath.abczww.bjcar.crawler.core.Processor;
 import xpath.abczww.bjcar.crawler.processor.AutohomeProcessor;
 
@@ -22,24 +22,20 @@ import xpath.abczww.bjcar.crawler.processor.AutohomeProcessor;
  * @version 1.0
  *
  */
-public class AutohomeController implements CrawlerController {
-	/** the forward urls. */
-	protected List<String> urls;
-	/** the entrance of the website. */
-	protected String entranceUrl;
-	/** the base url of the website. */
-	protected String webSite;
-	/** if the page need to analysis the forward pages. */
-	protected boolean isNeedForward;
+public class AutohomeController extends AbsController {
+
 	/** if load page success or not. */
 	protected boolean loadPageSuccessFlag = false;
 
-	public void execute() throws IOException {
+	private JXDocument xdoc;
+
+	public void execute() throws Exception {
+		initDoc();
 		if (isNeedForward) {
-			generateForwardUrls();
+			getAllUrlsByXPath(entranceUrl);
 			for (String url : urls) {
-				Processor processor = new AutohomeProcessor(url);
-				putProcessorToPool(processor);
+				// Processor processor = new AutohomeProcessor(url);
+				// putProcessorToPool(processor);
 				// for test.
 				break;
 			}
@@ -49,41 +45,50 @@ public class AutohomeController implements CrawlerController {
 		}
 	}
 
-	private void generateForwardUrls() throws IOException {
+	private void initDoc() throws IOException {
+		Document doc = Jsoup.connect(entranceUrl).timeout(timeout)
+				.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0").get();
+
+		xdoc = new JXDocument(doc);
 		urls = new ArrayList<String>();
-		findForwardPage(entranceUrl);
 	}
 
-	private void putProcessorToPool(Processor processor) {
-		ExecutorPool.put(processor);
-	}
-
-	private void findForwardPage(String url) throws IOException {
-		Document doc = Jsoup.connect(url).get();
-		Elements pages = doc.getElementsByAttributeValue("class", "pages");
-		if (pages.size() < 1) {
-			System.out.println("Can't load autohome");
-			return;
+	private void getAllUrlsByXPath(String url) throws XpathSyntaxErrorException, IOException, InterruptedException {
+		Document doc = Jsoup.connect(url).timeout(10000)
+				.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0").get();
+		xdoc = new JXDocument(doc);
+		System.out.println(url);
+		List<Object> rs = xdoc.sel(xUrl);
+		
+		for (Object o : rs) {
+			if (o instanceof Element) {
+				Element ele = (Element) o;
+				String turl = webSite + ele.attr("href");
+				urls.add(turl);
+				System.out.println(turl + " : " + urls.size());
+			}
 		}
 
-		Element pageAre = pages.get(0);
-		Elements afpage = pageAre.getElementsByAttributeValue("class", "afpage");
-		if (afpage.size() < 1) {
-			return;
-		}
-
-		Element afUrl = afpage.get(0);
-		if (null != afUrl) {
-			String forwardUrl = webSite + afUrl.attr("href");
-			System.out.println(forwardUrl);
-			urls.add(forwardUrl);
-			if (!isContinue(doc)) {
+		if (isNeedForward) {
+			String forwardUrl = getForwardUrl(url);
+			if (null == forwardUrl) {
 				return;
 			}
-			findForwardPage(forwardUrl);
+			
+			getAllUrlsByXPath(forwardUrl);
 		}
+	}
 
-		loadPageSuccessFlag = true;
+	private String getForwardUrl(String url) throws XpathSyntaxErrorException, IOException {
+		List<Object> rs = xdoc.sel(xForward);
+		String reValue = null;
+		for (Object o : rs) {
+			if (o instanceof Element) {
+				Element ele = (Element) o;
+				reValue = webSite + ele.attr("href");
+			}
+		}
+		return reValue;
 	}
 
 	protected boolean isContinue(Document doc) {
@@ -92,12 +97,6 @@ public class AutohomeController implements CrawlerController {
 		}
 
 		return true;
-	}
-
-	public void setEntranceUrl(String webSite, String url, boolean isNeedForward) {
-		this.webSite = webSite;
-		this.entranceUrl = url;
-		this.isNeedForward = isNeedForward;
 	}
 
 	public boolean isLoadPageSuccess() {
