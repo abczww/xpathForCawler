@@ -1,18 +1,15 @@
-package xpath.abczww;
+package xpath.abczww.temp;
 
 import java.util.List;
 
-import org.apache.commons.lang3.StringUtils;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
-import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
 import cn.wanghaomiao.xpath.model.JXDocument;
-import cn.wanghaomiao.xpath.model.JXNode;
 import junit.framework.Assert;
+import xpath.abczww.Seeds;
 
 public class JXDocumentTest {
 

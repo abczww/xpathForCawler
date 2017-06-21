@@ -8,7 +8,7 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import xpath.abczww.bjcar.crawler.core.Article;
+import xpath.abczww.bjcar.beans.Article;
 import xpath.abczww.bjcar.crawler.core.Observer;
 import xpath.abczww.bjcar.crawler.core.Processor;
 
@@ -29,8 +29,8 @@ public class AutohomeProcessor implements Processor {
 			assert listdl.size() > 0;
 			for (Element elemt : listdl) {
 				Article art = new Article();
-				art.setTitle(elemt.getElementsByAttributeValue("class", "a_topic").get(0).html());
-				art.setCreateDate(elemt.getElementsByAttributeValue("class", "tdate").get(0).html());
+				art.setArticleTitle(elemt.getElementsByAttributeValue("class", "a_topic").get(0).html());
+				art.setCr(elemt.getElementsByAttributeValue("class", "tdate").get(0).html());
 				art.setAuthor(elemt.getElementsByAttributeValue("class", "linkblack").get(0).html());
 				art.setType("bj40");
 				System.out.println(art);

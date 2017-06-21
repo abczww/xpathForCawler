@@ -2,6 +2,8 @@ package xpath.abczww.bjcar.crawler.core;
 
 import java.util.Set;
 
+import xpath.abczww.bjcar.beans.Article;
+
 public abstract class AbsProcessor implements Processor {
 	protected String webSite;
 	protected String entranceUrl;

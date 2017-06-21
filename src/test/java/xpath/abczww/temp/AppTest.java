@@ -1,4 +1,4 @@
-package xpath.abczww;
+package xpath.abczww.temp;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

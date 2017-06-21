@@ -1,4 +1,4 @@
-package xpath.abczww;
+package xpath.abczww.autohome;
 
 import java.io.IOException;
 import java.util.Set;
@@ -9,6 +9,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 import org.junit.Test;
+
+import xpath.abczww.Seeds;
+import xpath.abczww.bjcar.beans.Article;
 
 public class JSoupTest {
 
@@ -69,10 +72,10 @@ public class JSoupTest {
 			assert listdl.size() > 0;
 			for (Element elemt : listdl) {
 				Article art = new Article();
-				art.setTitle(elemt.getElementsByAttributeValue("class", "a_topic").get(0).html());
-				art.setCreateDate(elemt.getElementsByAttributeValue("class", "tdate").get(0).html());
-				art.setAuthor(elemt.getElementsByAttributeValue("class", "linkblack").get(0).html());
-				art.setType("bj40");
+				art.setArticleTitle(elemt.getElementsByAttributeValue("class", "a_topic").get(0).html());
+				art.setCreatedTime(elemt.getElementsByAttributeValue("class", "tdate").get(0).html());
+				art.setArticleAuthor(elemt.getElementsByAttributeValue("class", "linkblack").get(0).html());
+				art.setCarType("bj40");
 				System.out.println(art);
 			}
 		} catch (IOException e) {

@@ -10,8 +10,10 @@ import org.jsoup.nodes.Element;
 
 import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
 import cn.wanghaomiao.xpath.model.JXDocument;
+import cn.wanghaomiao.xpath.model.JXNode;
 import xpath.abczww.bjcar.crawler.core.AbsController;
 import xpath.abczww.bjcar.crawler.core.Processor;
+import xpath.abczww.bjcar.crawler.core.UtilTools;
 import xpath.abczww.bjcar.crawler.processor.AutohomeProcessor;
 
 /**
@@ -33,11 +35,9 @@ public class AutohomeController extends AbsController {
 		initDoc();
 		if (isNeedForward) {
 			getAllUrlsByXPath(entranceUrl);
-			for (String url : urls) {
-				// Processor processor = new AutohomeProcessor(url);
-				// putProcessorToPool(processor);
-				// for test.
-				break;
+			System.out.println(urls.size());
+			for(int i=0;i<10;i++){
+				
 			}
 		} else {
 			Processor processor = new AutohomeProcessor(entranceUrl);
@@ -52,23 +52,38 @@ public class AutohomeController extends AbsController {
 		xdoc = new JXDocument(doc);
 		urls = new ArrayList<String>();
 	}
+	
+	private void getContentsByUrl(String url) throws IOException{
+		Document doc = Jsoup.connect(entranceUrl).timeout(timeout)
+				.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0").get();
+
+		xdoc = new JXDocument(doc);
+		//List<Object> titles = xdoc.sel(xTitle);
+	}
 
 	private void getAllUrlsByXPath(String url) throws XpathSyntaxErrorException, IOException, InterruptedException {
 		Document doc = Jsoup.connect(url).timeout(10000)
 				.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0").get();
 		xdoc = new JXDocument(doc);
-		System.out.println(url);
-		List<Object> rs = xdoc.sel(xUrl);
+		List<JXNode> rs = xdoc.selN("//*[@id='subcontent']/dl[@class='list_dl']");
 		
-		for (Object o : rs) {
-			if (o instanceof Element) {
-				Element ele = (Element) o;
-				String turl = webSite + ele.attr("href");
-				urls.add(turl);
-				System.out.println(turl + " : " + urls.size());
-			}
+		////*[@id="subcontent"]/dl[7]/dt/a
+		// //*[@id="subcontent"]/dl[2]/dd[1]/a
+		////*[@id="subcontent"]/dl[2]/dd/span
+		for (JXNode node : rs) {
+			String turl = UtilTools.getContentByXPath(node, "//dt/a", "href");
+			String tauthor = UtilTools.getContentByXPath(node, "//dd/a", null);
+			String tdate = UtilTools.getContentByXPath(node, "//dd/span", null);
+			
+			System.out.println(tdate + " : " + tauthor +" : " + turl);
+			
+			urls.add(turl);
 		}
-
+		
+		if(!isContinue()){
+			return;
+		}
+		isNeedForward = false;
 		if (isNeedForward) {
 			String forwardUrl = getForwardUrl(url);
 			if (null == forwardUrl) {
@@ -91,8 +106,8 @@ public class AutohomeController extends AbsController {
 		return reValue;
 	}
 
-	protected boolean isContinue(Document doc) {
-		if (urls.size() >= 2) {
+	protected boolean isContinue() {
+		if (urls.size() >= 10) {
 			return false;
 		}
 

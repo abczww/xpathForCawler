@@ -14,9 +14,35 @@ public abstract class AbsController implements CrawlerController {
 	protected Boolean isNeedForward;
 	
 	protected String xForward;
-	
 	protected String xUrl;
+	protected String xTitle;
+	protected String xAuthor;
+	protected String xDate;
 	
+	public String getxTitle() {
+		return xTitle;
+	}
+
+	public void setxTitle(String xTitle) {
+		this.xTitle = xTitle;
+	}
+
+	public String getxAuthor() {
+		return xAuthor;
+	}
+
+	public void setxAuthor(String xAuthor) {
+		this.xAuthor = xAuthor;
+	}
+
+	public String getxDate() {
+		return xDate;
+	}
+
+	public void setxDate(String xDate) {
+		this.xDate = xDate;
+	}
+
 	protected int timeout;
 	
 	public int getTimeout() {

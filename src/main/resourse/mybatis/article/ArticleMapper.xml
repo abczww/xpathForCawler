@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="Article">
+
+	<insert id="saveArticle" parameterType="article">
+		insert into bj_system_article_temp(gatherTime, carType, carFirm, articleType, articleWebsite,
+		articleUrl, articleAuthor, articleTime, articleTitle, articleContent,
+		createdBy, createdTime,updatedBy,updatedTime) 
+		values(#{gatherTime}, #{carType}, #{carFirm}, #{articleType}, #{articleWebsite},
+		#{articleUrl}, #{articleAuthor}, #{articleTime}, #{articleTitle}, #{articleContent},
+		#{createdBy}, #{createdTime},#{updatedBy},#{updatedTime});
+	</insert>
+
+	<!-- 根据查询我的浏览记录 -->
+	<select id="getAllArticles" resultType="article" useCache="true">
+		select * from bj_system_issue_temp order by id desc;
+	</select>
+	
+
+</mapper>

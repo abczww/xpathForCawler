@@ -2,6 +2,8 @@ package xpath.abczww.bjcar.crawler.core;
 
 import java.util.Set;
 
+import xpath.abczww.bjcar.beans.Article;
+
 public interface Processor extends Runnable {
 	
 	public void setEntranceURL(String url);
