@@ -13,7 +13,7 @@
 
 	<!-- 根据查询我的浏览记录 -->
 	<select id="getAllArticles" resultType="article" useCache="true">
-		select * from bj_system_issue_temp order by id desc;
+		select * from bj_system_article_temp order by id desc;
 	</select>
 	
 

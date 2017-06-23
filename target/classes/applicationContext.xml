@@ -71,7 +71,7 @@
 
 
 	<bean id="autohomeController"
-		class="xpath.abczww.bjcar.crawler.controller.AutohomeController">
+		class="com.cnki.ksp.controller.AutohomeController">
 		<property name="timeout" value="${timeout}" />
 		<property name="webSite" value="${autohome.website}" />
 		<property name="entranceUrl" value="${autohome.entrance}" />
@@ -83,7 +83,7 @@
 		<property name="xForward" value="${autohome.xforward}" />
 	</bean>
 
-	<bean id="autohomeProcessor" class="xpath.abczww.bjcar.crawler.processor.AutohomeProcessor2">
+	<bean id="autohomeProcessor" class="com.cnki.ksp.processor.AutohomeProcessor2">
 		<property name="xContent" value="${autohome.xcontent}" />
 		<property name="xReply" value="${autohome.xreply}" />
 	</bean>
