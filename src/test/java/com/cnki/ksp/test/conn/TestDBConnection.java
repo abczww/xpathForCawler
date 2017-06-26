@@ -35,7 +35,7 @@ public class TestDBConnection {
 	private Article getTheArticle() {
 		Article artl = new Article();
 		artl.setGatherTime(null);
-		artl.setCarType("bj40");
+		artl.setCarModel("bj40");
 		artl.setCarFirm("beijing car");
 		artl.setArticleWebsite("www.autohome.com.cn");
 		artl.setarticleUrl("http://www.autohome.com.cn");

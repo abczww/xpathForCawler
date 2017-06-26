@@ -21,7 +21,7 @@ public class TestDouban2 {
 	@Before
 	public void before() throws Exception {
 		if (doubanTest == null) {
-			Document doc = Jsoup.connect("http://club.autohome.com.cn/bbs/thread-c-623-63246963-1.html")
+			Document doc = Jsoup.connect("http://club.autohome.com.cn/bbs/thread-c-623-64162945-1.html")
 					.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0").get();
 			doubanTest = new JXDocument(doc);
 		}
@@ -29,23 +29,31 @@ public class TestDouban2 {
 
 	@Test
 	public void listAllUrls() throws NoSuchFunctionException, XpathSyntaxErrorException, NoSuchAxisException {
-		String xTitle = "//*[@id='consnav']/span[4]";
+		String xTitle = "//*[@id='consnav']/span[4]/text()";
 		////*[@id="consnav"]/span[4]
-		String xDate = "//*[@id='F0']/div[2]/div[1]/span[2]";
-		String xContent = "//*[@id='F0']/div[2]/div[2]/div[1]/div/div[2]";
+		String xDate = "//*[@xname='date']/text()";
+		String xContent = "//*[@id='F0']/div[2]/div[2]/div[1]/div";
+		////*[@id="F0"]/div[2]/div[2]
 		String xReply = "//*[@id='F$$']/div[2]/div/div[2]/div";
 		//// *[@id="F2"]/div[2]/div/div[2]/div/div[2]
 		//// *[@id="F16"]/div[2]/div/div[2]/div/div[2]
 		//// *[@id="F22"]/div[2]/div/div[2]/div/div[2]
+		
+		String xAuthor = "//*[@id='F0']/div[1]/ul[1]/li[1]";
+		////*[@id="F0"]/div[1]/ul[1]/li[1]/a
+		// //*[@id="F0"]/div[1]/ul[1]/li[1]/a[1]
 
 		String title = this.getContentByXPath(xTitle);
 		String date = this.getContentByXPath(xDate);
 		String content = this.getContentByXPath(xContent);
-		getReplysByXPath(xReply);
+		String author = this.getContentByXPath(xAuthor);
+		
+		System.out.println(author);
+		//getReplysByXPath(xReply);
 
 		System.out.println(title);
-		System.out.println(date);
-		System.out.println(content);
+		//System.out.println(date);
+		//System.out.println(content);
 		// System.out.println(reply);
 	}
 
@@ -64,7 +72,6 @@ public class TestDouban2 {
 	}
 
 	private String getContentByXPath(String xpath) throws XpathSyntaxErrorException {
-		System.out.println("current xpath:" + xpath);
 		List<String> urls = new ArrayList<String>();
 		List<Object> rs = doubanTest.sel(xpath);
 		String reValue = null;

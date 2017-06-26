@@ -12,11 +12,14 @@
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
+	<context:annotation-config />
+	<context:component-scan base-package="com.cnki.ksp" />
+
 	<bean id="propertyConfigurer"
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath*:xpath.properties</value>
+				<value>classpath*:autohomeCrawler.properties</value>
 				<value>classpath*:dbconfig.properties</value>
 			</list>
 		</property>
@@ -70,22 +73,6 @@
 	</bean>
 
 
-	<bean id="autohomeController"
-		class="com.cnki.ksp.controller.AutohomeController">
-		<property name="timeout" value="${timeout}" />
-		<property name="webSite" value="${autohome.website}" />
-		<property name="entranceUrl" value="${autohome.entrance}" />
-		<property name="xUrl" value="${autohome.xurl}" />
-		<property name="xTitle" value="${autohome.xtitle}" />
-		<property name="xDate" value="${autohome.xdate}" />
-		<property name="xAuthor" value="${autohome.xauthor}" />
-		<property name="isNeedForward" value="${autohome.isNeedForward}" />
-		<property name="xForward" value="${autohome.xforward}" />
-	</bean>
-
-	<bean id="autohomeProcessor" class="com.cnki.ksp.processor.AutohomeProcessor2">
-		<property name="xContent" value="${autohome.xcontent}" />
-		<property name="xReply" value="${autohome.xreply}" />
-	</bean>
+	<import resource="autohome_crawler.xml" />
 
 </beans>

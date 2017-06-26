@@ -7,7 +7,7 @@ import java.util.concurrent.TimeUnit;
 
 public class ExecutorPool {
 	private static ExecutorService executorPool;
-	private static final int THREAD_SIZE = 5;
+	private static final int THREAD_SIZE = 1;
 
 	private static synchronized ExecutorService getInstance() {
 		if (null == executorPool) {

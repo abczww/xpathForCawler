@@ -3,10 +3,10 @@
 <mapper namespace="Article">
 
 	<insert id="saveArticle" parameterType="article">
-		insert into bj_system_article_temp(gatherTime, carType, carFirm, articleType, articleWebsite,
+		insert into bj_system_article_temp(carModel, carFirm, articleType, articleWebsite,
 		articleUrl, articleAuthor, articleTime, articleTitle, articleContent,
 		createdBy, createdTime,updatedBy,updatedTime) 
-		values(#{gatherTime}, #{carType}, #{carFirm}, #{articleType}, #{articleWebsite},
+		values( #{carModel}, #{carFirm}, #{articleType}, #{articleWebsite},
 		#{articleUrl}, #{articleAuthor}, #{articleTime}, #{articleTitle}, #{articleContent},
 		#{createdBy}, #{createdTime},#{updatedBy},#{updatedTime});
 	</insert>
@@ -14,6 +14,14 @@
 	<!-- 根据查询我的浏览记录 -->
 	<select id="getAllArticles" resultType="article" useCache="true">
 		select * from bj_system_article_temp order by id desc;
+	</select>
+	
+	<select id="findDuplicatedArticle" resultType="article" parameterType="article" useCache="true">
+		select art.id from bj_system_article_temp art 
+		where art.articleTime = #{articleTime}
+		and art.articleAuthor = #{articleAuthor}
+		and art.articleTitle = #{articleTitle}
+		limit 0,10
 	</select>
 	
 

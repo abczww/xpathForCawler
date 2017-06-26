@@ -9,8 +9,9 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import com.cnki.ksp.core.AbsController;
+import com.cnki.ksp.core.CompleteHelper;
 import com.cnki.ksp.core.Processor;
-import com.cnki.ksp.core.UtilTools;
+import com.cnki.ksp.core.XPathUtilTools;
 import com.cnki.ksp.processor.AutohomeProcessor;
 
 import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
@@ -34,16 +35,28 @@ public class AutohomeController extends AbsController {
 
 	public void execute() throws Exception {
 		initDoc();
-		if (isNeedForward) {
+		if (this.isNeedForward()) {
+		//if(false){
 			getAllUrlsByXPath(entranceUrl);
 			System.out.println(urls.size());
-			for(int i=0;i<10;i++){
-				
+			CompleteHelper.initThreadCount(urls.size());
+			for (int i = 0; i < urls.size(); i++) {
+				String url = urls.get(i);
+				Processor processor = new AutohomeProcessor(webSite + "" + url, processorProperties);
+				processor.run();
+				System.out.println((i + 1) + ":" + urls.size());
+				Thread.sleep(2000);
 			}
 		} else {
-			Processor processor = new AutohomeProcessor(entranceUrl);
-			putProcessorToPool(processor);
+			CompleteHelper.initThreadCount(1);
+			
+			String url = "http://club.autohome.com.cn/bbs/thread-c-623-64211415-1.html";
+			//String url = "http://club.autohome.com.cn/bbs/thread-c-623-63549997-1.html";
+			Processor processor = new AutohomeProcessor(url, processorProperties);
+			processor.run();
 		}
+
+		waitAndClose();
 	}
 
 	private void initDoc() throws IOException {
@@ -53,35 +66,19 @@ public class AutohomeController extends AbsController {
 		xdoc = new JXDocument(doc);
 		urls = new ArrayList<String>();
 	}
-	
-	private void getContentsByUrl(String url) throws IOException{
-		Document doc = Jsoup.connect(entranceUrl).timeout(timeout)
-				.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0").get();
-
-		xdoc = new JXDocument(doc);
-		//List<Object> titles = xdoc.sel(xTitle);
-	}
 
 	private void getAllUrlsByXPath(String url) throws XpathSyntaxErrorException, IOException, InterruptedException {
 		Document doc = Jsoup.connect(url).timeout(10000)
 				.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0").get();
 		xdoc = new JXDocument(doc);
 		List<JXNode> rs = xdoc.selN("//*[@id='subcontent']/dl[@class='list_dl']");
-		
-		////*[@id="subcontent"]/dl[7]/dt/a
-		// //*[@id="subcontent"]/dl[2]/dd[1]/a
-		////*[@id="subcontent"]/dl[2]/dd/span
 		for (JXNode node : rs) {
-			String turl = UtilTools.getContentByXPath(node, "//dt/a", "href");
-			String tauthor = UtilTools.getContentByXPath(node, "//dd/a", null);
-			String tdate = UtilTools.getContentByXPath(node, "//dd/span", null);
-			
-			System.out.println(tdate + " : " + tauthor +" : " + turl);
-			
+			XPathUtilTools xpathTool = new XPathUtilTools(xdoc);
+			String turl = xpathTool.getContentByXPath(node, "//dt/a", "href");
 			urls.add(turl);
 		}
-		
-		if(!isContinue()){
+
+		if (!isContinue()) {
 			return;
 		}
 		isNeedForward = false;
@@ -90,7 +87,7 @@ public class AutohomeController extends AbsController {
 			if (null == forwardUrl) {
 				return;
 			}
-			
+
 			getAllUrlsByXPath(forwardUrl);
 		}
 	}
@@ -118,4 +115,5 @@ public class AutohomeController extends AbsController {
 	public boolean isLoadPageSuccess() {
 		return true;
 	}
+
 }
