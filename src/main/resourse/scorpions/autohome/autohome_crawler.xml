@@ -25,6 +25,7 @@
 				<prop key="xUrl">${autohome.xurl}</prop>
 				<prop key="xTitle">${autohome.xtitle}</prop>
 				<prop key="xDate">${autohome.xdate}</prop>
+				<prop key="xTime">${autohome.xtime}</prop>
 				<prop key="xAuthor">${autohome.xauthor}</prop>
 				<prop key="isNeedForward">${autohome.isNeedForward}</prop>
 				<prop key="xForward">${autohome.xforward}</prop>
@@ -34,7 +35,7 @@
 			<props>
 				<prop key="xTitle">${autohome.xtitle2}</prop>
 				<prop key="xAuthor">${autohome.xauthor2}</prop>
-				<prop key="xDate">${autohome.xdate2}</prop>
+				<prop key="xTime">${autohome.xtime2}</prop>
 				<prop key="xContent">${autohome.xcontent}</prop>
 				<prop key="xContent1">${autohome.xcontent1}</prop>
 				<prop key="xContent2">${autohome.xcontent2}</prop>
@@ -42,6 +43,8 @@
 				<prop key="carModel">${autohome.carModel}</prop>
 				<prop key="carFirm">${autohome.carFirm}</prop>
 				<prop key="webSite">${autohome.website}</prop>
+				<prop key="xHits">${autohome.xhits}</prop>
+				<prop key="xReplies">${autohome.xreplies}</prop>
 			</props>
 		</property>
 	</bean>

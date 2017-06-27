@@ -12,7 +12,7 @@ public class TestCase02 {
 		CrawlerController cc = AppContext.getBean("autohomeController", CrawlerController.class);
 		try {
 			cc.init();
-			cc.execute();
+			cc.run();
 			
 		} catch (Exception e) {
 			e.printStackTrace();

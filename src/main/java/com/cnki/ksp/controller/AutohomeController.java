@@ -8,7 +8,6 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import com.cnki.ksp.core.AbsController;
-import com.cnki.ksp.core.CompleteHelper;
 import com.cnki.ksp.core.Processor;
 import com.cnki.ksp.core.XPathUtilTools;
 import com.cnki.ksp.processor.AutohomeProcessor;
@@ -25,7 +24,7 @@ import cn.wanghaomiao.xpath.model.JXNode;
  * @version 1.0
  *
  */
-public class AutohomeController extends AbsController {
+public class AutohomeController extends AbsController implements Runnable {
 
 	/** if load page success or not. */
 	protected boolean loadPageSuccessFlag = false;
@@ -46,33 +45,42 @@ public class AutohomeController extends AbsController {
 		xUrl = controllerProperties.getProperty("xUrl");
 		isNeedForward = String.valueOf(controllerProperties.get("isNeedForward")).equals("true") ? true : false;
 		xForward = controllerProperties.getProperty("xForward");
-		urls = new ArrayList<String>();
+		articleUrls = new ArrayList<String>();
 	}
 
-	public void execute() throws Exception {
+	/**
+	 * get all article urls from the entrance; and then analyze the article url and get
+	 * the article; and the save the articles to db.
+	 * 
+	 * @throws Exception,
+	 *             if any exception happened, throw it to run method of thread.
+	 */
+	private void execute() throws Exception {
 		try {
 			if (isNeedForward) {
 				// if(false){
 				getAllUrlsByTemplate();
-				System.out.println(urls.size());
+				System.out.printf("get %d urls in all.\n", articleUrls.size());
 
-				for (int i = 0; i < urls.size(); i++) {
-					String url = urls.get(i);
+				for (int i = 0; i < articleUrls.size(); i++) {
+					String url = articleUrls.get(i);
 					Processor processor = new AutohomeProcessor(webSite + "" + url, processorProperties);
-					processor.run();
-					System.out.println((i + 1) + "/" + urls.size());
+					processor.execute();
+					System.out.println("getting articles from url progress: " + (i + 1) + "/" + articleUrls.size());
+					// save 100 articles in one time.
+					if ((i + 1) % 100 == 0) {
+						saveArticlesAndClean();
+					}
 				}
 			} else {
-				CompleteHelper.initThreadCount(1);
-
 				String url = "http://club.autohome.com.cn/bbs/thread-c-623-64211415-1.html";
 				// String url =
 				// "http://club.autohome.com.cn/bbs/thread-c-623-63549997-1.html";
 				Processor processor = new AutohomeProcessor(url, processorProperties);
-				processor.run();
+				processor.execute();
 			}
 
-			saveArticlesAndClose();
+			saveArticlesAndClean();
 		} catch (Exception e) {
 			e.printStackTrace();
 			throw e;
@@ -83,16 +91,14 @@ public class AutohomeController extends AbsController {
 		String entranceTemplate = controllerProperties.getProperty("entranceTemplate");
 		int pageStart = Integer.parseInt(controllerProperties.getProperty("pageStart"));
 		int pageEnd = Integer.parseInt(controllerProperties.getProperty("pageEnd"));
-		urls.clear();
+		articleUrls.clear();
 
-		for (int i = pageStart; i < pageEnd; i++) {
+		for (int i = pageStart; i <= pageEnd; i++) {
 			String url = entranceTemplate.replaceAll("pageNum", i + "");
 			analyseUrls(url);
-			if (urls.size() > 100) {
-				return urls;
-			}
+			System.out.printf("analyse all pages: %d/%d, get %d articles in all.\n", i, pageEnd, articleUrls.size());
 		}
-		return urls;
+		return articleUrls;
 	}
 
 	/**
@@ -107,7 +113,6 @@ public class AutohomeController extends AbsController {
 	 *             if any exceptions happened, throw it.
 	 */
 	private void analyseUrls(String url) throws Exception {
-		Thread.sleep(3000);
 		Document doc = XPathUtilTools.getDocFromUrl(url, timeout);
 
 		xdoc = new JXDocument(doc);
@@ -115,10 +120,7 @@ public class AutohomeController extends AbsController {
 		for (JXNode node : rs) {
 			XPathUtilTools xpathTool = new XPathUtilTools(xdoc);
 			String turl = xpathTool.getContentByXPath(node, "//dt/a", "href");
-			urls.add(turl);
-			if (urls.size() % 100 == 0) {
-				System.out.println(urls.size());
-			}
+			articleUrls.add(turl);
 		}
 	}
 
@@ -147,6 +149,15 @@ public class AutohomeController extends AbsController {
 			}
 		}
 		return reValue;
+	}
+
+	@Override
+	public void run() {
+		try {
+			this.execute();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

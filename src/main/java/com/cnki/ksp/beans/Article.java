@@ -11,25 +11,31 @@ public class Article extends BaseBean {
 	/** 厂商 */
 	private String carFirm;
 	/** 类型1:行业动态 ；2:问题发现 ；3:定制改装 ；4:竞品分析 */
-	private int articleType;
+	private int type;
 	/** 来源网站 */
-	private String articleWebsite;
+	private String website;
 	/** 原始URL */
-	private String articleUrl;
+	private String url;
 	/** 帖子信息-作者 */
-	private String articleAuthor;
+	private String author;
 	/** 帖子信息-时间 */
-	private String articleTime;
+	private String time;
+	/** 帖子信息-日期 */
+	private String date;
 	/** 帖子信息-标题 */
-	private String articleTitle;
+	private String title;
 	/** 帖子信息-全文 */
-	private String articleContent;
+	private String content;
 	/** 帖子信息-全文- 全文检索 */
-	private String articleContent2;
+	private String content2;
+	/** 点击数 */
+	private int hits;
+	/** 回复数 */
+	private int replies;
 
 	@Override
 	public String toString() {
-		return articleAuthor + ":" + articleTime + ":" + articleTitle + ": " + articleContent;
+		return author + ":" + time + ":" + title + ": " + content2;
 	}
 
 	public int getId() {
@@ -64,68 +70,91 @@ public class Article extends BaseBean {
 		this.carFirm = carFirm;
 	}
 
-	public int getArticleType() {
-		return articleType;
+	public int getType() {
+		return type;
 	}
 
-	public void setArticleType(int articleType) {
-		this.articleType = articleType;
+	public void setType(int type) {
+		this.type = type;
 	}
 
-	public String getArticleWebsite() {
-		return articleWebsite;
+	public String getWebsite() {
+		return website;
 	}
 
-	public void setArticleWebsite(String articleWebsite) {
-		this.articleWebsite = articleWebsite;
+	public void setWebsite(String website) {
+		this.website = website;
 	}
 
-	public String getArticleUrl() {
-		return articleUrl;
+	public String getUrl() {
+		return url;
 	}
 
-	public void setarticleUrl(String articleUrl) {
-		this.articleUrl = articleUrl;
+	public void setUrl(String url) {
+		this.url = url;
 	}
 
-	public String getArticleAuthor() {
-		return articleAuthor;
+	public String getAuthor() {
+		return author;
 	}
 
-	public void setArticleAuthor(String articleAuthor) {
-		this.articleAuthor = articleAuthor;
+	public void setAuthor(String author) {
+		this.author = author;
 	}
 
-	public String getArticleTime() {
-		return articleTime;
+	public String getTime() {
+		return time;
 	}
 
-	public void setArticleTime(String articleTime) {
-		this.articleTime = articleTime;
+	public void setTime(String time) {
+		this.time = time;
 	}
 
-	public String getArticleTitle() {
-		return articleTitle;
+	public String getDate() {
+		return date;
 	}
 
-	public void setArticleTitle(String articleTitle) {
-		this.articleTitle = articleTitle;
+	public void setDate(String date) {
+		this.date = date;
 	}
 
-	public String getArticleContent() {
-		return articleContent;
+	public String getTitle() {
+		return title;
 	}
 
-	public void setArticleContent(String articleContent) {
-		this.articleContent = articleContent;
+	public void setTitle(String title) {
+		this.title = title;
 	}
 
-	public String getArticleContent2() {
-		return articleContent2;
+	public String getContent() {
+		return content;
 	}
 
-	public void setArticleContent2(String articleContent2) {
-		this.articleContent2 = articleContent2;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
+	public String getContent2() {
+		return content2;
+	}
+
+	public void setContent2(String content2) {
+		this.content2 = content2;
+	}
+
+	public int getHits() {
+		return hits;
+	}
+
+	public void setHits(int hits) {
+		this.hits = hits;
+	}
+
+	public int getReplies() {
+		return replies;
+	}
+
+	public void setReplies(int replies) {
+		this.replies = replies;
+	}
 }

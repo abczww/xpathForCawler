@@ -23,5 +23,5 @@ public interface CrawlerController {
 	 * 
 	 * @throws IOException
 	 */
-	public void execute() throws Exception;
+	public void run();
 }

@@ -7,9 +7,9 @@ import org.jsoup.nodes.Document;
 import com.cnki.ksp.beans.Article;
 import com.cnki.ksp.core.AbsProcessor;
 import com.cnki.ksp.core.ArticlePool;
-import com.cnki.ksp.core.CompleteHelper;
 import com.cnki.ksp.core.XPathUtilTools;
 import com.cnki.ksp.helper.HTMLCleanHelper;
+import com.cnki.ksp.helper.UtilHelper;
 
 import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
 import cn.wanghaomiao.xpath.model.JXDocument;
@@ -26,18 +26,18 @@ public class AutohomeProcessor extends AbsProcessor {
 		this.prop = prop;
 	}
 
-	public void run() {
+	public void execute() {
 		try {
 			Article art = this.getArticleFromUrl(this.entranceUrl);
 			if (null != art) {
-				ArticlePool.pushArticle(art);
+				ArticlePool.getInstance().pushArticle(art);
 			} else {
 				System.out.println("Can't get the article from the url: " + entranceUrl);
 			}
 		} catch (Exception e) {
 			// if any exceptions happened, record the url and try again after
 			// all processers completed
-			CompleteHelper.pushFialUrl(entranceUrl);
+			ArticlePool.getInstance().pushFialUrl(entranceUrl);
 			e.printStackTrace();
 		} finally {
 			// CompleteHelper.complete(this);
@@ -47,9 +47,11 @@ public class AutohomeProcessor extends AbsProcessor {
 	/**
 	 * get an article from a url.
 	 * 
-	 * @param url, thr url we want to analysis.
+	 * @param url,
+	 *            thr url we want to analysis.
 	 * @return an article.
-	 * @throws Exception, if any exception happened, throws it.
+	 * @throws Exception,
+	 *             if any exception happened, throws it.
 	 */
 	private Article getArticleFromUrl(String url) throws Exception {
 		Article artl = null;
@@ -60,19 +62,25 @@ public class AutohomeProcessor extends AbsProcessor {
 		String title = xpathTools.getContentByXPath(prop.getProperty("xTitle"));
 		String content = getConent(xpathTools, prop.getProperty("xContent"));
 		String author = xpathTools.getContentByXPath(prop.getProperty("xAuthor"));
-		String date = xpathTools.getContentByXPath(prop.getProperty("xDate"));
+		String time = xpathTools.getContentByXPath(prop.getProperty("xTime"));
+		String date = UtilHelper.getDateFromTimeByFormat(time, "yyyy-MM-dd hh:mm:ss", "yyyy-MM-dd");
+		String hits = xpathTools.getContentByXPath(prop.getProperty("xHits"));
+		String replies = xpathTools.getContentByXPath(prop.getProperty("xReplies"));
 
 		if (null != content && title != null && author != null && date != null) {
 			artl = new Article();
 			artl.setCarModel(prop.getProperty("carModel"));
 			artl.setCarFirm(prop.getProperty("carFirm"));
-			artl.setArticleWebsite(prop.getProperty("webSite"));
-			artl.setarticleUrl(this.entranceUrl);
-			artl.setArticleAuthor(author);
-			artl.setArticleTime(date);
-			artl.setArticleTitle(title);
-			artl.setArticleContent(HTMLCleanHelper.removeSytleAndScript(content));
-			artl.setArticleContent2(HTMLCleanHelper.removeHTML(content));
+			artl.setWebsite(prop.getProperty("webSite"));
+			artl.setUrl(this.entranceUrl);
+			artl.setAuthor(author);
+			artl.setTime(time);
+			artl.setDate(date);
+			artl.setTitle(title);
+			artl.setContent(HTMLCleanHelper.removeSytleAndScript(content));
+			artl.setContent2(HTMLCleanHelper.removeHTML(content));
+			artl.setHits(Integer.parseInt(hits));
+			artl.setReplies(Integer.parseInt(replies));
 			artl.setCreatedBy("william");
 			artl.setUpdatedBy("william");
 		}
@@ -80,10 +88,12 @@ public class AutohomeProcessor extends AbsProcessor {
 	}
 
 	/**
-	 * get the article content from the xpathTools. because a url may have different content, 
-	 * so we need different xpath to analyze the content.
+	 * get the article content from the xpathTools. because a url may have
+	 * different content, so we need different xpath to analyze the content.
+	 * 
 	 * @param xpathTools
-	 * @param defaultPath, if we could get the content from the default xpath.
+	 * @param defaultPath,
+	 *            if we could get the content from the default xpath.
 	 * @return the content.
 	 * @throws XpathSyntaxErrorException
 	 */

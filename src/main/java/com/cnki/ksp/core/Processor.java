@@ -13,6 +13,6 @@ public interface Processor  {
 
 	public void setObserver(Observer observer);
 	
-	public void run() ;
+	public void execute() ;
 
 }

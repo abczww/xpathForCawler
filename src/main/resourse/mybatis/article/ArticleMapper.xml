@@ -3,11 +3,15 @@
 <mapper namespace="Article">
 
 	<insert id="saveArticle" parameterType="article">
-		insert into bj_system_article_temp(carModel, carFirm, articleType, articleWebsite, 
-		articleUrl, articleAuthor, articleTime, articleTitle, articleContent, articleContent2, 
+		insert into bj_system_article_temp(
+		carModel, carFirm, type, website, 
+		url, author, time, date, 
+		title, content, content2, hits, replies, 
 		createdBy, createdTime,updatedBy,updatedTime) 
-		values( #{carModel}, #{carFirm}, #{articleType}, #{articleWebsite},
-		#{articleUrl}, #{articleAuthor}, #{articleTime}, #{articleTitle}, #{articleContent}, #{articleContent2}, 
+		values( 
+		#{carModel}, #{carFirm}, #{type}, #{website},
+		#{url}, #{author}, #{time}, #{date}, 
+		 #{title}, #{content}, #{content2}, #{hits}, #{replies},
 		#{createdBy}, #{createdTime}, #{updatedBy}, #{updatedTime});
 	</insert>
 
@@ -18,9 +22,9 @@
 	
 	<select id="findDuplicatedArticle" resultType="article" parameterType="article" useCache="true">
 		select art.id from bj_system_article_temp art 
-		where art.articleTime = #{articleTime}
-		and art.articleAuthor = #{articleAuthor}
-		and art.articleTitle = #{articleTitle}
+		where art.time = #{time}
+		and art.author = #{author}
+		and art.title = #{title}
 		limit 0,10
 	</select>
 	

@@ -1,5 +1,6 @@
 package com.cnki.ksp.core;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -15,11 +16,11 @@ public abstract class AbsController implements CrawlerController {
 	@Resource(name = "sqlSessionTemplate")
 	protected SqlSessionTemplate sqlSessionTemplate;
 
-	public void saveArticlesAndClose() throws InterruptedException {
-		for (int i = 0; i < CompleteHelper.getFailUrls().size(); i++) {
-			String url = CompleteHelper.getFailUrls().get(i);
+	public void saveArticlesAndClean() throws InterruptedException {
+		for (int i = 0; i < ArticlePool.getInstance().getFailUrls().size(); i++) {
+			String url = ArticlePool.getInstance().getFailUrls().get(i);
 			Processor processor = new AutohomeProcessor(url, processorProperties);
-			processor.run();
+			processor.execute();
 			Thread.sleep(3000);
 		}
 		saveArticles();
@@ -27,15 +28,24 @@ public abstract class AbsController implements CrawlerController {
 	}
 
 	private int saveArticles() {
-		List<Article> arts = ArticlePool.getAllArticles();
+		List<Article> arts = ArticlePool.getInstance().getAllArticles();
+		List<Article> duplicatedArts = new ArrayList<Article>();
 		for (Article art : arts) {
 			if (!checkAndFindArticle(art)) {
 				sqlSessionTemplate.insert("Article.saveArticle", art);
 			} else {
 				System.out.println("Find duplicated records: " + art);
+				duplicatedArts.add(art);
 			}
 		}
 
+		System.out.printf("Save %d records in all\n", arts.size());
+		System.out.printf("Found %d duplicated articles:", duplicatedArts.size());
+		for (Article art : duplicatedArts) {
+			System.out.println(art.getTitle() + ": " + art.getUrl());
+		}
+
+		ArticlePool.getInstance().clear();
 		return arts.size();
 
 	}
@@ -51,7 +61,7 @@ public abstract class AbsController implements CrawlerController {
 	protected abstract void getAllUrlsByXPath(String url) throws Exception;
 
 	/** the forward urls. */
-	protected List<String> urls;
+	protected List<String> articleUrls;
 	protected Properties controllerProperties;
 	protected Properties processorProperties;
 

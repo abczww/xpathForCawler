@@ -12,16 +12,17 @@ import cn.wanghaomiao.xpath.model.JXNode;
 
 public class XPathUtilTools {
 
+	private static long magicSleep = 1700;
 	private JXDocument xdoc;
 
 	public XPathUtilTools(JXDocument xdoc) {
 		this.xdoc = xdoc;
 	}
-	
-	public static Document getDocFromUrl(String url, int timeout) throws Exception{
+
+	public static Document getDocFromUrl(String url, int timeout) throws Exception {
 		Document doc = null;
 		int tryTimes = 0;
-		Thread.sleep(2000);
+		Thread.sleep(magicSleep);
 		while (true) {
 			try {
 				doc = Jsoup.connect(url).timeout(timeout)
@@ -31,15 +32,17 @@ public class XPathUtilTools {
 				if (tryTimes == 3) {
 					throw e;
 				}
-				System.out.println("Socket error, try " + tryTimes + " times, try again after 30s.");
-				Thread.sleep(30000);
+				System.out.println("Socket error, try " + tryTimes + " times, try again after 10s.");
+				Thread.sleep(10000);
+				//magicSleep = magicSleep + 200;
 			}
 
 			if (null != doc) {
+				//magicSleep = magicSleep - 2;
 				return doc;
 			}
 		}
-		
+
 	}
 
 	public String getContentByXPath(JXNode node, String xPath, String attr) throws XpathSyntaxErrorException {
@@ -63,7 +66,12 @@ public class XPathUtilTools {
 	private String getContentByNodeList(List<JXNode> rs) {
 		if (rs.size() > 0) {
 			JXNode node = rs.get(0);
-			String content = node.getElement().html();
+			String content = null;
+			if (null == node.getElement()) {
+				content = node.getTextVal();
+			} else {
+				content = node.getElement().html();
+			}
 			return content;
 		}
 		return null;

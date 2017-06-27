@@ -29,13 +29,13 @@ import org.jsoup.nodes.Element;
 import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
 import cn.wanghaomiao.xpath.model.JXDocument;
 
-public class XPathHelper extends JFrame {
+public class XPathFrame extends JFrame {
 
 	JTextField jt_url = new JTextField();
 	JTextField jt_xpath = new JTextField();
 	JTextArea jta_content = new JTextArea();
 
-	public XPathHelper() {
+	public XPathFrame() {
 		Container con = this.getContentPane();
 		this.setLayout(null);
 
@@ -160,7 +160,7 @@ public class XPathHelper extends JFrame {
 	}
 
 	public static void main(String[] args) {
-		new XPathHelper();
+		new XPathFrame();
 	}
 
 	String propFilePath = this.getClass().getClassLoader().getResource("xpathhelper/xpath_helper.properties").getPath();
