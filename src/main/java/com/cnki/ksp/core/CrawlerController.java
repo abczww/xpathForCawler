@@ -1,8 +1,6 @@
 package com.cnki.ksp.core;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * the controller of the crawler. funciton list:
@@ -16,6 +14,8 @@ import java.util.List;
  *
  */
 public interface CrawlerController {
+	
+	public void init() throws Exception;
 
 	/**
 	 * the core method of Controller, the method should analysis the url and put
@@ -24,12 +24,4 @@ public interface CrawlerController {
 	 * @throws IOException
 	 */
 	public void execute() throws Exception;
-
-	/**
-	 * if load page success.
-	 * 
-	 * @return loadPageSuccessFlag, if load page success return true or return
-	 *         false;
-	 */
-	public boolean isLoadPageSuccess() ;
 }

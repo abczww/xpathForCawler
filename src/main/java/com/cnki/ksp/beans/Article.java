@@ -24,6 +24,8 @@ public class Article extends BaseBean {
 	private String articleTitle;
 	/** 帖子信息-全文 */
 	private String articleContent;
+	/** 帖子信息-全文- 全文检索 */
+	private String articleContent2;
 
 	@Override
 	public String toString() {
@@ -117,4 +119,13 @@ public class Article extends BaseBean {
 	public void setArticleContent(String articleContent) {
 		this.articleContent = articleContent;
 	}
+
+	public String getArticleContent2() {
+		return articleContent2;
+	}
+
+	public void setArticleContent2(String articleContent2) {
+		this.articleContent2 = articleContent2;
+	}
+
 }

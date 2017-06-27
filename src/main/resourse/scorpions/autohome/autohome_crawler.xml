@@ -14,15 +14,22 @@
 
 
 	<bean id="autohomeController" class="com.cnki.ksp.controller.AutohomeController">
-		<property name="timeout" value="${timeout}" />
-		<property name="webSite" value="${autohome.website}" />
-		<property name="entranceUrl" value="${autohome.entrance}" />
-		<property name="xUrl" value="${autohome.xurl}" />
-		<property name="xTitle" value="${autohome.xtitle}" />
-		<property name="xDate" value="${autohome.xdate}" />
-		<property name="xAuthor" value="${autohome.xauthor}" />
-		<property name="isNeedForward" value="${autohome.isNeedForward}" />
-		<property name="xForward" value="${autohome.xforward}" />
+		<property name="controllerProperties">
+			<props>
+				<prop key="timeout">${timeout}</prop>
+				<prop key="webSite">${autohome.website}</prop>
+				<prop key="entranceUrl">${autohome.entrance}</prop>
+				<prop key="entranceTemplate">${autohome.entranceTemplate}</prop>
+				<prop key="pageStart">${autohome.pageStart}</prop>
+				<prop key="pageEnd">${autohome.pageEnd}</prop>
+				<prop key="xUrl">${autohome.xurl}</prop>
+				<prop key="xTitle">${autohome.xtitle}</prop>
+				<prop key="xDate">${autohome.xdate}</prop>
+				<prop key="xAuthor">${autohome.xauthor}</prop>
+				<prop key="isNeedForward">${autohome.isNeedForward}</prop>
+				<prop key="xForward">${autohome.xforward}</prop>
+			</props>
+		</property>
 		<property name="processorProperties">
 			<props>
 				<prop key="xTitle">${autohome.xtitle2}</prop>
@@ -39,6 +46,6 @@
 		</property>
 	</bean>
 
-	
+
 </beans>
    

@@ -1,6 +1,10 @@
 package com.cnki.ksp.core;
 
+import java.io.IOException;
 import java.util.List;
+
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 
 import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
 import cn.wanghaomiao.xpath.model.JXDocument;
@@ -12,6 +16,30 @@ public class XPathUtilTools {
 
 	public XPathUtilTools(JXDocument xdoc) {
 		this.xdoc = xdoc;
+	}
+	
+	public static Document getDocFromUrl(String url, int timeout) throws Exception{
+		Document doc = null;
+		int tryTimes = 0;
+		Thread.sleep(2000);
+		while (true) {
+			try {
+				doc = Jsoup.connect(url).timeout(timeout)
+						.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0").get();
+			} catch (IOException e) {
+				tryTimes++;
+				if (tryTimes == 3) {
+					throw e;
+				}
+				System.out.println("Socket error, try " + tryTimes + " times, try again after 30s.");
+				Thread.sleep(30000);
+			}
+
+			if (null != doc) {
+				return doc;
+			}
+		}
+		
 	}
 
 	public String getContentByXPath(JXNode node, String xPath, String attr) throws XpathSyntaxErrorException {

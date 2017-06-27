@@ -11,6 +11,7 @@ public class TestCase02 {
 	public void testLoadApp() {
 		CrawlerController cc = AppContext.getBean("autohomeController", CrawlerController.class);
 		try {
+			cc.init();
 			cc.execute();
 			
 		} catch (Exception e) {

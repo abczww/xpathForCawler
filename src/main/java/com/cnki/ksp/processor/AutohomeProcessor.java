@@ -1,9 +1,7 @@
 package com.cnki.ksp.processor;
 
-import java.io.IOException;
 import java.util.Properties;
 
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import com.cnki.ksp.beans.Article;
@@ -11,6 +9,7 @@ import com.cnki.ksp.core.AbsProcessor;
 import com.cnki.ksp.core.ArticlePool;
 import com.cnki.ksp.core.CompleteHelper;
 import com.cnki.ksp.core.XPathUtilTools;
+import com.cnki.ksp.helper.HTMLCleanHelper;
 
 import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
 import cn.wanghaomiao.xpath.model.JXDocument;
@@ -36,21 +35,25 @@ public class AutohomeProcessor extends AbsProcessor {
 				System.out.println("Can't get the article from the url: " + entranceUrl);
 			}
 		} catch (Exception e) {
-			// if any exceptions happened, record the url and try again after all processers completed
+			// if any exceptions happened, record the url and try again after
+			// all processers completed
 			CompleteHelper.pushFialUrl(entranceUrl);
 			e.printStackTrace();
 		} finally {
-			CompleteHelper.complete(this);
+			// CompleteHelper.complete(this);
 		}
 	}
 
-	private Article getArticleFromUrl(String url) throws IOException, XpathSyntaxErrorException {
+	/**
+	 * get an article from a url.
+	 * 
+	 * @param url, thr url we want to analysis.
+	 * @return an article.
+	 * @throws Exception, if any exception happened, throws it.
+	 */
+	private Article getArticleFromUrl(String url) throws Exception {
 		Article artl = null;
-		Document doc = null;
-
-		doc = Jsoup.connect(url).userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0")
-				.get();
-
+		Document doc = XPathUtilTools.getDocFromUrl(url, 5000);
 		xdoc = new JXDocument(doc);
 
 		XPathUtilTools xpathTools = new XPathUtilTools(xdoc);
@@ -68,13 +71,22 @@ public class AutohomeProcessor extends AbsProcessor {
 			artl.setArticleAuthor(author);
 			artl.setArticleTime(date);
 			artl.setArticleTitle(title);
-			artl.setArticleContent(content);
+			artl.setArticleContent(HTMLCleanHelper.removeSytleAndScript(content));
+			artl.setArticleContent2(HTMLCleanHelper.removeHTML(content));
 			artl.setCreatedBy("william");
 			artl.setUpdatedBy("william");
 		}
 		return artl;
 	}
 
+	/**
+	 * get the article content from the xpathTools. because a url may have different content, 
+	 * so we need different xpath to analyze the content.
+	 * @param xpathTools
+	 * @param defaultPath, if we could get the content from the default xpath.
+	 * @return the content.
+	 * @throws XpathSyntaxErrorException
+	 */
 	private String getConent(XPathUtilTools xpathTools, String defaultPath) throws XpathSyntaxErrorException {
 		String content = xpathTools.getContentByXPath(defaultPath);
 		if (null != content) {

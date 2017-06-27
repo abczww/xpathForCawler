@@ -4,7 +4,7 @@ import java.util.Set;
 
 import com.cnki.ksp.beans.Article;
 
-public interface Processor extends Runnable {
+public interface Processor  {
 	public Set<Article> getArticles();
 
 	public String getEarliestDate();
@@ -12,5 +12,7 @@ public interface Processor extends Runnable {
 	public String getLastDate();
 
 	public void setObserver(Observer observer);
+	
+	public void run() ;
 
 }
