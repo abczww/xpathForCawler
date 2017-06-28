@@ -22,9 +22,10 @@
 	
 	<select id="findDuplicatedArticle" resultType="article" parameterType="article" useCache="true">
 		select art.id from bj_system_article_temp art 
-		where art.time = #{time}
+		where art.date = #{date}
 		and art.author = #{author}
 		and art.title = #{title}
+		and art.url = #{url}
 		limit 0,10
 	</select>
 	

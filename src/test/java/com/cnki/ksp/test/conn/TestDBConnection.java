@@ -37,12 +37,12 @@ public class TestDBConnection {
 		artl.setGatherTime(null);
 		artl.setCarModel("bj40");
 		artl.setCarFirm("beijing car");
-		artl.setArticleWebsite("www.autohome.com.cn");
-		artl.setarticleUrl("http://www.autohome.com.cn");
-		artl.setArticleAuthor("NotMe");
-		artl.setArticleTime("2017-06-21");
-		artl.setArticleTitle("This is a test");
-		artl.setArticleContent("添加包的依赖，编辑pom.xml文件添加如下依赖");
+		artl.setWebsite("www.autohome.com.cn");
+		artl.setUrl("http://www.autohome.com.cn");
+		artl.setAuthor("NotMe");
+		artl.setTime("2017-06-21");
+		artl.setTitle("This is a test");
+		artl.setContent("添加包的依赖，编辑pom.xml文件添加如下依赖");
 		artl.setCreatedBy("zww");
 		artl.setUpdatedBy("zww");
 

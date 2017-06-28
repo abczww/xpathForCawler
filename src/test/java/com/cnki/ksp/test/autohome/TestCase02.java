@@ -4,6 +4,7 @@ import org.junit.Test;
 
 import com.cnki.ksp.core.AppContext;
 import com.cnki.ksp.core.CrawlerController;
+import com.cnki.ksp.core.KspObserver;
 
 public class TestCase02 {
 
@@ -11,7 +12,7 @@ public class TestCase02 {
 	public void testLoadApp() {
 		CrawlerController cc = AppContext.getBean("autohomeController", CrawlerController.class);
 		try {
-			cc.init();
+			cc.init(KspObserver.getIntance());
 			cc.run();
 			
 		} catch (Exception e) {

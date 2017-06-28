@@ -18,7 +18,7 @@ public abstract class AbsProcessor implements Processor {
 		return null;
 	}
 
-	public void setObserver(Observer observer) {
+	public void setObserver(KspObserver observer) {
 	}
 
 }

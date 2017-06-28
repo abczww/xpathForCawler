@@ -1,4 +1,4 @@
-package com.cnki.ksp.helper;
+package com.cnki.ksp.frame;
 
 import java.awt.Container;
 import java.awt.Font;
@@ -31,6 +31,7 @@ import cn.wanghaomiao.xpath.model.JXDocument;
 
 public class XPathFrame extends JFrame {
 
+	private static final long serialVersionUID = -5180414036371694421L;
 	JTextField jt_url = new JTextField();
 	JTextField jt_xpath = new JTextField();
 	JTextArea jta_content = new JTextArea();

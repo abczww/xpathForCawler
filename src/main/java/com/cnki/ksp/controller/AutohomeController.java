@@ -7,7 +7,10 @@ import java.util.List;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
+import com.cnki.ksp.beans.Article;
 import com.cnki.ksp.core.AbsController;
+import com.cnki.ksp.core.ArticlePool;
+import com.cnki.ksp.core.KspObserver;
 import com.cnki.ksp.core.Processor;
 import com.cnki.ksp.core.XPathUtilTools;
 import com.cnki.ksp.processor.AutohomeProcessor;
@@ -38,7 +41,9 @@ public class AutohomeController extends AbsController implements Runnable {
 	private boolean isNeedForward = false;
 	private String xForward = null;
 
-	public void init() {
+	@Override
+	public void init(KspObserver observer) {
+		this.observer = observer;
 		// entranceUrl = controllerProperties.getProperty("entranceUrl");
 		webSite = controllerProperties.getProperty("webSite");
 		timeout = Integer.parseInt(String.valueOf(controllerProperties.getProperty("timeout")));
@@ -49,8 +54,8 @@ public class AutohomeController extends AbsController implements Runnable {
 	}
 
 	/**
-	 * get all article urls from the entrance; and then analyze the article url and get
-	 * the article; and the save the articles to db.
+	 * get all article urls from the entrance; and then analyze the article url
+	 * and get the article; and the save the articles to db.
 	 * 
 	 * @throws Exception,
 	 *             if any exception happened, throw it to run method of thread.
@@ -60,13 +65,13 @@ public class AutohomeController extends AbsController implements Runnable {
 			if (isNeedForward) {
 				// if(false){
 				getAllUrlsByTemplate();
-				System.out.printf("get %d urls in all.\n", articleUrls.size());
+				observer.appendInfo("get %d urls in all.\n", articleUrls.size());
 
 				for (int i = 0; i < articleUrls.size(); i++) {
 					String url = articleUrls.get(i);
-					Processor processor = new AutohomeProcessor(webSite + "" + url, processorProperties);
+					Processor processor = new AutohomeProcessor(webSite + "" + url, processorProperties, observer);
 					processor.execute();
-					System.out.println("getting articles from url progress: " + (i + 1) + "/" + articleUrls.size());
+					observer.appendInfo("getting articles from url progress: " + (i + 1) + "/" + articleUrls.size());
 					// save 100 articles in one time.
 					if ((i + 1) % 100 == 0) {
 						saveArticlesAndClean();
@@ -76,7 +81,7 @@ public class AutohomeController extends AbsController implements Runnable {
 				String url = "http://club.autohome.com.cn/bbs/thread-c-623-64211415-1.html";
 				// String url =
 				// "http://club.autohome.com.cn/bbs/thread-c-623-63549997-1.html";
-				Processor processor = new AutohomeProcessor(url, processorProperties);
+				Processor processor = new AutohomeProcessor(url, processorProperties, observer);
 				processor.execute();
 			}
 
@@ -96,7 +101,7 @@ public class AutohomeController extends AbsController implements Runnable {
 		for (int i = pageStart; i <= pageEnd; i++) {
 			String url = entranceTemplate.replaceAll("pageNum", i + "");
 			analyseUrls(url);
-			System.out.printf("analyse all pages: %d/%d, get %d articles in all.\n", i, pageEnd, articleUrls.size());
+			observer.appendInfo("analyse all pages: %d/%d, get %d articles in all.\n", i, pageEnd, articleUrls.size());
 		}
 		return articleUrls;
 	}
@@ -120,7 +125,29 @@ public class AutohomeController extends AbsController implements Runnable {
 		for (JXNode node : rs) {
 			XPathUtilTools xpathTool = new XPathUtilTools(xdoc);
 			String turl = xpathTool.getContentByXPath(node, "//dt/a", "href");
-			articleUrls.add(turl);
+			String tauthor = xpathTool.getContentByXPath(node, "//dd[1]/a", null);
+			String tdate = xpathTool.getContentByXPath(node, "//dd[1]/span", null);
+			String ttitle = xpathTool.getContentByXPath(node, "//dt/a", null);
+			Article art = new Article();
+			art.setUrl(this.webSite + turl);
+			art.setAuthor(tauthor);
+			art.setDate(tdate);
+			art.setTitle(ttitle);
+			if (!checkAndFindArticle(art)) {
+				articleUrls.add(turl);
+			} else {
+				ArticlePool.getInstance().pushDuplicated(turl);
+			}
+			//// *[@id="subcontent"]/dl[24]/dt/a
+			//// *[@id="subcontent"]/dl[8]/dd[1]/span
+			//// *[@id="subcontent"]/dl[8]/dd[1]/a
+			//// *[@id="subcontent"]/dl[9]/dt/a
+			//// *[@id="subcontent"]/dl[24]/dd[1]/a
+
+			// to do
+			// need to check the db, if we need to analyze the articl url.
+			// if the article exists in db, don't add it.
+
 		}
 	}
 
@@ -134,7 +161,7 @@ public class AutohomeController extends AbsController implements Runnable {
 			if (null == forwardUrl) {
 				return;
 			}
-			System.out.println(forwardUrl);
+			observer.appendInfo(forwardUrl);
 			getAllUrlsByXPath(forwardUrl);
 		}
 	}
@@ -150,7 +177,7 @@ public class AutohomeController extends AbsController implements Runnable {
 		}
 		return reValue;
 	}
-
+	
 	@Override
 	public void run() {
 		try {

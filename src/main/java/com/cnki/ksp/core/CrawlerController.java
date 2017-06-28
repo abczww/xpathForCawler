@@ -15,7 +15,7 @@ import java.io.IOException;
  */
 public interface CrawlerController {
 	
-	public void init() throws Exception;
+	public void init(KspObserver observer) throws Exception;
 
 	/**
 	 * the core method of Controller, the method should analysis the url and put

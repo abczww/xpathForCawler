@@ -72,10 +72,10 @@ public class JSoupTest {
 			assert listdl.size() > 0;
 			for (Element elemt : listdl) {
 				Article art = new Article();
-				art.setArticleTitle(elemt.getElementsByAttributeValue("class", "a_topic").get(0).html());
+				art.setTitle(elemt.getElementsByAttributeValue("class", "a_topic").get(0).html());
 				art.setCreatedTime(elemt.getElementsByAttributeValue("class", "tdate").get(0).html());
-				art.setArticleAuthor(elemt.getElementsByAttributeValue("class", "linkblack").get(0).html());
-				art.setCarType("bj40");
+				art.setAuthor(elemt.getElementsByAttributeValue("class", "linkblack").get(0).html());
+				art.setCarFirm("bj40");
 				System.out.println(art);
 			}
 		} catch (IOException e) {

@@ -15,11 +15,12 @@ public abstract class AbsController implements CrawlerController {
 
 	@Resource(name = "sqlSessionTemplate")
 	protected SqlSessionTemplate sqlSessionTemplate;
+	protected KspObserver observer;
 
 	public void saveArticlesAndClean() throws InterruptedException {
 		for (int i = 0; i < ArticlePool.getInstance().getFailUrls().size(); i++) {
 			String url = ArticlePool.getInstance().getFailUrls().get(i);
-			Processor processor = new AutohomeProcessor(url, processorProperties);
+			Processor processor = new AutohomeProcessor(url, processorProperties, observer);
 			processor.execute();
 			Thread.sleep(3000);
 		}
@@ -39,10 +40,10 @@ public abstract class AbsController implements CrawlerController {
 			}
 		}
 
-		System.out.printf("Save %d records in all\n", arts.size());
-		System.out.printf("Found %d duplicated articles:", duplicatedArts.size());
+		observer.appendInfo("Save %d records in all\n", arts.size());
+		observer.appendInfo("Found %d duplicated articles:", duplicatedArts.size());
 		for (Article art : duplicatedArts) {
-			System.out.println(art.getTitle() + ": " + art.getUrl());
+			observer.appendInfo(art.getTitle() + ": " + art.getUrl());
 		}
 
 		ArticlePool.getInstance().clear();
@@ -50,7 +51,7 @@ public abstract class AbsController implements CrawlerController {
 
 	}
 
-	private boolean checkAndFindArticle(Article art) {
+	public boolean checkAndFindArticle(Article art) {
 		List<Integer> ids = sqlSessionTemplate.selectList("Article.findDuplicatedArticle", art);
 		if (ids.size() > 0) {
 			return true;

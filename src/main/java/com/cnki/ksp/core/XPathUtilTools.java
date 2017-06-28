@@ -33,7 +33,7 @@ public class XPathUtilTools {
 					throw e;
 				}
 				System.out.println("Socket error, try " + tryTimes + " times, try again after 10s.");
-				Thread.sleep(10000);
+				Thread.sleep(30000);
 				//magicSleep = magicSleep + 200;
 			}
 

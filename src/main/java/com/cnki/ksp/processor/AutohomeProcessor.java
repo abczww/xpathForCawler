@@ -7,6 +7,7 @@ import org.jsoup.nodes.Document;
 import com.cnki.ksp.beans.Article;
 import com.cnki.ksp.core.AbsProcessor;
 import com.cnki.ksp.core.ArticlePool;
+import com.cnki.ksp.core.KspObserver;
 import com.cnki.ksp.core.XPathUtilTools;
 import com.cnki.ksp.helper.HTMLCleanHelper;
 import com.cnki.ksp.helper.UtilHelper;
@@ -20,10 +21,12 @@ public class AutohomeProcessor extends AbsProcessor {
 
 	private String entranceUrl;
 	private Properties prop;
+	private KspObserver observer;
 
-	public AutohomeProcessor(String url, Properties prop) {
+	public AutohomeProcessor(String url, Properties prop, KspObserver observer) {
 		this.entranceUrl = url;
 		this.prop = prop;
+		this.observer = observer;
 	}
 
 	public void execute() {
@@ -32,7 +35,7 @@ public class AutohomeProcessor extends AbsProcessor {
 			if (null != art) {
 				ArticlePool.getInstance().pushArticle(art);
 			} else {
-				System.out.println("Can't get the article from the url: " + entranceUrl);
+				observer.appendInfo("Can't get the article from the url: " + entranceUrl);
 			}
 		} catch (Exception e) {
 			// if any exceptions happened, record the url and try again after

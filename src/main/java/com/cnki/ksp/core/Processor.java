@@ -1,5 +1,6 @@
 package com.cnki.ksp.core;
 
+import java.util.Properties;
 import java.util.Set;
 
 import com.cnki.ksp.beans.Article;
@@ -11,7 +12,7 @@ public interface Processor  {
 
 	public String getLastDate();
 
-	public void setObserver(Observer observer);
+	public void setObserver(KspObserver observer);
 	
 	public void execute() ;
 

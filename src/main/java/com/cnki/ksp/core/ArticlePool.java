@@ -9,6 +9,7 @@ public class ArticlePool {
 
 	private static List<Article> articles = new ArrayList<Article>();
 	private static List<String> failUrls = new ArrayList<String>();
+	private static List<String> duplicatedUrls = new ArrayList<String>();
 
 	private static ArticlePool articlePool;
 
@@ -35,10 +36,15 @@ public class ArticlePool {
 	public void clear() {
 		articles.clear();
 		failUrls.clear();
+		duplicatedUrls.clear();
 	}
 	
 	public void pushFialUrl(String url) {
 		failUrls.add(url);
+	}
+	
+	public void pushDuplicated(String url){
+		duplicatedUrls.add(url);
 	}
 
 	public List<String> getFailUrls() {
