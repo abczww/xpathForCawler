@@ -13,14 +13,14 @@
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 
 
-	<bean id="autohomeController" class="com.cnki.ksp.controller.AutohomeController">
+	<bean id="autohomeController_bj80" class="com.cnki.ksp.controller.autohome.AutohomeController">
 		<property name="controllerProperties">
 			<props>
 				<prop key="timeout">${timeout}</prop>
 				<prop key="webSite">${autohome.website}</prop>
-				<prop key="entranceUrl">${autohome.entrance}</prop>
-				<prop key="entranceTemplate">${autohome.entranceTemplate}</prop>
-				<prop key="pageStart">${autohome.pageStart}</prop>
+				<prop key="entranceUrl">${autohome.bj80.entrance}</prop>
+				<prop key="entranceTemplate">${autohome.bj80.entranceTemplate}</prop>
+				<prop key="pageStart">1</prop>
 				<prop key="pageEnd">${autohome.pageEnd}</prop>
 				<prop key="xUrl">${autohome.xurl}</prop>
 				<prop key="xTitle">${autohome.xtitle}</prop>
@@ -33,6 +33,7 @@
 		</property>
 		<property name="processorProperties">
 			<props>
+				<prop key="carModel">${autohome.bj80.carModel}</prop>
 				<prop key="xTitle">${autohome.xtitle2}</prop>
 				<prop key="xAuthor">${autohome.xauthor2}</prop>
 				<prop key="xTime">${autohome.xtime2}</prop>
@@ -40,7 +41,6 @@
 				<prop key="xContent1">${autohome.xcontent1}</prop>
 				<prop key="xContent2">${autohome.xcontent2}</prop>
 				<prop key="xReply">${autohome.xreply}</prop>
-				<prop key="carModel">${autohome.carModel}</prop>
 				<prop key="carFirm">${autohome.carFirm}</prop>
 				<prop key="webSite">${autohome.website}</prop>
 				<prop key="xHits">${autohome.xhits}</prop>

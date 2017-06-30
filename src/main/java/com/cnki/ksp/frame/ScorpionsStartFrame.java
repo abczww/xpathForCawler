@@ -8,11 +8,13 @@ import java.awt.event.WindowEvent;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.Timer;
 
+import com.cnki.ksp.controller.TSPController;
 import com.cnki.ksp.core.AppContext;
 import com.cnki.ksp.core.CrawlerController;
 import com.cnki.ksp.core.KspObserver;
@@ -21,11 +23,12 @@ public class ScorpionsStartFrame extends JFrame {
 
 	private static final long serialVersionUID = -3686716486219841278L;
 	private static JTextArea jta_info = new JTextArea();
+	private JTextField jtf_topic = new JTextField();
 	private JTextField jtf_message = new JTextField();
 	private JButton jbtn_close = new JButton("Close");
 	private JButton jbtn_scorpinAction = new JButton("Action");
 	private Timer sysTimer;
-	
+
 	private final String title = "KScorpion In Action V1.0.1";
 
 	public ScorpionsStartFrame() {
@@ -36,11 +39,11 @@ public class ScorpionsStartFrame extends JFrame {
 	public void initFrame() {
 		this.setLayout(null);
 
-		jbtn_scorpinAction.setBounds(10, 10, 120, 40);
+		jbtn_scorpinAction.setBounds(50, 10, 120, 35);
 		jbtn_scorpinAction.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				jbtn_scorpinAction.setVisible(false);
+				jbtn_scorpinAction.setEnabled(false);
 				jbtn_close.setVisible(true);
 				jtf_message.setText("KScorpion is running...");
 				new Thread() {
@@ -52,8 +55,7 @@ public class ScorpionsStartFrame extends JFrame {
 			}
 		});
 
-		jbtn_close.setBounds(10, 10, 120, 40);
-		jbtn_close.setVisible(false);
+		jbtn_close.setBounds(180, 10, 120, 35);
 		jbtn_close.addActionListener(new ActionListener() {
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -63,15 +65,27 @@ public class ScorpionsStartFrame extends JFrame {
 
 		});
 
-		jtf_message.setBounds(140, 10, 650, 40);
+		JLabel jll_info = new JLabel("Info");
+		jll_info.setBounds(10, 50, 100, 30);
+
+		jtf_message.setBounds(50, 50, 650, 30);
+
+		JLabel jll_topic = new JLabel("Topic");
+		jll_topic.setBounds(10, 90, 100, 30);
+
+		jtf_topic = new JTextField();
+		jtf_topic.setBounds(50, 90, 650, 30);
 
 		JScrollPane jsp_info = new JScrollPane(jta_info);
-		jsp_info.setBounds(10, 60, 780, 500);
+		jsp_info.setBounds(10, 130, 780, 430);
 
 		Container con = this.getContentPane();
 		con.add(jbtn_close);
 		con.add(jbtn_scorpinAction);
+		con.add(jll_info);
 		con.add(jtf_message);
+		con.add(jll_topic);
+		con.add(jtf_topic);
 		con.add(jsp_info);
 
 		this.setSize(800, 600);
@@ -108,9 +122,12 @@ public class ScorpionsStartFrame extends JFrame {
 		try {
 			KspObserver observer = KspObserver.getIntance();
 			observer.setHandler(jta_info);
-			CrawlerController cc = AppContext.getBean("autohomeController", CrawlerController.class);
-			cc.init(observer);
-			cc.run();
+			TSPController tsp = AppContext.getBean(TSPController.class);
+			for (CrawlerController cc : tsp.getCrawlers()) {
+				cc.init(observer);
+				jtf_topic.setText("getting articles from " + cc.getTopic());
+				cc.run();
+			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

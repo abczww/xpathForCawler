@@ -2,14 +2,13 @@ package com.cnki.ksp.processor;
 
 import java.util.Properties;
 
-import org.jsoup.nodes.Document;
-
 import com.cnki.ksp.beans.Article;
 import com.cnki.ksp.core.AbsProcessor;
 import com.cnki.ksp.core.ArticlePool;
 import com.cnki.ksp.core.KspObserver;
 import com.cnki.ksp.core.XPathUtilTools;
 import com.cnki.ksp.helper.HTMLCleanHelper;
+import com.cnki.ksp.helper.JSoupConnectionHelper;
 import com.cnki.ksp.helper.UtilHelper;
 
 import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
@@ -58,8 +57,7 @@ public class AutohomeProcessor extends AbsProcessor {
 	 */
 	private Article getArticleFromUrl(String url) throws Exception {
 		Article artl = null;
-		Document doc = XPathUtilTools.getDocFromUrl(url, 5000);
-		xdoc = new JXDocument(doc);
+		xdoc = JSoupConnectionHelper.getXDocumentFromUrl(url, 5000);
 
 		XPathUtilTools xpathTools = new XPathUtilTools(xdoc);
 		String title = xpathTools.getContentByXPath(prop.getProperty("xTitle"));

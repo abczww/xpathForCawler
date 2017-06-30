@@ -30,7 +30,7 @@ public class KspObserver {
 	public void appendInfo(String format, Object... args){
 		String info = String.format(format, args);
 		System.out.println(info);
-		jta_defaultInfoHandler.append(info);
+		jta_defaultInfoHandler.append(info + "\n");
 		jta_defaultInfoHandler.setCaretPosition(jta_defaultInfoHandler.getDocument().getLength());
 	}
 

@@ -1,10 +1,9 @@
-package com.cnki.ksp.controller;
+package com.cnki.ksp.controller.autohome;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 
 import com.cnki.ksp.beans.Article;
@@ -13,6 +12,8 @@ import com.cnki.ksp.core.ArticlePool;
 import com.cnki.ksp.core.KspObserver;
 import com.cnki.ksp.core.Processor;
 import com.cnki.ksp.core.XPathUtilTools;
+import com.cnki.ksp.helper.JSoupConnectionHelper;
+import com.cnki.ksp.helper.UtilHelper;
 import com.cnki.ksp.processor.AutohomeProcessor;
 
 import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
@@ -52,6 +53,11 @@ public class AutohomeController extends AbsController implements Runnable {
 		xForward = controllerProperties.getProperty("xForward");
 		articleUrls = new ArrayList<String>();
 	}
+	
+	@Override
+	public String getTopic(){
+		return processorProperties.getProperty("carModel");
+	}
 
 	/**
 	 * get all article urls from the entrance; and then analyze the article url
@@ -65,7 +71,7 @@ public class AutohomeController extends AbsController implements Runnable {
 			if (isNeedForward) {
 				// if(false){
 				getAllUrlsByTemplate();
-				observer.appendInfo("get %d urls in all.\n", articleUrls.size());
+				observer.appendInfo("get %d urls in all.", articleUrls.size());
 
 				for (int i = 0; i < articleUrls.size(); i++) {
 					String url = articleUrls.get(i);
@@ -93,15 +99,18 @@ public class AutohomeController extends AbsController implements Runnable {
 	}
 
 	private List<String> getAllUrlsByTemplate() throws Exception {
+		JXDocument xdoc = JSoupConnectionHelper.getXDocumentFromUrl(controllerProperties.getProperty("entranceUrl"), timeout);
+		XPathUtilTools xpathTools = new XPathUtilTools(xdoc);
+		String endPageStr = xpathTools.getContentByXPath(controllerProperties.getProperty("pageEnd"));
 		String entranceTemplate = controllerProperties.getProperty("entranceTemplate");
-		int pageStart = Integer.parseInt(controllerProperties.getProperty("pageStart"));
-		int pageEnd = Integer.parseInt(controllerProperties.getProperty("pageEnd"));
+		int pageStart = 1;
+		int pageEnd = Integer.parseInt(UtilHelper.getLastPageNumber(endPageStr));
 		articleUrls.clear();
 
 		for (int i = pageStart; i <= pageEnd; i++) {
 			String url = entranceTemplate.replaceAll("pageNum", i + "");
 			analyseUrls(url);
-			observer.appendInfo("analyse all pages: %d/%d, get %d articles in all.\n", i, pageEnd, articleUrls.size());
+			observer.appendInfo("analyse all pages: %d/%d, get %d articles in all.", i, pageEnd, articleUrls.size());
 		}
 		return articleUrls;
 	}
@@ -118,9 +127,7 @@ public class AutohomeController extends AbsController implements Runnable {
 	 *             if any exceptions happened, throw it.
 	 */
 	private void analyseUrls(String url) throws Exception {
-		Document doc = XPathUtilTools.getDocFromUrl(url, timeout);
-
-		xdoc = new JXDocument(doc);
+		xdoc = JSoupConnectionHelper.getXDocumentFromUrl(url, timeout);
 		List<JXNode> rs = xdoc.selN(xUrl);
 		for (JXNode node : rs) {
 			XPathUtilTools xpathTool = new XPathUtilTools(xdoc);

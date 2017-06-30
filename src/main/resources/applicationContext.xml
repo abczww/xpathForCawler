@@ -19,7 +19,7 @@
 		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations">
 			<list>
-				<value>classpath*:scorpions/autohome/autohomeCrawler.properties</value>
+				<value>classpath*:scorpions/scorpions.properties</value>
 				<value>classpath*:dbconfig.properties</value>
 			</list>
 		</property>
@@ -73,6 +73,6 @@
 	</bean>
 
 
-	<import resource="scorpions/autohome/autohome_crawler.xml" />
+	<import resource="scorpions/scorpions.xml" />
 
 </beans>

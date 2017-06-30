@@ -40,7 +40,7 @@ public abstract class AbsController implements CrawlerController {
 			}
 		}
 
-		observer.appendInfo("Save %d records in all\n", arts.size());
+		observer.appendInfo("Save %d records in all", arts.size());
 		observer.appendInfo("Found %d duplicated articles:", duplicatedArts.size());
 		for (Article art : duplicatedArts) {
 			observer.appendInfo(art.getTitle() + ": " + art.getUrl());

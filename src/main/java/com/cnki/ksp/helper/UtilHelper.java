@@ -1,9 +1,10 @@
 package com.cnki.ksp.helper;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class UtilHelper {
 
@@ -33,6 +34,13 @@ public class UtilHelper {
 		String dateStr = df.format(date_time);
 		return dateStr;
 
+	}
+
+	public static final String getLastPageNumber(String str) {
+		String regex = "[^0-9]";
+		Pattern p = Pattern.compile(regex);
+		Matcher m = p.matcher(str);
+		return m.replaceAll("").trim();
 	}
 
 }
