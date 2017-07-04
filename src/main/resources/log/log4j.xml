@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<appender name="myConsole" class="org.apache.log4j.ConsoleAppender">  
+        <layout class="org.apache.log4j.PatternLayout">  
+            <param name="ConversionPattern" value=" %d [%t] %-5p [%c] - %m%n" />  
+        </layout>  
+        <!--过滤器设置输出的级别 -->  
+        <filter class="com.cnki.ksp.filter.CustomerLogFilter">  
+            <param name="levelMin" value="warn" />  
+            <param name="levelMax" value="fatal" />  
+            <param name="AcceptOnMatch" value="true" />  
+        </filter>  
+    </appender>  
+    
+    <appender name="debugFile" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="logs/debug.log" />
+        <param name="MaxFileSize" value="1024KB"/>
+        <param name="MaxBackupIndex" value="5"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d [%t] %-5p [%c] - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMax" value="debug" />
+            <param name="LevelMin" value="debug" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+    </appender>
+    
+    <appender name="infoFile" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="logs/info.log" />
+        <param name="MaxFileSize" value="1024KB"/>
+        <param name="MaxBackupIndex" value="5"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d [%t] %-5p [%c] - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMax" value="info" />
+            <param name="LevelMin" value="info" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+    </appender>
+
+    <appender name="warnFile" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="logs/warn.log" />
+        <param name="MaxFileSize" value="1024KB"/>
+        <param name="MaxBackupIndex" value="5"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d [%t] %-5p [%c] - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMax" value="warn" />
+            <param name="LevelMin" value="warn" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+    </appender>
+    
+    <appender name="errorFile" class="org.apache.log4j.RollingFileAppender">
+        <param name="File" value="logs/error.log " />
+        <param name="MaxFileSize" value="1024KB"/>
+        <param name="MaxBackupIndex" value="5"/>
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value=" %d [%t] %-5p [%c] - %m%n" />
+        </layout>
+        <filter class="org.apache.log4j.varia.LevelRangeFilter">
+            <param name="LevelMin" value="error" />
+            <param name="AcceptOnMatch" value="true" />
+        </filter>
+    </appender>
+    
+
+    
+    <logger name="java.sql.Connection" additivity="false">
+        <level value="debug"/>
+ 
+    </logger>
+    <logger name="java.sql.Statement" additivity="false">
+        <level value="debug" />
+ 
+    </logger>
+    <logger name="java.sql.PreparedStatement" additivity="false">
+        <level value="debug" />
+ 
+    </logger>
+    
+    <root>
+        <level value="info" />
+        <appender-ref ref="infoFile" />
+        <!--
+        <appender-ref ref="infoFile" />
+        <appender-ref ref="warnFile" />
+        <appender-ref ref="errorFile" /> -->
+    </root>
+
+</log4j:configuration>

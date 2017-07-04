@@ -12,13 +12,14 @@
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
     
-    <import resource="autohome/autohome_bj20_scorpion.xml" />
+    <import resource="autohome/autohome_*.xml" />
     
     <bean id="tspController" class="com.cnki.ksp.controller.TSPController">
     	<property name="crawlers">
     		<list>
     			<ref bean="autohomeController_bj20"/>
-    			
+    			<ref bean="autohomeController_bj40"/>
+    			<ref bean="autohomeController_bj80"/>
     		</list>
     	</property>
     </bean>

@@ -120,7 +120,7 @@ public class ScorpionsStartFrame extends JFrame {
 
 	private void startAutohomeScorpion() {
 		try {
-			KspObserver observer = KspObserver.getIntance();
+			KspObserver observer = KspObserver.getIntance(this.getClass().getName());
 			observer.setHandler(jta_info);
 			TSPController tsp = AppContext.getBean(TSPController.class);
 			for (CrawlerController cc : tsp.getCrawlers()) {

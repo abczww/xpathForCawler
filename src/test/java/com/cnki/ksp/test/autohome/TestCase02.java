@@ -12,9 +12,9 @@ public class TestCase02 {
 	public void testLoadApp() {
 		CrawlerController cc = AppContext.getBean("autohomeController", CrawlerController.class);
 		try {
-			cc.init(KspObserver.getIntance());
+			cc.init(KspObserver.getIntance(this.getClass().getName()));
 			cc.run();
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
