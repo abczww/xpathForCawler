@@ -11,17 +11,8 @@
     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
-	<bean id="propertyConfigurer"
-		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-		<property name="locations">
-			<list>
-				<value>classpath*:scorpions/scorpions.properties</value>
-				<value>classpath*:dbconfig.properties</value>
-			</list>
-		</property>
-	</bean>
-
-	<bean id="autohomeController_bj20" class="com.cnki.ksp.controller.autohome.AutohomeController">
+	
+	<bean id="autohomeController_bj20" class="com.cnki.ksp.controller.autohome.AutohomeBBSController">
 		<property name="controllerProperties">
 			<props>
 				<prop key="timeout">${timeout}</prop>

@@ -1,0 +1,1054 @@
+[INFO ] 2017-07-04 14:27:21,194 method:com.cnki.ksp.test.log.TestSLF4j.testInitSLF4j(TestSLF4j.java:16)
+hello hzh
+[INFO ] 2017-07-04 14:27:28,595 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-04 14:27:28,643 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@28feb3fa, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@675d3402, org.springframework.test.context.support.DirtiesContextTestExecutionListener@51565ec2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@482f8f11, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1593948d]
+[INFO ] 2017-07-04 14:27:28,889 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-04 14:27:29,415 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-04 14:27:29,451 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 14:27:29,478 method:org.springframework.beans.factory.support.DefaultListableBeanFactory.registerBeanDefinition(DefaultListableBeanFactory.java:822)
+Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:src/main/resources/applicationContext.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]]
+[INFO ] 2017-07-04 14:27:29,500 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@e45f292: startup date [Tue Jul 04 14:27:29 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 14:27:29,675 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 14:27:29,677 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[WARN ] 2017-07-04 14:27:30,425 method:org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:487)
+Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tspController' defined in URL [file:src/main/resources/scorpions/scorpions.xml]: Cannot resolve reference to bean 'autohomeController_bj40' while setting bean property 'crawlers' with key [1]; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'autohomeController_bj40' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:382)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:259)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:261)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:219)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'autohomeController_bj40' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:687)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 45 more
+[ERROR] 2017-07-04 14:27:30,427 method:org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:215)
+Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@675d3402] to prepare test instance [com.cnki.ksp.test.conn.TestDBConnection@6a4f787b]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:94)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:259)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:261)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:219)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tspController' defined in URL [file:src/main/resources/scorpions/scorpions.xml]: Cannot resolve reference to bean 'autohomeController_bj40' while setting bean property 'crawlers' with key [1]; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'autohomeController_bj40' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:382)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	... 25 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'autohomeController_bj40' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:687)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 45 more
+[INFO ] 2017-07-04 14:27:30,441 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-04 14:27:30,555 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-04 14:27:30,580 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 14:27:30,607 method:org.springframework.beans.factory.support.DefaultListableBeanFactory.registerBeanDefinition(DefaultListableBeanFactory.java:822)
+Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:src/main/resources/applicationContext.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]]
+[INFO ] 2017-07-04 14:27:30,610 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@1e04fa0a: startup date [Tue Jul 04 14:27:30 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 14:27:30,624 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 14:27:30,624 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[WARN ] 2017-07-04 14:27:30,778 method:org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:487)
+Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tspController' defined in URL [file:src/main/resources/scorpions/scorpions.xml]: Cannot resolve reference to bean 'autohomeController_bj40' while setting bean property 'crawlers' with key [1]; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'autohomeController_bj40' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:382)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:259)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:261)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:219)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'autohomeController_bj40' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:687)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 45 more
+[ERROR] 2017-07-04 14:27:30,780 method:org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:215)
+Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@675d3402] to prepare test instance [com.cnki.ksp.test.conn.TestDBConnection@66d3eec0]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:94)
+	at org.springframework.test.context.DefaultTestContext.getApplicationContext(DefaultTestContext.java:72)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:212)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:200)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:259)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:261)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:219)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:83)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:68)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:163)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'tspController' defined in URL [file:src/main/resources/scorpions/scorpions.xml]: Cannot resolve reference to bean 'autohomeController_bj40' while setting bean property 'crawlers' with key [1]; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'autohomeController_bj40' is defined
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedList(BeanDefinitionValueResolver.java:382)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:157)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1477)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:68)
+	at org.springframework.test.context.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:86)
+	... 25 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No bean named 'autohomeController_bj40' is defined
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeanDefinition(DefaultListableBeanFactory.java:687)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getMergedLocalBeanDefinition(AbstractBeanFactory.java:1168)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:281)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 45 more
+[INFO ] 2017-07-04 14:28:43,080 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-04 14:28:43,112 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@28feb3fa, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@675d3402, org.springframework.test.context.support.DirtiesContextTestExecutionListener@51565ec2, org.springframework.test.context.transaction.TransactionalTestExecutionListener@482f8f11, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1593948d]
+[INFO ] 2017-07-04 14:28:43,274 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-04 14:28:43,580 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-04 14:28:43,631 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 14:28:43,665 method:org.springframework.beans.factory.support.DefaultListableBeanFactory.registerBeanDefinition(DefaultListableBeanFactory.java:822)
+Overriding bean definition for bean 'propertyConfigurer': replacing [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in URL [file:src/main/resources/applicationContext.xml]] with [Generic bean: class [org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/windhut/Workspaces/crawler/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]]
+[INFO ] 2017-07-04 14:28:43,691 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/src/main/resources/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 14:28:43,723 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/src/main/resources/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 14:28:43,757 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@e45f292: startup date [Tue Jul 04 14:28:43 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 14:28:43,916 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 14:28:43,917 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 14:28:45,566 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-04 14:28:45,770 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing org.springframework.context.support.GenericApplicationContext@e45f292: startup date [Tue Jul 04 14:28:43 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 14:28:45,775 method:com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1444)
+{dataSource-1} closed
+[INFO ] 2017-07-04 15:16:24,123 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 15:16:24 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:16:24,191 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:16:24,561 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:16:24,609 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:16:24,642 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:16:24,683 method:org.springframework.beans.factory.support.DefaultListableBeanFactory.registerBeanDefinition(DefaultListableBeanFactory.java:822)
+Overriding bean definition for bean 'autohomeController_bj20': replacing [Generic bean: class [com.cnki.ksp.controller.autohome.AutohomeEvaluateController]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]] with [Generic bean: class [com.cnki.ksp.controller.autohome.AutohomeBBSController]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]]
+[INFO ] 2017-07-04 15:16:24,684 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:16:24,721 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:16:24,961 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:16:24,962 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:16:32,672 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-04 15:16:33,859 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse all pages: 1/71, get 104 articles in all.
+[INFO ] 2017-07-04 15:21:05,597 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 15:21:05 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:21:05,665 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:21:06,085 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:21:06,145 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:21:06,239 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:21:06,260 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:21:06,283 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:21:06,621 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:21:06,624 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:24:45,483 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1134affc: startup date [Tue Jul 04 15:24:45 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:24:45,560 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:24:45,992 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:24:46,034 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:24:46,061 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:24:46,113 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:24:46,144 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:24:46,430 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:24:46,431 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:24:49,797 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1134affc: startup date [Tue Jul 04 15:24:49 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:24:49,891 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:24:50,278 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:24:50,323 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:24:50,363 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:24:50,411 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:24:50,480 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:24:50,702 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:24:50,703 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:24:57,824 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 15:24:57 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:24:58,002 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:24:58,394 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:24:58,430 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:24:58,496 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:24:58,529 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:24:58,558 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:24:58,796 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:24:58,796 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:38:54,488 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1134affc: startup date [Tue Jul 04 15:38:54 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:38:54,559 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:38:54,933 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:38:54,971 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:38:55,042 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:38:55,099 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:38:55,129 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:38:55,344 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:38:55,345 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:39:01,441 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:03,889 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 15:39:03 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:39:04,034 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:39:04,779 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:39:04,841 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:39:04,891 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:39:04,956 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:39:05,070 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:39:05,309 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:39:05,310 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:39:10,324 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:12,287 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:14,110 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:16,057 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:17,948 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:19,876 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:21,690 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:25,450 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:28,406 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:30,288 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:32,177 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:34,111 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:36,047 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:37,789 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:39,645 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:41,550 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:43,548 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:45,399 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:47,142 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:53,711 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:57,232 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:39:59,183 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:01,136 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:02,975 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:04,795 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:06,890 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:08,734 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:10,639 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:12,807 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:15,148 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:17,879 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:21,340 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:23,414 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:25,375 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:27,157 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:29,051 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:30,861 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:32,841 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:37,814 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:41,244 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:46,315 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:49,384 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:51,127 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:52,952 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:54,755 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:40:56,615 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:00,254 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:03,909 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:05,909 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:07,930 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:09,979 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:11,931 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:13,935 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:15,983 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:17,790 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:20,286 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:23,564 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:26,683 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:28,540 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:30,358 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:32,155 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:34,115 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:35,912 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:37,620 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:39,402 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:41,338 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:43,125 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:44,934 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:46,647 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:49,336 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:54,951 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:56,697 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:41:58,499 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:00,234 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:03,742 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:05,516 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:07,321 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:10,195 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:15,006 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:18,462 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:20,845 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:22,559 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:25,043 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:27,139 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:28,920 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:30,688 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:32,571 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:34,379 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:36,290 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:38,100 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:39,929 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:41,855 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:45,261 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:50,827 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:52,997 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:54,815 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:56,673 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:42:59,440 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:01,255 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:03,150 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:05,017 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:08,527 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:11,849 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:14,013 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:16,450 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:21,431 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:24,296 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:27,025 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:33,388 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:35,387 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:37,156 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:39,014 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:40,901 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:42,728 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:44,731 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:46,671 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:49,500 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:53,719 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:55,758 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:43:58,134 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:01,009 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:03,171 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:05,300 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:06,644 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1134affc: startup date [Tue Jul 04 15:44:06 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:44:06,701 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:44:07,197 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:44:07,252 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:44:07,325 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:44:07,401 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:07,427 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:44:07,454 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:44:07,646 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:44:07,647 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:44:09,838 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:11,741 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:12,079 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:17,636 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:17,925 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:20,308 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:20,829 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:23,224 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:23,408 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:25,478 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:26,826 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:27,851 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:29,759 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:44:36,507 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 15:44:36 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:44:36,594 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:44:37,172 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:44:37,208 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:44:37,254 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:44:37,326 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:44:37,405 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:44:37,705 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:44:37,706 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:45:21,295 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 15:45:21 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:45:21,401 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:45:21,809 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:45:21,843 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:45:21,908 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:45:21,964 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:45:21,985 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:45:22,256 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:45:22,257 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:46:30,379 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1134affc: startup date [Tue Jul 04 15:46:30 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:46:30,458 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:46:30,844 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:46:30,885 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:46:30,927 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:46:30,951 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:46:30,979 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:46:31,205 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:46:31,206 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:46:34,863 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:46:38,712 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:46:40,614 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:46:42,750 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:46:44,787 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:46:46,674 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:46:48,532 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:46:50,461 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:46:52,885 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 0 articles in all.
+[INFO ] 2017-07-04 15:47:00,051 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 15:47:00 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:47:00,130 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:47:00,531 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:47:00,587 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:47:00,641 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:47:00,711 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:47:00,769 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:47:01,037 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:47:01,038 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:48:03,441 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 15:48:03 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:48:03,590 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:48:04,037 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:48:04,085 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:48:04,174 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:48:04,252 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:48:04,302 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:48:04,613 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:48:04,614 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:54:06,080 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 15:54:06 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:54:06,161 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:54:06,610 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:54:06,654 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:54:06,751 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:54:06,832 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:54:06,884 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:54:07,122 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:54:07,123 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:56:57,052 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1134affc: startup date [Tue Jul 04 15:56:57 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:56:57,122 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:56:57,560 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:56:57,592 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:56:57,634 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:56:57,663 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:56:57,687 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:56:57,903 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:56:57,903 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:57:04,719 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-04 15:57:05,147 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 15 articles in all.
+[INFO ] 2017-07-04 15:57:09,079 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 30 articles in all.
+[INFO ] 2017-07-04 15:57:15,954 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 15:57:15 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:57:16,145 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:57:16,541 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:57:16,596 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:57:16,656 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:57:16,691 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:57:16,748 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:57:17,025 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:57:17,029 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:59:33,666 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1134affc: startup date [Tue Jul 04 15:59:33 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:59:33,737 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:59:34,199 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:59:34,230 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:59:34,309 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:59:34,405 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:59:34,443 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:59:34,701 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:59:34,702 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 15:59:45,381 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 15:59:45 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 15:59:45,476 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 15:59:45,940 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 15:59:45,978 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 15:59:46,033 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 15:59:46,081 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 15:59:46,160 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 15:59:46,474 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 15:59:46,475 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 16:02:55,853 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 16:02:55 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 16:02:56,029 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 16:02:56,536 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 16:02:56,585 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 16:02:56,658 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 16:02:56,700 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 16:02:56,722 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 16:02:56,955 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 16:02:56,956 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 16:03:45,697 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 16:03:45 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 16:03:45,782 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 16:03:46,165 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 16:03:46,208 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 16:03:46,283 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 16:03:46,334 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 16:03:46,357 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 16:03:46,590 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 16:03:46,591 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 16:05:22,159 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 16:05:22 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 16:05:22,239 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 16:05:22,706 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 16:05:22,752 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 16:05:22,840 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 16:05:22,869 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 16:05:22,939 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 16:05:23,217 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 16:05:23,219 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 16:11:21,781 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 16:11:21 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 16:11:21,861 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 16:11:22,236 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 16:11:22,296 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 16:11:22,365 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 16:11:22,402 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 16:11:22,436 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 16:11:22,899 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 16:11:22,900 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 16:12:48,781 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 16:12:48 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 16:12:48,875 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 16:12:49,426 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 16:12:49,482 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 16:12:49,583 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 16:12:49,644 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 16:12:49,680 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 16:12:49,956 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 16:12:49,959 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 16:18:30,037 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 16:18:30 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 16:18:30,126 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 16:18:30,540 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 16:18:30,572 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 16:18:30,602 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 16:18:30,657 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 16:18:30,746 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 16:18:31,054 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 16:18:31,055 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 16:20:42,551 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@5762806e: startup date [Tue Jul 04 16:20:42 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-04 16:20:42,805 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-04 16:20:43,374 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-04 16:20:43,419 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-04 16:20:43,521 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-04 16:20:43,553 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-04 16:20:43,647 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-04 16:20:43,977 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-04 16:20:43,978 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-04 16:21:07,299 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-04 16:21:07,685 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 15 articles in all.
+[INFO ] 2017-07-04 16:21:25,416 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1/, get 30 articles in all.

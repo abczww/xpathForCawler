@@ -13,22 +13,13 @@ import com.cnki.ksp.core.KspObserver;
 import com.cnki.ksp.core.Processor;
 import com.cnki.ksp.core.XPathUtilTools;
 import com.cnki.ksp.helper.JSoupConnectionHelper;
-import com.cnki.ksp.helper.UtilHelper;
 import com.cnki.ksp.processor.AutohomeProcessor;
 
 import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
 import cn.wanghaomiao.xpath.model.JXDocument;
 import cn.wanghaomiao.xpath.model.JXNode;
 
-/**
- * The crawler for Autohome(汽车之家). it could list all articles of autohome and
- * save it to db.
- * 
- * @author william
- * @version 1.0
- *
- */
-public class AutohomeController extends AbsController implements Runnable {
+public class AutohomeEvaluateController extends AbsController implements Runnable {
 
 	/** if load page success or not. */
 	protected boolean loadPageSuccessFlag = false;
@@ -53,9 +44,9 @@ public class AutohomeController extends AbsController implements Runnable {
 		xForward = controllerProperties.getProperty("xForward");
 		articleUrls = new ArrayList<String>();
 	}
-	
+
 	@Override
-	public String getTopic(){
+	public String getTopic() {
 		return processorProperties.getProperty("carModel");
 	}
 
@@ -99,18 +90,17 @@ public class AutohomeController extends AbsController implements Runnable {
 	}
 
 	private List<String> getAllUrlsByTemplate() throws Exception {
-		JXDocument xdoc = JSoupConnectionHelper.getXDocumentFromUrl(controllerProperties.getProperty("entranceUrl"), timeout);
-		XPathUtilTools xpathTools = new XPathUtilTools(xdoc);
-		String endPageStr = xpathTools.getContentByXPath(controllerProperties.getProperty("pageEnd"));
 		String entranceTemplate = controllerProperties.getProperty("entranceTemplate");
 		int pageStart = 1;
-		int pageEnd = Integer.parseInt(UtilHelper.getLastPageNumber(endPageStr));
 		articleUrls.clear();
 
-		for (int i = pageStart; i <= pageEnd; i++) {
-			String url = entranceTemplate.replaceAll("pageNum", i + "");
+		while (true) {
+			String url = entranceTemplate.replaceAll("pageNum", pageStart + "");
+			if (url.startsWith("###")) {
+				break;
+			}
 			analyseUrls(url);
-			observer.appendInfo("analyse all pages: %d/%d, get %d articles in all.", i, pageEnd, articleUrls.size());
+			observer.appendInfo("analyse page: %d, get %d articles in all.", pageStart, articleUrls.size());
 		}
 		return articleUrls;
 	}
@@ -131,12 +121,12 @@ public class AutohomeController extends AbsController implements Runnable {
 		List<JXNode> rs = xdoc.selN(xUrl);
 		for (JXNode node : rs) {
 			XPathUtilTools xpathTool = new XPathUtilTools(xdoc);
-			String turl = xpathTool.getContentByXPath(node, "//dt/a", "href");
-			String tauthor = xpathTool.getContentByXPath(node, "//dd[1]/a", null);
-			String tdate = xpathTool.getContentByXPath(node, "//dd[1]/span", null);
-			String ttitle = xpathTool.getContentByXPath(node, "//dt/a", null);
+			String turl = xpathTool.getContentByXPath(node, controllerProperties.getProperty("xTitleUrl"), "href");
+			String tauthor = xpathTool.getContentByXPath(node, controllerProperties.getProperty("xAuthor"), null);
+			String tdate = xpathTool.getContentByXPath(node, controllerProperties.getProperty("xDate"), null);
+			String ttitle = xpathTool.getContentByXPath(node, controllerProperties.getProperty("xTitle"), null);
 			Article art = new Article();
-			art.setUrl(this.webSite + turl);
+			art.setUrl(turl.startsWith("http") ? turl : (this.webSite + turl));
 			art.setAuthor(tauthor);
 			art.setDate(tdate);
 			art.setTitle(ttitle);
@@ -184,7 +174,7 @@ public class AutohomeController extends AbsController implements Runnable {
 		}
 		return reValue;
 	}
-	
+
 	@Override
 	public void run() {
 		try {

@@ -82,12 +82,14 @@ public class XPathFrame extends JFrame {
 						}
 					}
 
-					jta_content.setText(reValue);
+					jta_content.setText(reValue==null?"null":reValue);
 				} catch (IOException e1) {
 					e1.printStackTrace();
+					jta_content.setText(e1.getMessage());
 				} catch (XpathSyntaxErrorException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
+					jta_content.setText(e1.getMessage());
 				}
 			}
 		});

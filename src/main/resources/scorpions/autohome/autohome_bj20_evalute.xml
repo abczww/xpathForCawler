@@ -11,30 +11,27 @@
     http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
-
-
-	<bean id="autohomeController_bj40" class="com.cnki.ksp.controller.autohome.AutohomeBBSController">
+	
+	<bean id="autohomeController_bj20_evalute" class="com.cnki.ksp.controller.autohome.AutohomeEvaluateController">
 		<property name="controllerProperties">
 			<props>
-				<prop key="timeout">${timeout}</prop>
-				<prop key="webSite">${autohome.website}</prop>
-				<prop key="entranceUrl">${autohome.bj40.entrance}</prop>
-				<prop key="entranceTemplate">${autohome.bj40.entranceTemplate}</prop>
-				<prop key="pageStart">1</prop>
-				<prop key="pageEnd">${autohome.pageEnd}</prop>
-				<prop key="xUrl">${autohome.xurl}</prop>
-				<prop key="xTitle">${autohome.xtitle}</prop>
-				<prop key="xDate">${autohome.xdate}</prop>
+				<prop key="timeout">6000</prop>
+				<prop key="webSite">http://k.autohome.com.cn</prop>
+				<prop key="entranceUrl">http://k.autohome.com.cn/623/index_1.html#dataList</prop>
+				<prop key="entranceTemplate">http://k.autohome.com.cn/623/index_pageNum.html#dataList</prop>
+				<prop key="xUrl">//div[@class='mouthcon']</prop>
+				<prop key="xTitleUrl">//div[@class='mouth-item']/div/div/a</prop>
+				<prop key="xTitle">//div[@class='mouth-item']/div/div/a</prop>
+				<prop key="xDate">//div[@class='mouth-item']/div/div/b/a</prop>
 				<prop key="xTime">${autohome.xtime}</prop>
-				<prop key="xAuthor">${autohome.xauthor}</prop>
-				<prop key="isNeedForward">${autohome.isNeedForward}</prop>
-				<prop key="xForward">${autohome.xforward}</prop>
+				<prop key="xAuthor">//div[@class='name-text']/p/a</prop>
+				<prop key="isNeedForward">true</prop>
 			</props>
 		</property>
 		<property name="processorProperties">
 			<props>
-				<prop key="carModel">${autohome.bj80.carModel}</prop>
-				<prop key="xTitle">${autohome.xtitle2}</prop>
+				<prop key="carModel">bj20</prop>
+				<prop key="xTitle">//div[@class='kou-tit']/h3</prop>
 				<prop key="xAuthor">${autohome.xauthor2}</prop>
 				<prop key="xTime">${autohome.xtime2}</prop>
 				<prop key="xContent">${autohome.xcontent}</prop>

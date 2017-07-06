@@ -28,6 +28,9 @@ public class XPathUtilTools {
 	}
 
 	public String getContentByXPath(String xPath) throws XpathSyntaxErrorException {
+		if (null == xPath || "".equals(xPath.trim())) {
+			return null;
+		}
 		List<JXNode> rs = xdoc.selN(xPath);
 		return getContentByNodeList(rs);
 	}
