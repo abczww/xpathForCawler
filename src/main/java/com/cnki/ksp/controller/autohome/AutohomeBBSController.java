@@ -28,7 +28,7 @@ import cn.wanghaomiao.xpath.model.JXNode;
  * @version 1.0
  *
  */
-public class AutohomeBBSController extends AbsController implements Runnable {
+public class AutohomeBBSController extends AbsController {
 
 	/** if load page success or not. */
 	protected boolean loadPageSuccessFlag = false;
@@ -66,7 +66,8 @@ public class AutohomeBBSController extends AbsController implements Runnable {
 	 * @throws Exception,
 	 *             if any exception happened, throw it to run method of thread.
 	 */
-	private void execute() throws Exception {
+	@Override
+	public void execute() throws Exception {
 		try {
 			if (isNeedForward) {
 				// if(false){
@@ -183,15 +184,6 @@ public class AutohomeBBSController extends AbsController implements Runnable {
 			}
 		}
 		return reValue;
-	}
-	
-	@Override
-	public void run() {
-		try {
-			this.execute();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
 
 }

@@ -4,18 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
-import javax.annotation.Resource;
-
-import org.mybatis.spring.SqlSessionTemplate;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cnki.ksp.beans.Article;
+import com.cnki.ksp.dao.ArticleDao;
 import com.cnki.ksp.processor.AutohomeProcessor;
 
-public abstract class AbsController implements CrawlerController {
+public abstract class AbsController implements CrawlerController, Runnable {
 
-	@Resource(name = "sqlSessionTemplate")
-	protected SqlSessionTemplate sqlSessionTemplate;
+	@Autowired
+	protected ArticleDao articleDao;
 	protected KspObserver observer;
+	/** the forward urls. */
+	protected List<String> articleUrls;
+	protected Properties controllerProperties;
+	protected Properties processorProperties;
 
 	public void saveArticlesAndClean() throws InterruptedException {
 		for (int i = 0; i < ArticlePool.getInstance().getFailUrls().size(); i++) {
@@ -33,7 +36,7 @@ public abstract class AbsController implements CrawlerController {
 		List<Article> duplicatedArts = new ArrayList<Article>();
 		for (Article art : arts) {
 			if (!checkAndFindArticle(art)) {
-				sqlSessionTemplate.insert("Article.saveArticle", art);
+				articleDao.save(art);
 			} else {
 				System.out.println("Find duplicated records: " + art);
 				duplicatedArts.add(art);
@@ -52,19 +55,24 @@ public abstract class AbsController implements CrawlerController {
 	}
 
 	public boolean checkAndFindArticle(Article art) {
-		List<Integer> ids = sqlSessionTemplate.selectList("Article.findDuplicatedArticle", art);
+		List<Integer> ids = articleDao.getDuplicatedArticles(art);
 		if (ids.size() > 0) {
 			return true;
 		}
 		return false;
 	}
+	
+	@Override
+	public void run() {
+		try {
+			execute();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
 
 	protected abstract void getAllUrlsByXPath(String url) throws Exception;
-
-	/** the forward urls. */
-	protected List<String> articleUrls;
-	protected Properties controllerProperties;
-	protected Properties processorProperties;
 
 	public Properties getControllerProperties() {
 		return controllerProperties;
@@ -84,5 +92,15 @@ public abstract class AbsController implements CrawlerController {
 
 	protected void putProcessorToPool(Processor processor) {
 		// ExecutorPool.put(processor);
+	}
+
+	public int getKspId() {
+		Object value = controllerProperties.get("kspId");
+		return null == value ? 0 : Integer.parseInt(String.valueOf(value));
+	}
+
+	public String getKspName() {
+		Object value = controllerProperties.get("kspName");
+		return null == value ? "" : String.valueOf(value);
 	}
 }

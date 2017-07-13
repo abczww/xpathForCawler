@@ -5,14 +5,14 @@
 	<insert id="saveArticle" parameterType="article">
 		insert into bj_article_temp(
 		carModel, carFirm, type, website, 
-		url, author, time, date, 
+		url, author, time, date, kspId,
 		title, content, content2, hits, replies, 
-		createdBy, createdTime,updatedBy,updatedTime) 
+		createdTime) 
 		values( 
 		#{carModel}, #{carFirm}, #{type}, #{website},
-		#{url}, #{author}, #{time}, #{date}, 
+		#{url}, #{author}, #{time}, #{date}, #{kspId} 
 		 #{title}, #{content}, #{content2}, #{hits}, #{replies},
-		#{createdBy}, #{createdTime}, #{updatedBy}, #{updatedTime});
+		#{createdTime});
 	</insert>
 
 	<!-- 根据查询我的浏览记录 -->

@@ -14,7 +14,7 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 import javax.swing.Timer;
 
-import com.cnki.ksp.controller.TSPController;
+import com.cnki.ksp.controller.KSPController;
 import com.cnki.ksp.core.AppContext;
 import com.cnki.ksp.core.CrawlerController;
 import com.cnki.ksp.core.KspObserver;
@@ -122,10 +122,10 @@ public class ScorpionsStartFrame extends JFrame {
 		try {
 			KspObserver observer = KspObserver.getIntance(this.getClass().getName());
 			observer.setHandler(jta_info);
-			TSPController tsp = AppContext.getBean(TSPController.class);
+			KSPController tsp = AppContext.getBean(KSPController.class);
 			for (CrawlerController cc : tsp.getCrawlers()) {
 				cc.init(observer);
-				jtf_topic.setText("getting articles from " + cc.getTopic());
+				jtf_topic.setText(cc.getKspName() + " is getting articles from " + cc.getTopic());
 				cc.run();
 			}
 		} catch (Exception e) {

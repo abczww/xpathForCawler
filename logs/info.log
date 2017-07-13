@@ -1,26 +1,309 @@
-[INFO ] 2017-07-06 11:52:09,172 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
-Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1134affc: startup date [Thu Jul 06 11:52:09 CST 2017]; root of context hierarchy
-[INFO ] 2017-07-06 11:52:09,295 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+[INFO ] 2017-07-13 09:13:01,422 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6d306baa: startup date [Thu Jul 13 09:13:01 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-13 09:13:01,512 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
 Loading XML bean definitions from class path resource [applicationContext.xml]
-[INFO ] 2017-07-06 11:52:09,995 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+[INFO ] 2017-07-13 09:13:01,968 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
 Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
-[INFO ] 2017-07-06 11:52:10,031 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+[INFO ] 2017-07-13 09:13:01,999 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
 Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
-[INFO ] 2017-07-06 11:52:10,058 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+[INFO ] 2017-07-13 09:13:02,033 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
 Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
-[INFO ] 2017-07-06 11:52:10,081 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+[INFO ] 2017-07-13 09:13:02,090 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
 Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
-[INFO ] 2017-07-06 11:52:10,105 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+[INFO ] 2017-07-13 09:13:02,118 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.out.xml]
+[INFO ] 2017-07-13 09:14:09,224 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f257b7b: startup date [Thu Jul 13 09:14:09 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-13 09:14:09,279 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-13 09:14:09,574 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-13 09:14:09,606 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-13 09:14:09,681 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-13 09:14:09,741 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-13 09:14:09,782 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
 Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
-[INFO ] 2017-07-06 11:52:10,360 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+[INFO ] 2017-07-13 09:14:10,042 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
 Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
-[INFO ] 2017-07-06 11:52:10,362 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+[INFO ] 2017-07-13 09:14:10,043 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
 Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
-[INFO ] 2017-07-06 11:52:18,725 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+[INFO ] 2017-07-13 09:14:17,586 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
 {dataSource-1} inited
-[INFO ] 2017-07-06 11:52:19,054 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
-analyse page: 1, get 15 articles in all.
-[INFO ] 2017-07-06 11:52:24,313 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
-analyse page: 1, get 30 articles in all.
-[INFO ] 2017-07-06 11:52:28,445 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
-analyse page: 1, get 45 articles in all.
+[INFO ] 2017-07-13 09:14:18,524 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse all pages: 1/74, get 104 articles in all.
+[INFO ] 2017-07-13 09:14:21,118 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse all pages: 2/74, get 204 articles in all.
+[INFO ] 2017-07-13 09:14:23,647 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse all pages: 3/74, get 304 articles in all.
+[INFO ] 2017-07-13 10:30:34,345 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e89f53: startup date [Thu Jul 13 10:30:34 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-13 10:30:34,401 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-13 10:30:34,747 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-13 10:30:34,789 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-13 10:30:34,850 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-13 10:30:34,876 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-13 10:30:34,896 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-13 10:30:35,141 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-13 10:30:35,141 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-13 10:32:14,764 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2715b7cb: startup date [Thu Jul 13 10:32:14 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-13 10:32:14,829 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-13 10:32:15,226 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-13 10:32:15,266 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-13 10:32:15,331 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-13 10:32:15,393 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-13 10:32:15,543 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-13 10:32:15,705 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-13 10:32:15,706 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[WARN ] 2017-07-13 10:32:16,413 method:org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:487)
+Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'autohomeController_bj20_evalute': Injection of autowired dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected com.cnki.ksp.dao.ArticleDao com.cnki.ksp.core.AbsController.articleDao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.cnki.ksp.dao.ArticleDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:334)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1210)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.cnki.ksp.core.AppContext.<clinit>(AppContext.java:9)
+	at com.cnki.ksp.frame.ScorpionsStartFrame.startAutohomeScorpion(ScorpionsStartFrame.java:125)
+	at com.cnki.ksp.frame.ScorpionsStartFrame.access$3(ScorpionsStartFrame.java:121)
+	at com.cnki.ksp.frame.ScorpionsStartFrame$1$1.run(ScorpionsStartFrame.java:52)
+Caused by: org.springframework.beans.factory.BeanCreationException: Could not autowire field: protected com.cnki.ksp.dao.ArticleDao com.cnki.ksp.core.AbsController.articleDao; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.cnki.ksp.dao.ArticleDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:561)
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:88)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessPropertyValues(AutowiredAnnotationBeanPostProcessor.java:331)
+	... 16 more
+Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type [com.cnki.ksp.dao.ArticleDao] found for dependency: expected at least 1 bean which qualifies as autowire candidate for this dependency. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.raiseNoSuchBeanDefinitionException(DefaultListableBeanFactory.java:1301)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1047)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:942)
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:533)
+	... 18 more
+[INFO ] 2017-07-13 10:39:16,838 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@605f54a5: startup date [Thu Jul 13 10:39:16 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-13 10:39:16,903 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-13 10:39:17,210 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-13 10:39:17,249 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-13 10:39:17,292 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-13 10:39:17,390 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-13 10:39:17,439 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-13 10:39:17,667 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-13 10:39:17,668 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[WARN ] 2017-07-13 10:39:18,543 method:org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:487)
+Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleDao' defined in class path resource [applicationContext.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionTemplate' of bean class [com.cnki.ksp.dao.ArticleDao]: Bean property 'sqlSessionTemplate' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.cnki.ksp.core.AppContext.<clinit>(AppContext.java:9)
+	at com.cnki.ksp.frame.ScorpionsStartFrame.startAutohomeScorpion(ScorpionsStartFrame.java:125)
+	at com.cnki.ksp.frame.ScorpionsStartFrame.access$3(ScorpionsStartFrame.java:121)
+	at com.cnki.ksp.frame.ScorpionsStartFrame$1$1.run(ScorpionsStartFrame.java:52)
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionTemplate' of bean class [com.cnki.ksp.dao.ArticleDao]: Bean property 'sqlSessionTemplate' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1076)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:927)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:95)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1510)
+	... 16 more
+[INFO ] 2017-07-13 10:40:26,816 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f257b7b: startup date [Thu Jul 13 10:40:26 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-13 10:40:26,870 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-13 10:40:27,222 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-13 10:40:27,266 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-13 10:40:27,375 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-13 10:40:27,407 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-13 10:40:27,437 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-13 10:40:27,746 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-13 10:40:27,747 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[WARN ] 2017-07-13 10:40:28,509 method:org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:487)
+Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleDao' defined in class path resource [applicationContext.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionTemplate' of bean class [com.cnki.ksp.dao.ArticleDao]: Bean property 'sqlSessionTemplate' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.cnki.ksp.core.AppContext.<clinit>(AppContext.java:9)
+	at com.cnki.ksp.frame.ScorpionsStartFrame.startAutohomeScorpion(ScorpionsStartFrame.java:125)
+	at com.cnki.ksp.frame.ScorpionsStartFrame.access$3(ScorpionsStartFrame.java:121)
+	at com.cnki.ksp.frame.ScorpionsStartFrame$1$1.run(ScorpionsStartFrame.java:52)
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionTemplate' of bean class [com.cnki.ksp.dao.ArticleDao]: Bean property 'sqlSessionTemplate' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1076)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:927)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:95)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1510)
+	... 16 more
+[INFO ] 2017-07-13 10:41:57,925 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e89f53: startup date [Thu Jul 13 10:41:57 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-13 10:41:57,982 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-13 10:41:58,414 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-13 10:41:58,468 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-13 10:41:58,515 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-13 10:41:58,610 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-13 10:41:58,643 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-13 10:41:58,836 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-13 10:41:58,836 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[WARN ] 2017-07-13 10:41:59,507 method:org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:487)
+Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleDao' defined in class path resource [applicationContext.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionTemplate' of bean class [com.cnki.ksp.dao.ArticleDao]: Bean property 'sqlSessionTemplate' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.cnki.ksp.core.AppContext.<clinit>(AppContext.java:9)
+	at com.cnki.ksp.frame.ScorpionsStartFrame.startAutohomeScorpion(ScorpionsStartFrame.java:125)
+	at com.cnki.ksp.frame.ScorpionsStartFrame.access$3(ScorpionsStartFrame.java:121)
+	at com.cnki.ksp.frame.ScorpionsStartFrame$1$1.run(ScorpionsStartFrame.java:52)
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionTemplate' of bean class [com.cnki.ksp.dao.ArticleDao]: Bean property 'sqlSessionTemplate' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1076)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:927)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:95)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1510)
+	... 16 more
+[INFO ] 2017-07-13 10:46:17,033 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@63e89f53: startup date [Thu Jul 13 10:46:17 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-13 10:46:17,089 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-13 10:46:17,466 method:org.springframework.beans.factory.support.DefaultListableBeanFactory.registerBeanDefinition(DefaultListableBeanFactory.java:822)
+Overriding bean definition for bean 'articleDao': replacing [Generic bean: class [com.cnki.ksp.dao.ArticleDao]; scope=singleton; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/com/cnki/ksp/dao/ArticleDao.class]] with [Generic bean: class [com.cnki.ksp.dao.ArticleDao]; scope=; abstract=false; lazyInit=false; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in class path resource [applicationContext.xml]]
+[INFO ] 2017-07-13 10:46:17,469 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-13 10:46:17,546 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-13 10:46:17,581 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-13 10:46:17,605 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-13 10:46:17,627 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-13 10:46:17,872 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-13 10:46:17,873 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[WARN ] 2017-07-13 10:46:18,613 method:org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:487)
+Exception encountered during context initialization - cancelling refresh attempt
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'articleDao' defined in class path resource [applicationContext.xml]: Error setting property values; nested exception is org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionTemplate' of bean class [com.cnki.ksp.dao.ArticleDao]: Bean property 'sqlSessionTemplate' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1514)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1222)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:537)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:476)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:303)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:194)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:755)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:757)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:480)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:139)
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:83)
+	at com.cnki.ksp.core.AppContext.<clinit>(AppContext.java:9)
+	at com.cnki.ksp.frame.ScorpionsStartFrame.startAutohomeScorpion(ScorpionsStartFrame.java:125)
+	at com.cnki.ksp.frame.ScorpionsStartFrame.access$3(ScorpionsStartFrame.java:121)
+	at com.cnki.ksp.frame.ScorpionsStartFrame$1$1.run(ScorpionsStartFrame.java:52)
+Caused by: org.springframework.beans.NotWritablePropertyException: Invalid property 'sqlSessionTemplate' of bean class [com.cnki.ksp.dao.ArticleDao]: Bean property 'sqlSessionTemplate' is not writable or has an invalid setter method. Does the parameter type of the setter match the return type of the getter?
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:1076)
+	at org.springframework.beans.BeanWrapperImpl.setPropertyValue(BeanWrapperImpl.java:927)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:95)
+	at org.springframework.beans.AbstractPropertyAccessor.setPropertyValues(AbstractPropertyAccessor.java:75)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1510)
+	... 16 more
+[INFO ] 2017-07-13 10:47:50,718 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@6f257b7b: startup date [Thu Jul 13 10:47:50 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-13 10:47:50,780 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-13 10:47:51,291 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-13 10:47:51,368 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-13 10:47:51,429 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-13 10:47:51,464 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-13 10:47:51,506 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-13 10:47:51,723 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-13 10:47:51,724 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-13 10:47:57,234 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited

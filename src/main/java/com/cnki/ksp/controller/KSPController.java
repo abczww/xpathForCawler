@@ -4,7 +4,7 @@ import java.util.List;
 
 import com.cnki.ksp.core.CrawlerController;
 
-public class TSPController {
+public class KSPController {
 	
 	List<CrawlerController> crawlers;
 

@@ -14,7 +14,7 @@
     
     <import resource="autohome/autohome_*.xml" />
     
-    <bean id="tspController" class="com.cnki.ksp.controller.TSPController">
+    <bean id="tspController" class="com.cnki.ksp.controller.KSPController">
     	<property name="crawlers">
     		<list>
     			<ref bean="autohomeController_bj20"/>

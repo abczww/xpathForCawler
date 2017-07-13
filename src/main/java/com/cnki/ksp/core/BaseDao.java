@@ -1,11 +1,12 @@
 package com.cnki.ksp.core;
 
-import org.mybatis.spring.SqlSessionTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
+import java.util.List;
 
-public abstract class BaseDao {
+public abstract class BaseDao<T> {
 
-	@Autowired
-	protected SqlSessionTemplate sqlSessionTemplate;
+	public abstract void save(T art);
+	
+	public abstract List<T> getAll();
+
 
 }

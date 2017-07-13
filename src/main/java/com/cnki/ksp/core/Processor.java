@@ -1,6 +1,5 @@
 package com.cnki.ksp.core;
 
-import java.util.Properties;
 import java.util.Set;
 
 import com.cnki.ksp.beans.Article;

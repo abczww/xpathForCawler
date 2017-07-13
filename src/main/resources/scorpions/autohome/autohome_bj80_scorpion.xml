@@ -16,6 +16,8 @@
 	<bean id="autohomeController_bj80" class="com.cnki.ksp.controller.autohome.AutohomeBBSController">
 		<property name="controllerProperties">
 			<props>
+				<prop key="kspId">1301</prop>
+				<prop key="kspName">${kspName.1301}</prop>
 				<prop key="timeout">${timeout}</prop>
 				<prop key="webSite">${autohome.website}</prop>
 				<prop key="entranceUrl">${autohome.bj80.entrance}</prop>
@@ -48,7 +50,5 @@
 			</props>
 		</property>
 	</bean>
-
-
 </beans>
    

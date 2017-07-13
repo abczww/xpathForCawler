@@ -72,7 +72,6 @@
 		<constructor-arg ref="sqlSessionFactory" />
 	</bean>
 
-
 	<import resource="scorpions/scorpions.xml" />
 
 </beans>

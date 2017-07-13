@@ -1,0 +1,26 @@
+[INFO ] 2017-07-06 11:52:09,172 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1134affc: startup date [Thu Jul 06 11:52:09 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-06 11:52:09,295 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-06 11:52:09,995 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-06 11:52:10,031 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-06 11:52:10,058 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-06 11:52:10,081 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-06 11:52:10,105 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-06 11:52:10,360 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-06 11:52:10,362 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/crawler/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-06 11:52:18,725 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-06 11:52:19,054 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1, get 15 articles in all.
+[INFO ] 2017-07-06 11:52:24,313 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1, get 30 articles in all.
+[INFO ] 2017-07-06 11:52:28,445 method:com.cnki.ksp.core.KspObserver.appendInfo(KspObserver.java:54)
+analyse page: 1, get 45 articles in all.

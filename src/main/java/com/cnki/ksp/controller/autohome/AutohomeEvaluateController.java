@@ -57,7 +57,8 @@ public class AutohomeEvaluateController extends AbsController implements Runnabl
 	 * @throws Exception,
 	 *             if any exception happened, throw it to run method of thread.
 	 */
-	private void execute() throws Exception {
+	@Override
+	public void execute() throws Exception {
 		try {
 			if (isNeedForward) {
 				// if(false){
