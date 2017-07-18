@@ -2,9 +2,11 @@ package com.cnki.ksp.core;
 
 import java.util.List;
 
-public abstract class BaseDao<T> {
+import com.cnki.ksp.beans.BaseBean;
 
-	public abstract void save(T art);
+public abstract class BaseDao<T extends BaseBean> {
+
+	public abstract void save(T t);
 	
 	public abstract List<T> getAll();
 

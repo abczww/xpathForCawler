@@ -18,17 +18,17 @@ public class ArticleDao extends BaseDao<Article> {
 
 	@Override
 	public List<Article> getAll() {
-		List<Article> arts = sqlSessionTemplate.selectList("Article.getAllArticles");
+		List<Article> arts = sqlSessionTemplate.selectList("Article.getAll");
 		return arts;
 	}
 
 	@Override
 	public void save(Article art) {
-		sqlSessionTemplate.insert("Article.saveArticle", art);
+		sqlSessionTemplate.insert("Article.save", art);
 	}
 
 	public List<Integer> getDuplicatedArticles(Article art) {
-		List<Integer> ids = sqlSessionTemplate.selectList("Article.findDuplicatedArticle", art);
+		List<Integer> ids = sqlSessionTemplate.selectList("Article.findDuplicated", art);
 		return ids;
 	}
 

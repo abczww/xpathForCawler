@@ -7,13 +7,17 @@ import java.util.Properties;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import com.cnki.ksp.beans.Article;
+import com.cnki.ksp.beans.CaptureRecord;
 import com.cnki.ksp.dao.ArticleDao;
+import com.cnki.ksp.dao.CaptureRecordDao;
 import com.cnki.ksp.processor.AutohomeProcessor;
 
 public abstract class AbsController implements CrawlerController, Runnable {
 
 	@Autowired
 	protected ArticleDao articleDao;
+	@Autowired 
+	protected CaptureRecordDao crDao;
 	protected KspObserver observer;
 	/** the forward urls. */
 	protected List<String> articleUrls;
@@ -69,6 +73,14 @@ public abstract class AbsController implements CrawlerController, Runnable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	
+	private void recrod(CaptureRecord cr){
+		cr.setCreatedBy(System.getenv("UESRNAME"));
+		cr.setKspId(Integer.parseInt(String.valueOf(controllerProperties.get("kspId"))));
+		cr.setKspName(String.valueOf(controllerProperties.get("kspName")));
+		//contro
+		
 	}
 
 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="CaptureRecord">
+
+	<insert id="save" parameterType="captureRecord">
+		insert into bdap_capture_record(
+		kspId, kspName,url
+		) 
+		values(
+		#{kspId},#{kspName},#{url}
+		);
+	</insert>
+
+	<!-- 根据查询我的浏览记录 -->
+	<select id="getAll" resultType="captureRecord" useCache="false">
+		select * from bdap_capture_record order by id desc; 
+	</select>
+	
+	<select id="getlatestTime"></select>
+	
+	<select id="findDuplicated" resultType="int" parameterType="captureRecord" useCache="true">
+		select art.id from bdap_capture_record art 
+		where art.date = #{date}
+		and art.author = #{author}
+		and art.title = #{title}
+		and art.url = #{url}
+		limit 0,10
+	</select>
+	
+
+</mapper>

@@ -1,11 +1,11 @@
 package com.cnki.ksp.test.conn;
 
+import static org.junit.Assert.assertTrue;
+
 import java.util.List;
 
-import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mybatis.spring.SqlSessionTemplate;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,35 +16,26 @@ import com.cnki.ksp.beans.Article;
 import com.cnki.ksp.beans.CaptureRecord;
 import com.cnki.ksp.dao.CaptureRecordDao;
 
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration({ "file:src/main/resources/applicationContext.xml" })
-public class TestDBConnection {
+public class TestCaptureRecord {
+
 	Logger logger = LoggerFactory.getLogger(TestDBConnection.class);
 
 	@Autowired
-	private SqlSessionTemplate sqlSessionTemplate;
-	@Autowired
 	private CaptureRecordDao crDao;
-
-	@Test
-	public void testConenction() {
-
-		List<Article> arts = sqlSessionTemplate.selectList("Article.getAllArticles");
-		logger.debug("Found " + arts.size() + " articles");
-		System.out.println("Found " + arts.size() + " articles");
-		Assert.assertTrue(arts.size() > 0);
-	}
-
-	@Test
-	public void insertArticle() {
-		Article art = getTheArticle();
-		// sqlSessionTemplate.insert("Article.saveArticle", art);
-	}
 	
 	@Test
 	public void insertCaputreRecord(){
 		CaptureRecord cr = this.getCaptureRecord();
 		crDao.save(cr);
+	}
+	
+	@Test
+	public void getAll(){
+		List<CaptureRecord> crs = crDao.getAll();
+		assertTrue(crs.size()>0);
 	}
 
 	private Article getTheArticle() {
@@ -71,5 +62,7 @@ public class TestDBConnection {
 		cr.setUrl("a test url");
 		return cr;
 	}
+
+
 
 }

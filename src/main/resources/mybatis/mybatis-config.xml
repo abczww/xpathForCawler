@@ -12,6 +12,7 @@
 
 	<typeAliases>
 	    <typeAlias type="com.cnki.ksp.beans.Article" alias="article"/>
+	    <typeAlias type="com.cnki.ksp.beans.CaptureRecord" alias="captureRecord"/>
 	</typeAliases>
 	
 	
