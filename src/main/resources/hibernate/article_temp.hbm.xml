@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2016-3-15 16:30:05 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+	<class name="com.cnki.ksp.beans.Article" table="bdap_article_temp">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="native" />
+		</id>
+		<property name="kspId" type="java.lang.Integer">
+			<column name="kspId" />
+		</property>
+		<property name="gatherTime" type="java.lang.String">
+			<column name="gatherTime" />
+		</property>
+		<property name="carModel" type="java.lang.String">
+			<column name="carModel" />
+		</property>
+		<property name="carFirm" type="java.lang.String">
+			<column name="carFirm" />
+		</property>
+		<property name="type" type="java.lang.Integer">
+			<column name="type" />
+		</property>
+		<property name="website" type="java.lang.String">
+			<column name="website" />
+		</property>
+		<property name="url" type="java.lang.String">
+			<column name="url" />
+		</property>
+		<property name="author" type="java.lang.String">
+			<column name="author" />
+		</property>
+		<property name="time" type="java.lang.String">
+			<column name="time" />
+		</property>
+		<property name="date" type="java.lang.String">
+			<column name="date" />
+		</property>
+		<property name="title" type="java.lang.String">
+			<column name="title" />
+		</property>
+		<property name="content" type="java.lang.String">
+			<column name="content" />
+		</property>
+		<property name="content2" type="java.lang.String">
+			<column name="content2" />
+		</property>
+		<property name="hits" type="java.lang.Integer">
+			<column name="hits" />
+		</property>
+		<property name="replies" type="java.lang.Integer">
+			<column name="" />
+		</property>
+		<property name="createdBy" type="java.lang.String">
+			<column name="createdBy" />
+		</property>
+		<property name="createdTime" type="java.sql.Timestamp">
+			<column name="createdTime" />
+		</property>
+		<property name="updatedBy" type="java.lang.String">
+			<column name="updatedBy" />
+		</property>
+		<property name="updatedTime" type="java.sql.Timestamp">
+			<column name="" />
+		</property>
+		<property name="deleted" type="java.lang.Integer">
+			<column name="deleted" />
+		</property>
+	</class>
+</hibernate-mapping>

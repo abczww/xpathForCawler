@@ -10,6 +10,34 @@
 	<name>abczww</name>
 	<url>http://maven.apache.org</url>
 
+	<!-- 指定maven仓库 -->
+	<repositories><!-- 发现依赖和扩展的远程资源库 -->
+		<!-- maven自己官方仓库 -->
+		<repository>
+			<id>maven</id>
+			<name>Maven Repository Switchboard</name>
+			<layout>default</layout>
+			<url>http://repo1.maven.org/maven2</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<!-- 阿里巴巴发布版本仓库 -->
+		<repository>
+			<id>alibaba-opensource</id>
+			<name>alibaba-opensource</name>
+			<url>http://code.alibabatech.com/mvn/releases/</url>
+			<layout>default</layout>
+		</repository>
+		<!-- 阿里巴巴快照版本仓库 -->
+		<repository>
+			<id>alibaba-opensource-snapshot</id>
+			<name>alibaba-opensource-snapshot</name>
+			<url>http://code.alibabatech.com/mvn/snapshots/</url>
+			<layout>default</layout>
+		</repository>
+	</repositories>
+
 	<properties>
 		<spring.version>4.1.7.RELEASE</spring.version>
 		<junit.version>3.8.1</junit.version>
@@ -26,6 +54,7 @@
 		<commons.logging.version>1.1</commons.logging.version>
 		<javax.annotation.version>1.2</javax.annotation.version>
 		<slf4j.version>1.7.21</slf4j.version>
+		<hibernate.version>5.2.10.Final</hibernate.version>
 	</properties>
 
 	<dependencies>
@@ -66,13 +95,6 @@
 			<artifactId>junit-dataprovider</artifactId>
 			<version>1.12.0</version>
 		</dependency>
-
-
-
-
-
-
-
 
 		<dependency>
 			<groupId>junit</groupId>
@@ -289,6 +311,22 @@
 			<groupId>org.slf4j</groupId>
 			<artifactId>jul-to-slf4j</artifactId>
 			<version>${slf4j.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-ehcache</artifactId>
+			<version>${hibernate.version}</version>
 		</dependency>
 	</dependencies>
 

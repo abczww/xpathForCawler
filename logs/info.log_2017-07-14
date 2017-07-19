@@ -1,0 +1,28 @@
+[INFO ] 2017-07-14 15:53:12,677 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-14 15:53:12,753 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@9629756, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@62ee68d8, org.springframework.test.context.support.DirtiesContextTestExecutionListener@735b5592, org.springframework.test.context.transaction.TransactionalTestExecutionListener@58651fd0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@4520ebad]
+[INFO ] 2017-07-14 15:53:13,114 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-14 15:53:13,640 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-14 15:53:13,674 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-14 15:53:13,714 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-14 15:53:13,744 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-14 15:53:13,816 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-14 15:53:13,859 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@589838eb: startup date [Fri Jul 14 15:53:13 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-14 15:53:14,089 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-14 15:53:14,091 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-14 15:53:16,095 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-14 15:53:16,247 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing org.springframework.context.support.GenericApplicationContext@589838eb: startup date [Fri Jul 14 15:53:13 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-14 15:53:16,259 method:com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1444)
+{dataSource-1} closed

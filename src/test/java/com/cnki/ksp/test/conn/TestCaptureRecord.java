@@ -2,6 +2,7 @@ package com.cnki.ksp.test.conn;
 
 import static org.junit.Assert.assertTrue;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 import org.junit.Test;
@@ -35,7 +36,7 @@ public class TestCaptureRecord {
 	@Test
 	public void getAll(){
 		List<CaptureRecord> crs = crDao.getAll();
-		assertTrue(crs.size()>0);
+		assertTrue(crs.size()>=0);
 	}
 
 	private Article getTheArticle() {
@@ -60,6 +61,7 @@ public class TestCaptureRecord {
 		cr.setKspId(1101);
 		cr.setKspName("A test name");
 		cr.setUrl("a test url");
+		cr.setCaptureStartTime(new Timestamp(System.currentTimeMillis()));
 		return cr;
 	}
 

@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="CaptureRecord">
 
-	<insert id="save" parameterType="captureRecord">
+	<insert id="insert" parameterType="captureRecord">
 		insert into bdap_capture_record(
 		kspId, kspName,url
 		) 
@@ -10,6 +10,11 @@
 		#{kspId},#{kspName},#{url}
 		);
 	</insert>
+
+	<update id="update" parameterType="captureRecord">
+		update bdap_capture_record
+		set
+	</update>
 
 	<!-- 根据查询我的浏览记录 -->
 	<select id="getAll" resultType="captureRecord" useCache="false">

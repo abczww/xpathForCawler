@@ -2,6 +2,7 @@ package com.cnki.ksp.test.conn;
 
 import java.util.List;
 
+import com.cnki.ksp.dao.ArticleDao;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,6 +26,8 @@ public class TestDBConnection {
 	private SqlSessionTemplate sqlSessionTemplate;
 	@Autowired
 	private CaptureRecordDao crDao;
+	@Autowired
+	private ArticleDao articleDao;
 
 	@Test
 	public void testConenction() {
@@ -38,7 +41,7 @@ public class TestDBConnection {
 	@Test
 	public void insertArticle() {
 		Article art = getTheArticle();
-		// sqlSessionTemplate.insert("Article.saveArticle", art);
+		articleDao.save(art);
 	}
 	
 	@Test

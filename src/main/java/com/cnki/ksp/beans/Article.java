@@ -2,35 +2,37 @@ package com.cnki.ksp.beans;
 
 public class Article extends BaseBean {
 
-	/** 主键，自增 */
+	/** primary key, auto increase.  */
 	private int id;
-	/** 采集时间 */
+	/** the KScorpion id. */
+	private int kspId;
+	/** the gather time. */
 	private String gatherTime;
-	/** 车型 */
+	/** car model */
 	private String carModel;
-	/** 厂商 */
+	/** car firm */
 	private String carFirm;
-	/** 类型1:行业动态 ；2:问题发现 ；3:定制改装 ；4:竞品分析 */
+	/** type: 1:行业动态 ；2:问题发现 ；3:定制改装 ；4:竞品分析 */
 	private int type;
-	/** 来源网站 */
+	/** website */
 	private String website;
-	/** 原始URL */
+	/** the original URL */
 	private String url;
-	/** 帖子信息-作者 */
+	/** article-author */
 	private String author;
-	/** 帖子信息-时间 */
+	/** article-time */
 	private String time;
-	/** 帖子信息-日期 */
+	/** article-date */
 	private String date;
-	/** 帖子信息-标题 */
+	/** article-title */
 	private String title;
-	/** 帖子信息-全文 */
+	/** article-content */
 	private String content;
-	/** 帖子信息-全文- 全文检索 */
+	/** article-content- for content search */
 	private String content2;
-	/** 点击数 */
+	/** hits */
 	private int hits;
-	/** 回复数 */
+	/** replies */
 	private int replies;
 
 	@Override
@@ -156,5 +158,13 @@ public class Article extends BaseBean {
 
 	public void setReplies(int replies) {
 		this.replies = replies;
+	}
+
+	public int getKspId() {
+		return kspId;
+	}
+
+	public void setKspId(int kspId) {
+		this.kspId = kspId;
 	}
 }

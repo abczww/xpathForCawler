@@ -52,11 +52,11 @@ public class BaseBean {
 		this.updatedTime = updatedTime;
 	}
 
-	public boolean isDeleted() {
+	public int getDeleted() {
 		return deleted;
 	}
 
-	public void setDeleted(boolean deleted) {
+	public void setDeleted(int deleted) {
 		this.deleted = deleted;
 	}
 
@@ -64,6 +64,6 @@ public class BaseBean {
 	private Timestamp createdTime;
 	private String updatedBy;
 	private Timestamp updatedTime;
-	private boolean deleted;
+	private int deleted;
 
 }
