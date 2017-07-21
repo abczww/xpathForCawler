@@ -41,13 +41,13 @@ public class TestDBConnection {
 	@Test
 	public void insertArticle() {
 		Article art = getTheArticle();
-		articleDao.save(art);
+		articleDao.saveOrUpdate(art);
 	}
 	
 	@Test
 	public void insertCaputreRecord(){
 		CaptureRecord cr = this.getCaptureRecord();
-		crDao.save(cr);
+		crDao.saveOrUpdate(cr);
 	}
 
 	private Article getTheArticle() {

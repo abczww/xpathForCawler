@@ -53,9 +53,9 @@ public class AutohomeBBSController extends AbsController {
 		xForward = controllerProperties.getProperty("xForward");
 		articleUrls = new ArrayList<String>();
 	}
-	
+
 	@Override
-	public String getTopic(){
+	public String getTopic() {
 		return processorProperties.getProperty("carModel");
 	}
 
@@ -68,39 +68,35 @@ public class AutohomeBBSController extends AbsController {
 	 */
 	@Override
 	public void execute() throws Exception {
-		try {
-			if (isNeedForward) {
-				// if(false){
-				getAllUrlsByTemplate();
-				observer.appendInfo("get %d urls in all.", articleUrls.size());
+		if (isNeedForward) {
+			// if(false){
+			getAllUrlsByTemplate();
+			observer.appendInfo("get %d urls in all.", articleUrls.size());
 
-				for (int i = 0; i < articleUrls.size(); i++) {
-					String url = articleUrls.get(i);
-					Processor processor = new AutohomeProcessor(webSite + "" + url, processorProperties, observer);
-					processor.execute();
-					observer.appendInfo("getting articles from url progress: " + (i + 1) + "/" + articleUrls.size());
-					// save 100 articles in one time.
-					if ((i + 1) % 100 == 0) {
-						saveArticlesAndClean();
-					}
-				}
-			} else {
-				String url = "http://club.autohome.com.cn/bbs/thread-c-623-64211415-1.html";
-				// String url =
-				// "http://club.autohome.com.cn/bbs/thread-c-623-63549997-1.html";
-				Processor processor = new AutohomeProcessor(url, processorProperties, observer);
+			for (int i = 0; i < articleUrls.size(); i++) {
+				String url = articleUrls.get(i);
+				Processor processor = new AutohomeProcessor(webSite + "" + url, processorProperties, observer);
 				processor.execute();
+				observer.appendInfo("getting articles from url progress: " + (i + 1) + "/" + articleUrls.size());
+				// save 100 articles in one time.
+				if ((i + 1) % 100 == 0) {
+					saveArticlesAndClean();
+				}
 			}
-
-			saveArticlesAndClean();
-		} catch (Exception e) {
-			e.printStackTrace();
-			throw e;
+		} else {
+			String url = "http://club.autohome.com.cn/bbs/thread-c-623-64211415-1.html";
+			// String url =
+			// "http://club.autohome.com.cn/bbs/thread-c-623-63549997-1.html";
+			Processor processor = new AutohomeProcessor(url, processorProperties, observer);
+			processor.execute();
 		}
+
+		saveArticlesAndClean();
 	}
 
 	private List<String> getAllUrlsByTemplate() throws Exception {
-		JXDocument xdoc = JSoupConnectionHelper.getXDocumentFromUrl(controllerProperties.getProperty("entranceUrl"), timeout);
+		JXDocument xdoc = JSoupConnectionHelper.getXDocumentFromUrl(controllerProperties.getProperty("entranceUrl"),
+				timeout);
 		XPathUtilTools xpathTools = new XPathUtilTools(xdoc);
 		String endPageStr = xpathTools.getContentByXPath(controllerProperties.getProperty("pageEnd"));
 		String entranceTemplate = controllerProperties.getProperty("entranceTemplate");

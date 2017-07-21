@@ -18,11 +18,12 @@ public class CaptureRecordDao extends BaseDao<CaptureRecord> {
 	SessionFactory sessionFactory;
 
 	@Override
-	public void save(CaptureRecord cr) {
+	public CaptureRecord saveOrUpdate(CaptureRecord cr) {
 		Session session = sessionFactory.openSession();
 		session.getTransaction().begin();
 		session.saveOrUpdate(cr);
 		session.getTransaction().commit();
+		return cr;
 	}
 
 	@Override

@@ -43,7 +43,7 @@ public abstract class AbsController implements CrawlerController, Runnable {
         List<Article> duplicatedArts = new ArrayList<Article>();
         for (Article art : arts) {
             if (!checkAndFindArticle(art)) {
-                articleDao.save(art);
+                articleDao.saveOrUpdate(art);
             } else {
                 System.out.println("Find duplicated records: " + art);
                 duplicatedArts.add(art);
@@ -62,7 +62,7 @@ public abstract class AbsController implements CrawlerController, Runnable {
     }
 
     public boolean checkAndFindArticle(Article art) {
-        List<Integer> ids = articleDao.getDuplicatedArticles(art);
+        List<Article> ids = articleDao.checkDuplicated(art);
         if (ids.size() > 0) {
             return true;
         }
@@ -73,7 +73,7 @@ public abstract class AbsController implements CrawlerController, Runnable {
     public void run() {
         try {
             CaptureRecord cr = new CaptureRecord();
-            recrod(cr);
+            cr = recrod(cr);
             execute();
             recrod(cr);
         } catch (Exception e) {
@@ -81,8 +81,8 @@ public abstract class AbsController implements CrawlerController, Runnable {
         }
     }
 
-    private void recrod(CaptureRecord cr) {
-        if (cr.getId() < 0) {
+    private CaptureRecord recrod(CaptureRecord cr) {
+        if (cr.getId() == 0) {
             cr = new CaptureRecord();
             cr.setCreatedBy(System.getenv("UESRNAME"));
             cr.setKspId(Integer.parseInt(String.valueOf(controllerProperties.get("kspId"))));
@@ -92,10 +92,8 @@ public abstract class AbsController implements CrawlerController, Runnable {
             cr.setUpdatedBy(System.getenv("USERNAME"));
             cr.setUpdatedTime(new Timestamp(System.currentTimeMillis()));
         }
-
-
-
-        crDao.save(cr);
+        crDao.saveOrUpdate(cr);
+        return cr;
     }
 
 

@@ -1,12 +1,13 @@
 package com.cnki.ksp.beans;
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class BaseBean {
+public class BaseBean implements Serializable{
 
 	public String getCreatedBy() {
 		return createdBy;

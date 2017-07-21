@@ -27,12 +27,16 @@ public class XPathUtilTools {
 		return reValue;
 	}
 
-	public String getContentByXPath(String xPath) throws XpathSyntaxErrorException {
+	public String getContentByXPath(String xPath) throws XpathSyntaxErrorException, StyleChangedException {
 		if (null == xPath || "".equals(xPath.trim())) {
 			return null;
 		}
 		List<JXNode> rs = xdoc.selN(xPath);
-		return getContentByNodeList(rs);
+		String content = getContentByNodeList(rs);
+		if(null == content){
+			throw new StyleChangedException("The xpath: " + xPath + " changed", "StyleChangeException");
+		}
+		return content;
 	}
 
 	private String getContentByNodeList(List<JXNode> rs) {

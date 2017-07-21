@@ -30,7 +30,7 @@ public class TestCaptureRecord {
 	@Test
 	public void insertCaputreRecord(){
 		CaptureRecord cr = this.getCaptureRecord();
-		crDao.save(cr);
+		crDao.saveOrUpdate(cr);
 	}
 	
 	@Test

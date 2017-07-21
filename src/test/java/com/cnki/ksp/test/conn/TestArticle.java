@@ -28,12 +28,13 @@ public class TestArticle {
     @Test
     public void insertArticle() {
         Article art = getTheArticle();
-        articleDao.save(art);
+        articleDao.saveOrUpdate(art);
     }
     
     @Test
     public void getAllArticle(){
     	List<Article> arts = articleDao.getAll();
+    	System.out.println(arts.size());
     	assertTrue(arts.size()>0);
     }
 
@@ -46,9 +47,11 @@ public class TestArticle {
         artl.setWebsite("www.autohome.com.cn");
         artl.setUrl("http://www.autohome.com.cn");
         artl.setAuthor("NotMe");
+        artl.setDate("2017-07-20");
         artl.setTime("2017-06-21");
         artl.setTitle("This is a test");
         artl.setContent("添加包的依赖，编辑pom.xml文件添加如下依赖");
+        artl.setContent2("添加包的依赖，编辑pom.xml文件添加如下依赖");
         artl.setCreatedBy("zww");
         artl.setUpdatedBy("zww");
 

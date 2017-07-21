@@ -4,12 +4,9 @@
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
 	<session-factory>
-		<!-- 配置Hibernate的基本属性 -->
-		<!-- 1.数据源配置到IOC容器中 -->
-		<!-- 2.关联的.hbm.xml也在IOC容器配置SessionFactory实例 -->
-		<!-- 3.配置Hibernate的基本属性：方言，SQL显示及格式化，生成数据表的策略以及二级缓存 -->
+		<!-- set Hibernate base properties -->
 		<property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
-		<property name="hibernate.show_sql">true</property>
+		<property name="hibernate.show_sql">false</property>
 		<property name="hbm2ddl.auto">update</property>
 	</session-factory>
 </hibernate-configuration>

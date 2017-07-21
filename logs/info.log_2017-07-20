@@ -1,0 +1,398 @@
+[INFO ] 2017-07-20 09:16:44,139 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-20 09:16:44,162 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d057a39, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@26be92ad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c70fda8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@224edc67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14acaea5]
+[INFO ] 2017-07-20 09:16:44,325 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-20 09:16:44,708 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-20 09:16:44,738 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-20 09:16:44,792 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-20 09:16:44,820 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-20 09:16:44,838 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-20 09:16:44,867 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 09:16:44 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:16:45,070 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-20 09:16:45,072 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-20 09:16:45,723 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-07-20 09:16:45,727 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-07-20 09:16:45,767 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:16:45,973 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:16:47,280 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-07-20 09:16:47,372 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-07-20 09:16:48,155 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-20 09:16:48,193 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2017-07-20 09:16:49,956 method:org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47)
+HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2017-07-20 09:16:50,399 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 09:16:44 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:16:50,418 method:com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1444)
+{dataSource-1} closed
+[INFO ] 2017-07-20 09:17:20,971 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-20 09:17:20,992 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d057a39, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@26be92ad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c70fda8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@224edc67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14acaea5]
+[INFO ] 2017-07-20 09:17:21,178 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-20 09:17:21,496 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-20 09:17:21,541 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-20 09:17:21,584 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-20 09:17:21,616 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-20 09:17:21,638 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-20 09:17:21,696 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 09:17:21 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:17:21,931 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-20 09:17:21,932 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-20 09:17:22,712 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-07-20 09:17:22,715 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-07-20 09:17:22,768 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:17:23,041 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:17:24,509 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-07-20 09:17:24,577 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-07-20 09:17:25,365 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-20 09:17:25,390 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2017-07-20 09:17:26,311 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 09:17:21 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:17:26,329 method:com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1444)
+{dataSource-1} closed
+[INFO ] 2017-07-20 09:18:49,340 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-20 09:18:49,367 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d057a39, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@26be92ad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c70fda8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@224edc67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14acaea5]
+[INFO ] 2017-07-20 09:18:49,551 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-20 09:18:49,886 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-20 09:18:49,923 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-20 09:18:49,951 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-20 09:18:49,985 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-20 09:18:50,008 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-20 09:18:50,043 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 09:18:50 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:18:50,269 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-20 09:18:50,270 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-20 09:18:50,831 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-07-20 09:18:50,834 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-07-20 09:18:50,866 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:18:51,123 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:18:52,394 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-07-20 09:18:52,466 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-07-20 09:18:53,186 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-20 09:18:53,213 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[WARN ] 2017-07-20 09:18:54,648 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:129)
+SQL Error: 1048, SQLState: 23000
+[ERROR] 2017-07-20 09:18:54,648 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Column 'date' cannot be null
+[INFO ] 2017-07-20 09:18:54,665 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 09:18:50 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:18:54,676 method:com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1444)
+{dataSource-1} closed
+[INFO ] 2017-07-20 09:20:13,559 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-20 09:20:13,582 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d057a39, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@26be92ad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c70fda8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@224edc67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14acaea5]
+[INFO ] 2017-07-20 09:20:13,726 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-20 09:20:14,084 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-20 09:20:14,127 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-20 09:20:14,165 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-20 09:20:14,229 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-20 09:20:14,282 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-20 09:20:14,313 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 09:20:14 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:20:14,516 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-20 09:20:14,518 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-20 09:20:15,053 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-07-20 09:20:15,056 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-07-20 09:20:15,084 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:20:15,335 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:20:16,649 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-07-20 09:20:16,729 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-07-20 09:20:17,479 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-20 09:20:17,499 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[WARN ] 2017-07-20 09:20:18,835 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:129)
+SQL Error: 1048, SQLState: 23000
+[ERROR] 2017-07-20 09:20:18,836 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Column 'content2' cannot be null
+[INFO ] 2017-07-20 09:20:18,848 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 09:20:14 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:20:18,861 method:com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1444)
+{dataSource-1} closed
+[INFO ] 2017-07-20 09:20:57,461 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-20 09:20:57,485 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@8bd1b6a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@18be83e4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@cb5822, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b9e13df, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2b98378d]
+[INFO ] 2017-07-20 09:20:57,675 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-20 09:20:58,013 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-20 09:20:58,054 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-20 09:20:58,085 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-20 09:20:58,157 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-20 09:20:58,205 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-20 09:20:58,259 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@5702b3b1: startup date [Thu Jul 20 09:20:58 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:20:58,447 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-20 09:20:58,448 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-20 09:20:59,022 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-07-20 09:20:59,030 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-07-20 09:20:59,053 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:20:59,241 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:21:00,642 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-07-20 09:21:00,745 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-07-20 09:21:01,514 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-20 09:21:01,539 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2017-07-20 09:21:03,127 method:org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47)
+HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2017-07-20 09:21:03,435 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing org.springframework.context.support.GenericApplicationContext@5702b3b1: startup date [Thu Jul 20 09:20:58 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:21:03,449 method:com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1444)
+{dataSource-1} closed
+[INFO ] 2017-07-20 09:21:09,408 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-20 09:21:09,431 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@8bd1b6a, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@18be83e4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@cb5822, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4b9e13df, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@2b98378d]
+[INFO ] 2017-07-20 09:21:09,653 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-20 09:21:10,006 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-20 09:21:10,043 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-20 09:21:10,084 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-20 09:21:10,127 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-20 09:21:10,173 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-20 09:21:10,213 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@5702b3b1: startup date [Thu Jul 20 09:21:10 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:21:10,488 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-20 09:21:10,492 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-20 09:21:11,169 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-07-20 09:21:11,172 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-07-20 09:21:11,201 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:21:11,411 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 09:21:12,840 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-07-20 09:21:12,939 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-07-20 09:21:13,854 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-20 09:21:13,879 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2017-07-20 09:21:15,318 method:org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47)
+HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2017-07-20 09:21:15,672 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing org.springframework.context.support.GenericApplicationContext@5702b3b1: startup date [Thu Jul 20 09:21:10 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 09:21:15,687 method:com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1444)
+{dataSource-1} closed
+[INFO ] 2017-07-20 17:02:53,241 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-20 17:02:53,279 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d057a39, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@26be92ad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c70fda8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@224edc67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14acaea5]
+[INFO ] 2017-07-20 17:02:53,567 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-20 17:02:54,069 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-20 17:02:54,098 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-20 17:02:54,122 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-20 17:02:54,147 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-20 17:02:54,169 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-20 17:02:54,195 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 17:02:54 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 17:02:54,450 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-20 17:02:54,450 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-20 17:02:55,142 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-07-20 17:02:55,144 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-07-20 17:02:55,191 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 17:02:55,554 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 17:02:56,820 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-07-20 17:02:56,918 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-07-20 17:02:57,878 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-20 17:02:57,938 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2017-07-20 17:02:59,899 method:org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47)
+HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2017-07-20 17:03:00,169 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 17:02:54 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 17:03:00,193 method:com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1444)
+{dataSource-1} closed
+[INFO ] 2017-07-20 17:08:15,129 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-20 17:08:15,154 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d057a39, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@26be92ad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c70fda8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@224edc67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14acaea5]
+[INFO ] 2017-07-20 17:08:15,371 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-20 17:08:15,743 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-20 17:08:15,777 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-20 17:08:15,830 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-20 17:08:15,861 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-20 17:08:15,883 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-20 17:08:15,968 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 17:08:15 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 17:08:16,156 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-20 17:08:16,157 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-20 17:08:16,843 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-07-20 17:08:16,845 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-07-20 17:08:16,875 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 17:08:17,199 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 17:08:18,595 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-07-20 17:08:18,685 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-07-20 17:08:19,455 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-20 17:08:19,481 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2017-07-20 17:08:20,794 method:org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47)
+HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2017-07-20 17:08:20,958 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 17:08:15 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 17:08:20,971 method:com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1444)
+{dataSource-1} closed
+[INFO ] 2017-07-20 17:08:43,662 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getDefaultTestExecutionListenerClassNames(AbstractTestContextBootstrapper.java:256)
+Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+[INFO ] 2017-07-20 17:08:43,682 method:org.springframework.test.context.support.AbstractTestContextBootstrapper.getTestExecutionListeners(AbstractTestContextBootstrapper.java:182)
+Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d057a39, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@26be92ad, org.springframework.test.context.support.DirtiesContextTestExecutionListener@4c70fda8, org.springframework.test.context.transaction.TransactionalTestExecutionListener@224edc67, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@14acaea5]
+[INFO ] 2017-07-20 17:08:43,897 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/applicationContext.xml]
+[INFO ] 2017-07-20 17:08:44,225 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from URL [file:src/main/resources/scorpions/scorpions.xml]
+[INFO ] 2017-07-20 17:08:44,256 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-20 17:08:44,304 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-20 17:08:44,329 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-20 17:08:44,357 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/src/main/resources/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-20 17:08:44,402 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 17:08:44 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 17:08:44,617 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-20 17:08:44,618 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-20 17:08:45,201 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-07-20 17:08:45,204 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-07-20 17:08:45,234 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 17:08:45,446 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-20 17:08:46,640 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-07-20 17:08:46,718 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-07-20 17:08:47,465 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-20 17:08:47,486 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2017-07-20 17:08:48,702 method:org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47)
+HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2017-07-20 17:08:49,094 method:org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:862)
+Closing org.springframework.context.support.GenericApplicationContext@29ca901e: startup date [Thu Jul 20 17:08:44 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-20 17:08:49,107 method:com.alibaba.druid.pool.DruidDataSource.close(DruidDataSource.java:1444)
+{dataSource-1} closed

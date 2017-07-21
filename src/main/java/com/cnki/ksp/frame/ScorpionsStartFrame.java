@@ -18,7 +18,13 @@ import com.cnki.ksp.controller.KSPController;
 import com.cnki.ksp.core.AppContext;
 import com.cnki.ksp.core.CrawlerController;
 import com.cnki.ksp.core.KspObserver;
+import com.cnki.ksp.core.StyleChangedException;
 
+/**
+ *
+ * The main frame of the KSP, it's the entrance of the program.
+ *
+ */
 public class ScorpionsStartFrame extends JFrame {
 
 	private static final long serialVersionUID = -3686716486219841278L;
@@ -29,7 +35,7 @@ public class ScorpionsStartFrame extends JFrame {
 	private JButton jbtn_scorpinAction = new JButton("Action");
 	private Timer sysTimer;
 
-	private final String title = "KScorpion In Action V1.0.1";
+	private final String title = "KScorpion In Action " + Version.LATEST_VERSION;
 
 	public ScorpionsStartFrame() {
 		initFrame();
@@ -128,6 +134,8 @@ public class ScorpionsStartFrame extends JFrame {
 				jtf_topic.setText(cc.getKspName() + " is getting articles from " + cc.getTopic());
 				cc.run();
 			}
+		} catch (StyleChangedException se) {
+			se.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

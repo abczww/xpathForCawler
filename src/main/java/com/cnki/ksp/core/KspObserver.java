@@ -43,6 +43,9 @@ public class KspObserver {
 
 	public void appendInfo(String info) {
 		System.out.println(info);
+		if (jta_defaultInfoHandler.getRows() >= 26) {
+			jta_defaultInfoHandler.setText("");
+		}
 		jta_defaultInfoHandler.append(info + "\n");
 		logger.info(info);
 		jta_defaultInfoHandler.setCaretPosition(jta_defaultInfoHandler.getDocument().getLength());
@@ -52,6 +55,9 @@ public class KspObserver {
 		String info = String.format(format, args);
 		System.out.println(info);
 		logger.info(info);
+		if (jta_defaultInfoHandler.getRows() >= 26) {
+			jta_defaultInfoHandler.setText("");
+		}
 		jta_defaultInfoHandler.append(info + "\n");
 		jta_defaultInfoHandler.setCaretPosition(jta_defaultInfoHandler.getDocument().getLength());
 	}

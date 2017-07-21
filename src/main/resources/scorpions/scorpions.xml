@@ -20,7 +20,6 @@
     			<ref bean="autohomeController_bj20"/>
     			<ref bean="autohomeController_bj40"/>
     			<ref bean="autohomeController_bj80"/>
-    			<ref bean="autohomeController_bj20_evalute"/>
     		</list>
     	</property>
     </bean>

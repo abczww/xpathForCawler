@@ -6,6 +6,7 @@ import com.cnki.ksp.beans.Article;
 import com.cnki.ksp.core.AbsProcessor;
 import com.cnki.ksp.core.ArticlePool;
 import com.cnki.ksp.core.KspObserver;
+import com.cnki.ksp.core.StyleChangedException;
 import com.cnki.ksp.core.XPathUtilTools;
 import com.cnki.ksp.helper.HTMLCleanHelper;
 import com.cnki.ksp.helper.JSoupConnectionHelper;
@@ -97,9 +98,16 @@ public class AutohomeProcessor extends AbsProcessor {
 	 *            if we could get the content from the default xpath.
 	 * @return the content.
 	 * @throws XpathSyntaxErrorException
+	 * @throws StyleChangedException
 	 */
-	private String getConent(XPathUtilTools xpathTools, String defaultPath) throws XpathSyntaxErrorException {
-		String content = xpathTools.getContentByXPath(defaultPath);
+	private String getConent(XPathUtilTools xpathTools, String defaultPath)
+			throws XpathSyntaxErrorException, StyleChangedException {
+		String content = null;
+		try {
+			content = xpathTools.getContentByXPath(defaultPath);
+		} catch (StyleChangedException e) {
+			// do nothing.
+		}
 		if (null != content) {
 			return content;
 		}
@@ -109,13 +117,16 @@ public class AutohomeProcessor extends AbsProcessor {
 				break;
 			}
 
-			content = xpathTools.getContentByXPath(prop.getProperty(key + i));
+			try {
+				content = xpathTools.getContentByXPath(prop.getProperty(key + i));
+			} catch (StyleChangedException e) {
+				// do nothing.
+			}
 			if (null != content) {
 				return content;
 			}
 		}
-
-		return content;
+		throw new StyleChangedException("xContent", null);
 	}
 
 }
