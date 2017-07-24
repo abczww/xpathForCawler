@@ -18,8 +18,11 @@ public class JSoupConnectionHelper {
 		Thread.sleep(magicSleep);
 		while (true) {
 			try {
-				Document doc = Jsoup.connect(url).timeout(timeout)
-						.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:29.0) Gecko/20100101 Firefox/29.0").get();
+				Document doc = Jsoup.connect(url)
+						.header("User-Agent", "Mozilla/5.0 (Windows NT 6.1; Win64; x64; rv:49.0) Gecko/20100101 Firefox/49.0")
+						.header("Connection", "close")
+						.timeout(timeout)
+						.get();
 				xdoc = new JXDocument(doc);
 				return xdoc;
 			} catch (IOException e) {

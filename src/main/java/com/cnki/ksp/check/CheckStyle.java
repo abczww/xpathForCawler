@@ -75,6 +75,8 @@ public class CheckStyle {
 			System.out.println(changedStr);
 			info.append(changedStr + "\n");
 
+		} else {
+			System.out.println("OK: " + element + " : " + url);
 		}
 		return isChanged;
 	}

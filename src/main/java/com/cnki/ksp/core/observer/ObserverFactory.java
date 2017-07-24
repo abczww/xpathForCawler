@@ -15,16 +15,19 @@ import com.cnki.ksp.core.Observer;
 public class ObserverFactory {
 
 	private static Map<String, Observer> kspObserverMap = null;
+	
+	public static final String KSP_FRAME_OBSERVER = "frameObserver";
+	public static final String KSP_CMD_OBSERVER = "cmdObserver";
 
 	public static Observer getObserverByName(String className) {
 		if (kspObserverMap == null) {
 			kspObserverMap = new HashMap<>();
 		}
 		if (kspObserverMap.get(className) == null) {
-			if (className.equals(KspObserver.class.getName())) {
+			if (className.equals(KSP_FRAME_OBSERVER)) {
 				KspObserver kspObserver = KspObserver.getIntance();
 				kspObserverMap.put(className, kspObserver);
-			} else if (className.equals(KspNoWinObserver.class.getName())) {
+			} else if (className.equals(KSP_CMD_OBSERVER)) {
 				Observer observer = KspNoWinObserver.getIntance();
 				kspObserverMap.put(className, observer);
 			}

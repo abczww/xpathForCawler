@@ -26,6 +26,8 @@ public class TestCase01 {
 
 		XPathUtilTools xpathTool = new XPathUtilTools(xdoc);
 		String content = xpathTool.getContentByXPath("//*[@id='F0']/div[2]/div[2]/div[1]/div/div[2]");
+		
+		//List<JXNode> nodes = xdoc.
 		System.out.println(content);
 	}
 

@@ -19,7 +19,7 @@
 				<prop key="kspName">${kspName.1101}</prop>
 				<prop key="timeout">6000</prop>
 				<prop key="webSite">http://k.autohome.com.cn</prop>
-				<prop key="entranceUrl">http://k.autohome.com.cn/623/index_1.html#dataList</prop>
+				<prop key="entranceUrl">http://k.autohome.com.cn/623/index_pageNum.html#dataList</prop>
 				<prop key="entranceTemplate">http://k.autohome.com.cn/623/index_pageNum.html#dataList</prop>
 				<prop key="xUrl">//div[@class='mouthcon']</prop>
 				<prop key="xTitleUrl">//div[@class='mouth-item']/div/div/a</prop>

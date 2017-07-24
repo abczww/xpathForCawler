@@ -1,21 +1,38 @@
-package com.cnki.ksp.frame;
+package com.cnki.ksp.check;
 
-import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
-import cn.wanghaomiao.xpath.model.JXDocument;
-import com.cnki.ksp.core.AppContext;
-import com.cnki.ksp.core.StyleChangedException;
-import com.cnki.ksp.core.XPathUtilTools;
-import com.cnki.ksp.helper.JSoupConnectionHelper;
-import com.cnki.ksp.controller.autohome.AutohomeBBSController;
-
-import javax.swing.*;
-import java.awt.*;
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
+
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.SwingUtilities;
+
+import com.cnki.ksp.controller.autohome.AutohomeBBSController;
+import com.cnki.ksp.controller.autohome.AutohomeEvaluateController;
+import com.cnki.ksp.core.AppContext;
+import com.cnki.ksp.core.CrawlerController;
+import com.cnki.ksp.core.StyleChangedException;
+import com.cnki.ksp.core.XPathUtilTools;
+import com.cnki.ksp.helper.JSoupConnectionHelper;
+
+import cn.wanghaomiao.xpath.exception.XpathSyntaxErrorException;
+import cn.wanghaomiao.xpath.model.JXDocument;
 
 public class ArticleHelperFrame extends JFrame {
 
@@ -73,7 +90,7 @@ public class ArticleHelperFrame extends JFrame {
         con.add(jspane);
 
         // loadDefaultValues();
-        initXPath();
+        initXPath2();
 
         this.setVisible(true);
         this.setSize(800, 600);
@@ -101,6 +118,19 @@ public class ArticleHelperFrame extends JFrame {
 
     private void initXPath() {
         AutohomeBBSController coller = AppContext.getBean("autohomeController_bj40", AutohomeBBSController.class);
+        Properties prop = coller.getControllerProperties();
+
+        jt_title.setText(String.valueOf(prop.getProperty("xTitle")));
+        jt_author.setText(String.valueOf(prop.getProperty("xAuthor")));
+        jt_date.setText(String.valueOf(prop.getProperty("xDate")));
+        jt_content.setText(String.valueOf(prop.getProperty("xContent")));
+        jt_forward.setText(String.valueOf(prop.getProperty("xForward")));
+        jt_url.setText(String.valueOf(prop.getProperty("entranceUrl")));
+
+    }
+    
+    private void initXPath2() {
+    	AutohomeEvaluateController coller = (AutohomeEvaluateController)AppContext.getBean("autohomeController_bj20_evalute", AutohomeEvaluateController.class);
         Properties prop = coller.getControllerProperties();
 
         jt_title.setText(String.valueOf(prop.getProperty("xTitle")));

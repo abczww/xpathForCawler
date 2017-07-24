@@ -102,6 +102,7 @@ public class AutohomeEvaluateController extends AbsController implements Runnabl
 			}
 			analyseUrls(url);
 			observer.appendInfo("analyse page: %d, get %d articles in all.", pageStart, articleUrls.size());
+			pageStart++;
 		}
 		return articleUrls;
 	}
@@ -119,6 +120,7 @@ public class AutohomeEvaluateController extends AbsController implements Runnabl
 	 */
 	private void analyseUrls(String url) throws Exception {
 		xdoc = JSoupConnectionHelper.getXDocumentFromUrl(url, timeout);
+		System.out.println(xdoc.sel("//dev"));
 		List<JXNode> rs = xdoc.selN(xUrl);
 		for (JXNode node : rs) {
 			XPathUtilTools xpathTool = new XPathUtilTools(xdoc);

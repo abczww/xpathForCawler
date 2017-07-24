@@ -17,6 +17,7 @@
     <bean id="tspController" class="com.cnki.ksp.controller.KSPController">
     	<property name="crawlers">
     		<list>
+    			<ref bean="autohomeController_bj20_evalute"/>
     			<ref bean="autohomeController_bj20"/>
     			<ref bean="autohomeController_bj40"/>
     			<ref bean="autohomeController_bj80"/>
