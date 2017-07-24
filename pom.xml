@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>xpath</groupId>
-	<artifactId>abczww</artifactId>
+	<artifactId>ksp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>abczww</name>
+	<name>ksp</name>
 	<url>http://maven.apache.org</url>
 
 	<!-- 指定maven仓库 -->

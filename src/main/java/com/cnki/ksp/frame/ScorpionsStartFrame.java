@@ -17,8 +17,9 @@ import javax.swing.Timer;
 import com.cnki.ksp.controller.KSPController;
 import com.cnki.ksp.core.AppContext;
 import com.cnki.ksp.core.CrawlerController;
-import com.cnki.ksp.core.KspObserver;
 import com.cnki.ksp.core.StyleChangedException;
+import com.cnki.ksp.core.observer.KspObserver;
+import com.cnki.ksp.core.observer.ObserverFactory;
 
 /**
  *
@@ -126,7 +127,7 @@ public class ScorpionsStartFrame extends JFrame {
 
 	private void startAutohomeScorpion() {
 		try {
-			KspObserver observer = KspObserver.getIntance(this.getClass().getName());
+			KspObserver observer = (KspObserver)ObserverFactory.getObserverByName(this.getClass().getName());
 			observer.setHandler(jta_info);
 			KSPController tsp = AppContext.getBean(KSPController.class);
 			for (CrawlerController cc : tsp.getCrawlers()) {

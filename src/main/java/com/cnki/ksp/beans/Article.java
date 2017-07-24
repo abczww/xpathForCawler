@@ -2,6 +2,7 @@ package com.cnki.ksp.beans;
 
 public class Article extends BaseBean {
 
+	private static final long serialVersionUID = 565423499940305255L;
 	/** primary key, auto increase.  */
 	private int id;
 	/** the KScorpion id. */

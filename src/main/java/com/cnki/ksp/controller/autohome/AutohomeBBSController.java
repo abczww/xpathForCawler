@@ -9,7 +9,7 @@ import org.jsoup.nodes.Element;
 import com.cnki.ksp.beans.Article;
 import com.cnki.ksp.core.AbsController;
 import com.cnki.ksp.core.ArticlePool;
-import com.cnki.ksp.core.KspObserver;
+import com.cnki.ksp.core.Observer;
 import com.cnki.ksp.core.Processor;
 import com.cnki.ksp.core.XPathUtilTools;
 import com.cnki.ksp.helper.JSoupConnectionHelper;
@@ -43,7 +43,7 @@ public class AutohomeBBSController extends AbsController {
 	private String xForward = null;
 
 	@Override
-	public void init(KspObserver observer) {
+	public void init(Observer observer) {
 		this.observer = observer;
 		// entranceUrl = controllerProperties.getProperty("entranceUrl");
 		webSite = controllerProperties.getProperty("webSite");

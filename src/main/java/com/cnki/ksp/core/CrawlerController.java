@@ -14,7 +14,7 @@ import java.io.IOException;
  */
 public interface CrawlerController {
 
-	public void init(KspObserver observer) throws Exception;
+	public void init(Observer observer) throws Exception;
 
 	/**
 	 * get the id of the KScorption.

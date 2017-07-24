@@ -1,12 +1,11 @@
-package com.cnki.ksp.core;
-
-import java.util.HashMap;
-import java.util.Map;
+package com.cnki.ksp.core.observer;
 
 import javax.swing.JTextArea;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import com.cnki.ksp.core.Observer;
 
 /**
  * an observer of crawler. it could save log and print console.
@@ -15,26 +14,19 @@ import org.slf4j.LoggerFactory;
  * @version 2017.6
  *
  */
-public class KspObserver {
+public class KspObserver implements Observer {
 
 	private JTextArea jta_defaultInfoHandler = new JTextArea();
-	private static Map<String, KspObserver> kspObserverMap = null;
 	private static Logger logger = LoggerFactory.getLogger(KspObserver.class);
 
 	private KspObserver() {
 
 	}
 
-	public static synchronized KspObserver getIntance(String className) {
-		if (kspObserverMap == null) {
-			kspObserverMap = new HashMap<>();
-		}
+	static synchronized KspObserver getIntance() {
+		KspObserver kspObserver = new KspObserver();
 
-		if (kspObserverMap.get(className) == null) {
-			KspObserver kspObserver = new KspObserver();
-			kspObserverMap.put(className, kspObserver);
-		}
-		return kspObserverMap.get(className);
+		return kspObserver;
 	}
 
 	public void setHandler(JTextArea info) {

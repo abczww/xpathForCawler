@@ -9,6 +9,8 @@ import java.util.Date;
 
 public class BaseBean implements Serializable{
 
+	private static final long serialVersionUID = -2662763060926172385L;
+	
 	public String getCreatedBy() {
 		return createdBy;
 	}

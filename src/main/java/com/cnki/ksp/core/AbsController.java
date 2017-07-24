@@ -19,7 +19,7 @@ public abstract class AbsController implements CrawlerController, Runnable {
     protected ArticleDao articleDao;
     @Autowired
     protected CaptureRecordDao crDao;
-    protected KspObserver observer;
+    protected Observer observer;
     /**
      * the forward urls.
      */

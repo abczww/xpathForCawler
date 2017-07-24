@@ -4,15 +4,17 @@ import java.sql.Timestamp;
 
 public class CaptureRecord extends BaseBean {
 
-    private int id;
-    private int kspId;
-    private String kspName;
-    private String url;
-    private Timestamp captureStartTime;
-    private Timestamp caputreEndTime;
-    private int captureAccount;
+	private static final long serialVersionUID = 3793240867944955321L;
 
-    public int getCaptureAccount() {
+	private int id;
+	private int kspId;
+	private String kspName;
+	private String url;
+	private Timestamp captureStartTime;
+	private Timestamp caputreEndTime;
+	private int captureAccount;
+
+	public int getCaptureAccount() {
 		return captureAccount;
 	}
 
@@ -21,51 +23,51 @@ public class CaptureRecord extends BaseBean {
 	}
 
 	public int getId() {
-        return id;
-    }
+		return id;
+	}
 
-    public void setId(int id) {
-        this.id = id;
-    }
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    public int getKspId() {
-        return kspId;
-    }
+	public int getKspId() {
+		return kspId;
+	}
 
-    public void setKspId(int kspId) {
-        this.kspId = kspId;
-    }
+	public void setKspId(int kspId) {
+		this.kspId = kspId;
+	}
 
-    public String getKspName() {
-        return kspName;
-    }
+	public String getKspName() {
+		return kspName;
+	}
 
-    public void setKspName(String kspName) {
-        this.kspName = kspName;
-    }
+	public void setKspName(String kspName) {
+		this.kspName = kspName;
+	}
 
-    public String getUrl() {
-        return url;
-    }
+	public String getUrl() {
+		return url;
+	}
 
-    public void setUrl(String url) {
-        this.url = url;
-    }
+	public void setUrl(String url) {
+		this.url = url;
+	}
 
-    public Timestamp getCaptureStartTime() {
-        return captureStartTime;
-    }
+	public Timestamp getCaptureStartTime() {
+		return captureStartTime;
+	}
 
-    public void setCaptureStartTime(Timestamp captureStartTime) {
-        this.captureStartTime = captureStartTime;
-    }
+	public void setCaptureStartTime(Timestamp captureStartTime) {
+		this.captureStartTime = captureStartTime;
+	}
 
-    public Timestamp getCaputreEndTime() {
-        return caputreEndTime;
-    }
+	public Timestamp getCaputreEndTime() {
+		return caputreEndTime;
+	}
 
-    public void setCaputreEndTime(Timestamp caputreEndTime) {
+	public void setCaputreEndTime(Timestamp caputreEndTime) {
 
-        this.caputreEndTime = caputreEndTime;
-    }
+		this.caputreEndTime = caputreEndTime;
+	}
 }

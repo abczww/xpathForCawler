@@ -5,7 +5,7 @@ import java.util.Properties;
 import com.cnki.ksp.beans.Article;
 import com.cnki.ksp.core.AbsProcessor;
 import com.cnki.ksp.core.ArticlePool;
-import com.cnki.ksp.core.KspObserver;
+import com.cnki.ksp.core.Observer;
 import com.cnki.ksp.core.StyleChangedException;
 import com.cnki.ksp.core.XPathUtilTools;
 import com.cnki.ksp.helper.HTMLCleanHelper;
@@ -21,9 +21,9 @@ public class AutohomeProcessor extends AbsProcessor {
 
 	private String entranceUrl;
 	private Properties prop;
-	private KspObserver observer;
+	private Observer observer;
 
-	public AutohomeProcessor(String url, Properties prop, KspObserver observer) {
+	public AutohomeProcessor(String url, Properties prop, Observer observer) {
 		this.entranceUrl = url;
 		this.prop = prop;
 		this.observer = observer;
