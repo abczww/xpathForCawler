@@ -5,20 +5,20 @@
 <hibernate-mapping>
 	<class name="com.cnki.ksp.beans.Article" table="bdap_article_temp">
 		<id name="id" type="java.lang.Integer">
-			<column name="id" />
+			<column name="article_id" />
 			<generator class="native" />
 		</id>
 		<property name="kspId" type="java.lang.Integer">
-			<column name="kspId" />
+			<column name="ksp_id" />
 		</property>
 		<property name="gatherTime" type="java.lang.String">
-			<column name="gatherTime" />
+			<column name="gather_time" />
 		</property>
 		<property name="carModel" type="java.lang.String">
-			<column name="carModel" />
+			<column name="car_model" />
 		</property>
 		<property name="carFirm" type="java.lang.String">
-			<column name="carFirm" />
+			<column name="car_firm" />
 		</property>
 		<property name="type" type="java.lang.Integer">
 			<column name="type" />
@@ -54,16 +54,16 @@
 			<column name="" />
 		</property>
 		<property name="createdBy" type="java.lang.String">
-			<column name="createdBy" />
+			<column name="created_by" />
 		</property>
 		<property name="createdTime" type="java.sql.Timestamp">
-			<column name="createdTime" />
+			<column name="created_time" />
 		</property>
 		<property name="updatedBy" type="java.lang.String">
-			<column name="updatedBy" />
+			<column name="updated_by" />
 		</property>
 		<property name="updatedTime" type="java.sql.Timestamp">
-			<column name="" />
+			<column name="updated_time" />
 		</property>
 		<property name="deleted" type="java.lang.Integer">
 			<column name="deleted" />

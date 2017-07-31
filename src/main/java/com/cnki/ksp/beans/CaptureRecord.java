@@ -6,7 +6,7 @@ public class CaptureRecord extends BaseBean {
 
 	private static final long serialVersionUID = 3793240867944955321L;
 
-	private int id;
+	private int crId;
 	private int kspId;
 	private String kspName;
 	private String url;
@@ -22,12 +22,12 @@ public class CaptureRecord extends BaseBean {
 		this.captureAccount = captureAccount;
 	}
 
-	public int getId() {
-		return id;
+	public int getCrId() {
+		return crId;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setCrId(int crId) {
+		this.crId = crId;
 	}
 
 	public int getKspId() {

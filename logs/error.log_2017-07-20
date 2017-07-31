@@ -1,0 +1,4 @@
+[ERROR] 2017-07-20 09:18:54,648 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Column 'date' cannot be null
+[ERROR] 2017-07-20 09:20:18,836 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Column 'content2' cannot be null

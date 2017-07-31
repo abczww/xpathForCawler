@@ -12,6 +12,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.cnki.ksp.beans.Article;
 import com.cnki.ksp.dao.ArticleDao;
+import com.cnki.ksp.test.RunTests;
 
 /**
  * Creat
@@ -35,7 +36,7 @@ public class TestArticle {
     public void getAllArticle(){
     	List<Article> arts = articleDao.getAll();
     	System.out.println(arts.size());
-    	assertTrue(arts.size()>0);
+    	assertTrue(arts.size()>=0);
     }
 
     private Article getTheArticle() {
@@ -54,6 +55,7 @@ public class TestArticle {
         artl.setContent2("添加包的依赖，编辑pom.xml文件添加如下依赖");
         artl.setCreatedBy("zww");
         artl.setUpdatedBy("zww");
+        artl.setDeleted(RunTests.TEST_DELETE);
 
         return artl;
     }

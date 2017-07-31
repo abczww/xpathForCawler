@@ -4,15 +4,15 @@
 <!-- Generated 2016-3-15 16:30:05 by Hibernate Tools 3.4.0.CR1 -->
 <hibernate-mapping>
 	<class name="com.cnki.ksp.beans.CaptureRecord" table="bdap_capture_record">
-		<id name="id" type="java.lang.Integer">
-			<column name="id" />
+		<id name="crId" type="java.lang.Integer">
+			<column name="cr_id" />
 			<generator class="native" />
 		</id>
 		<property name="kspId" type="java.lang.Integer">
-			<column name="kspId" />
+			<column name="ksp_id" />
 		</property>
 		<property name="kspName" type="java.lang.String">
-			<column name="kspName" />
+			<column name="ksp_name" />
 		</property>
 		<property name="url" type="java.lang.String">
 			<column name="url" />
@@ -27,16 +27,16 @@
 			<column name="capture_account" />
 		</property>
 		<property name="createdTime" type="java.sql.Timestamp">
-			<column name="createdTime" />
+			<column name="created_time" />
 		</property>
 		<property name="createdBy" type="java.lang.String">
-			<column name="createdBy" />
+			<column name="created_by" />
 		</property>
 		<property name="updatedBy" type="java.lang.String">
-			<column name="updatedBy" />
+			<column name="updated_by" />
 		</property>
 		<property name="updatedTime" type="java.sql.Timestamp">
-			<column name="updatedTime" />
+			<column name="updated_time" />
 		</property>
 		<property name="deleted" type="java.lang.Integer">
 			<column name="deleted" />

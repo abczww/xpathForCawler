@@ -1,0 +1,274 @@
+[INFO ] 2017-07-28 10:31:38,775 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@12bb4df8: startup date [Fri Jul 28 10:31:38 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-28 10:31:38,888 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-28 10:31:39,440 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-28 10:31:39,472 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-28 10:31:39,499 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-28 10:31:39,525 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-28 10:31:39,548 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-28 10:31:39,855 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-28 10:31:39,856 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-28 10:31:41,018 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-07-28 10:31:41,022 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-07-28 10:31:41,108 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-28 10:31:41,597 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-28 10:31:42,964 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-07-28 10:31:43,087 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-07-28 10:31:44,164 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-28 10:31:44,201 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2017-07-28 10:31:45,542 method:org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47)
+HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2017-07-28 10:32:15,460 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+get 10 urls in all.
+[INFO ] 2017-07-28 10:32:17,709 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 1/10
+[INFO ] 2017-07-28 10:32:24,179 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 2/10
+[INFO ] 2017-07-28 10:32:28,837 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 3/10
+[INFO ] 2017-07-28 10:32:30,595 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 4/10
+[INFO ] 2017-07-28 10:32:32,309 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 5/10
+[INFO ] 2017-07-28 10:32:59,218 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 6/10
+[INFO ] 2017-07-28 10:33:01,776 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 7/10
+[INFO ] 2017-07-28 10:33:03,970 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 8/10
+[INFO ] 2017-07-28 10:33:05,639 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 9/10
+[INFO ] 2017-07-28 10:33:07,335 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 10/10
+[INFO ] 2017-07-28 10:33:07,419 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 10 records in all
+[INFO ] 2017-07-28 10:33:07,420 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 3 duplicated articles:
+[INFO ] 2017-07-28 10:33:07,420 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+北京BJ20论坛【精华作业汇总贴】持续更新中..: http://club.autohome.com.cn/bbs/thread-c-3800-62918931-1.html
+[INFO ] 2017-07-28 10:33:07,421 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+【公告2017.6.20更新】北京BJ20各地认证QQ群和认证车友会汇总: http://club.autohome.com.cn/bbs/thread-c-3800-63319223-1.html
+[INFO ] 2017-07-28 10:33:07,421 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+【版务】北京20论坛管理试行条例: http://club.autohome.com.cn/bbs/thread-c-3800-58535129-1.html
+[INFO ] 2017-07-28 10:33:12,279 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+get 37 urls in all.
+[INFO ] 2017-07-28 10:33:14,496 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 1/37
+[INFO ] 2017-07-28 10:33:18,923 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 2/37
+[INFO ] 2017-07-28 10:33:21,010 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 3/37
+[INFO ] 2017-07-28 10:33:23,203 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 4/37
+[INFO ] 2017-07-28 10:33:25,032 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 5/37
+[INFO ] 2017-07-28 10:33:26,955 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 6/37
+[INFO ] 2017-07-28 10:33:29,869 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 7/37
+[INFO ] 2017-07-28 10:33:31,983 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 8/37
+[INFO ] 2017-07-28 10:33:33,645 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 9/37
+[INFO ] 2017-07-28 10:33:36,477 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 10/37
+[INFO ] 2017-07-28 10:33:40,331 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 11/37
+[INFO ] 2017-07-28 10:33:42,192 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 12/37
+[INFO ] 2017-07-28 10:34:05,244 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 13/37
+[INFO ] 2017-07-28 10:34:06,964 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 14/37
+[INFO ] 2017-07-28 10:34:08,633 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 15/37
+[INFO ] 2017-07-28 10:34:13,555 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 16/37
+[INFO ] 2017-07-28 10:34:16,157 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 17/37
+[INFO ] 2017-07-28 10:34:24,557 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 18/37
+[INFO ] 2017-07-28 10:34:26,768 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 19/37
+[INFO ] 2017-07-28 10:34:30,033 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 20/37
+[INFO ] 2017-07-28 10:34:32,341 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 21/37
+[INFO ] 2017-07-28 10:34:37,776 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 22/37
+[INFO ] 2017-07-28 10:34:39,635 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 23/37
+[INFO ] 2017-07-28 10:34:41,359 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 24/37
+[INFO ] 2017-07-28 10:34:43,043 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 25/37
+[INFO ] 2017-07-28 10:34:44,781 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 26/37
+[INFO ] 2017-07-28 10:34:56,795 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 27/37
+[INFO ] 2017-07-28 10:34:58,589 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 28/37
+[INFO ] 2017-07-28 10:35:00,252 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 29/37
+[INFO ] 2017-07-28 10:35:06,431 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 30/37
+[INFO ] 2017-07-28 10:35:08,944 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 31/37
+[INFO ] 2017-07-28 10:35:10,643 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 32/37
+[INFO ] 2017-07-28 10:35:12,370 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 33/37
+[INFO ] 2017-07-28 10:35:14,063 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 34/37
+[INFO ] 2017-07-28 10:35:17,251 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 35/37
+[INFO ] 2017-07-28 10:35:20,087 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 36/37
+[INFO ] 2017-07-28 10:35:21,785 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 37/37
+[INFO ] 2017-07-28 10:35:21,989 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 37 records in all
+[INFO ] 2017-07-28 10:35:21,989 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 21 duplicated articles:
+[INFO ] 2017-07-28 10:35:21,989 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+关于分动箱使用注意事项，请云岭部落比赛选手、各专家、车友进来: http://club.autohome.com.cn/bbs/thread-c-623-65129207-1.html
+[INFO ] 2017-07-28 10:35:21,990 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+风里雨里！一路同行！: http://club.autohome.com.cn/bbs/thread-c-623-65183458-1.html
+[INFO ] 2017-07-28 10:35:21,990 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+广东有个盐洲岛: http://club.autohome.com.cn/bbs/thread-c-623-65182440-1.html
+[INFO ] 2017-07-28 10:35:21,990 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+北京40。男人的最爱: http://club.autohome.com.cn/bbs/thread-c-623-65172737-1.html
+[INFO ] 2017-07-28 10:35:21,990 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+开始自制小拖车，详细列出材料费用。: http://club.autohome.com.cn/bbs/thread-c-623-65171504-1.html
+[INFO ] 2017-07-28 10:35:21,990 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+【BJ40西游记】26、27游记 我们到达珠峰底了: http://club.autohome.com.cn/bbs/thread-c-623-65171226-1.html
+[INFO ] 2017-07-28 10:35:21,991 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+泰普版BJ40什么配置? 有差速锁吗: http://club.autohome.com.cn/bbs/threadqa-c-623-65170660-1.html
+[INFO ] 2017-07-28 10:35:21,991 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+2.0手四白: http://club.autohome.com.cn/bbs/thread-c-623-65170612-1.html
+[INFO ] 2017-07-28 10:35:21,991 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+BJ40L硬顶版: http://club.autohome.com.cn/bbs/threadqa-c-623-65168888-1.html
+[INFO ] 2017-07-28 10:35:21,992 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+老掌沟库布齐行: http://club.autohome.com.cn/bbs/thread-c-623-65168393-1.html
+[INFO ] 2017-07-28 10:35:21,992 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+吉林BJ40军团向灾区捐赠: http://club.autohome.com.cn/bbs/thread-c-623-65167579-1.html
+[INFO ] 2017-07-28 10:35:21,993 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+UAZ-469哪里可以订购: http://club.autohome.com.cn/bbs/thread-c-623-65164836-1.html
+[INFO ] 2017-07-28 10:35:21,993 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+BJ40佛野车友会、捐助山区小学: http://club.autohome.com.cn/bbs/thread-c-623-65164657-1.html
+[INFO ] 2017-07-28 10:35:21,993 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+两门40 泰普原厂软顶装车 效果还行: http://club.autohome.com.cn/bbs/thread-c-623-65163306-1.html
+[INFO ] 2017-07-28 10:35:21,993 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+有南京的bj40车友群吗？: http://club.autohome.com.cn/bbs/thread-c-623-65161718-1.html
+[INFO ] 2017-07-28 10:35:21,994 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+那里有改装？: http://club.autohome.com.cn/bbs/threadqa-c-623-65161483-1.html
+[INFO ] 2017-07-28 10:35:21,994 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+北汽啊北汽，伤不起的分动箱，什么时候能召回: http://club.autohome.com.cn/bbs/threadqa-c-623-65156984-1.html
+[INFO ] 2017-07-28 10:35:21,994 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+40L中控显示屏出现泊车辅助系统故障，请安全驾驶。怎么解决？: http://club.autohome.com.cn/bbs/threadqa-c-623-65156889-1.html
+[INFO ] 2017-07-28 10:35:21,994 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+车友们 B40 2.4和2.0t 区别在哪里 有多大: http://club.autohome.com.cn/bbs/threadqa-c-623-65154499-1.html
+[INFO ] 2017-07-28 10:35:21,994 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+已中毒泰普版40！给大家福利: http://club.autohome.com.cn/bbs/thread-c-623-65152847-1.html
+[INFO ] 2017-07-28 10:35:21,995 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+有江苏南通的车主吗？: http://club.autohome.com.cn/bbs/threadqa-c-623-65152743-1.html
+[INFO ] 2017-07-28 10:35:27,043 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+get 12 urls in all.
+[INFO ] 2017-07-28 10:35:30,410 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 1/12
+[INFO ] 2017-07-28 10:35:32,209 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 2/12
+[INFO ] 2017-07-28 10:35:33,924 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 3/12
+[INFO ] 2017-07-28 10:35:35,704 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 4/12
+[INFO ] 2017-07-28 10:35:37,821 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 5/12
+[INFO ] 2017-07-28 10:35:40,080 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 6/12
+[INFO ] 2017-07-28 10:35:42,257 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 7/12
+[INFO ] 2017-07-28 10:35:44,969 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 8/12
+[INFO ] 2017-07-28 10:35:46,764 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 9/12
+[INFO ] 2017-07-28 10:35:48,497 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 10/12
+[INFO ] 2017-07-28 10:35:50,202 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 11/12
+[INFO ] 2017-07-28 10:35:51,968 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 12/12
+[INFO ] 2017-07-28 10:35:52,013 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 12 records in all
+[INFO ] 2017-07-28 10:35:52,014 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 7 duplicated articles:
+[INFO ] 2017-07-28 10:35:52,014 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+汽车之家-BJ80认证车主微信群正式成立: http://club.autohome.com.cn/bbs/thread-c-2852-59523643-1.html
+[INFO ] 2017-07-28 10:35:52,014 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+BJ80微信群正式成立啦！: http://club.autohome.com.cn/bbs/thread-c-2852-55555410-1.html
+[INFO ] 2017-07-28 10:35:52,014 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+邀请80的车友一起玩穿越（广东）: http://club.autohome.com.cn/bbs/thread-c-2852-64736586-1.html
+[INFO ] 2017-07-28 10:35:52,014 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+请教下柴油汽油版本配置问题: http://club.autohome.com.cn/bbs/threadqa-c-2852-65161954-1.html
+[INFO ] 2017-07-28 10:35:52,014 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+bj80加92号油可以吗？: http://club.autohome.com.cn/bbs/threadqa-c-2852-65149153-1.html
+[INFO ] 2017-07-28 10:35:52,015 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+柴油降价: http://club.autohome.com.cn/bbs/threadqa-c-2852-65146871-1.html
+[INFO ] 2017-07-28 10:35:52,015 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+近三十万就俩气囊: http://club.autohome.com.cn/bbs/thread-c-2852-65135065-1.html
+[INFO ] 2017-07-28 11:14:18,624 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@12bb4df8: startup date [Fri Jul 28 11:14:18 CST 2017]; root of context hierarchy
+[INFO ] 2017-07-28 11:14:18,734 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-07-28 11:14:19,250 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-07-28 11:14:19,323 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-07-28 11:14:19,379 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-07-28 11:14:19,451 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-07-28 11:14:19,520 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-07-28 11:14:19,764 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-07-28 11:14:19,765 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-07-28 11:14:20,387 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-07-28 11:14:20,390 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-07-28 11:14:20,427 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-28 11:14:20,752 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-07-28 11:14:22,136 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-07-28 11:14:22,229 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-07-28 11:14:23,190 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-07-28 11:14:23,214 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2017-07-28 11:14:24,279 method:org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47)
+HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2017-07-28 11:14:28,908 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+analyse all pages: 1/81, get 103 articles in all.
+[INFO ] 2017-07-28 11:14:31,231 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+analyse all pages: 2/81, get 203 articles in all.
