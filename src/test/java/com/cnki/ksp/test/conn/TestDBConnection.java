@@ -15,6 +15,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.cnki.ksp.beans.Article;
 import com.cnki.ksp.beans.CaptureRecord;
+import com.cnki.ksp.core.ArticleType;
 import com.cnki.ksp.dao.CaptureRecordDao;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -51,12 +52,11 @@ public class TestDBConnection {
 	}
 
 	private Article getTheArticle() {
-		Article artl = new Article();
+		Article artl = new Article(1101, "http://www.autohome.com.cn", ArticleType.PROBLEM.getType());
 		artl.setGatherTime(null);
 		artl.setCarModel("bj40");
 		artl.setCarFirm("beijing car");
 		artl.setWebsite("www.autohome.com.cn");
-		artl.setUrl("http://www.autohome.com.cn");
 		artl.setAuthor("NotMe");
 		artl.setTime("2017-06-21");
 		artl.setTitle("This is a test");

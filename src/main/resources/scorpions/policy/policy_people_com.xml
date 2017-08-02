@@ -12,39 +12,47 @@
     http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
     http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-4.0.xsd">
 	
-	<bean id="autohomeController_bj20_evalute" class="com.cnki.ksp.controller.autohome.AutohomeEvaluateController">
+	<bean id="peopleCn_latest_statute" class="com.cnki.ksp.controller.people.PeopleCnController">
 		<property name="controllerProperties">
 			<props>
 				<prop key="kspId">1501</prop>
-				<prop key="kspName">People CN Policy</prop>
+				<!-- （1:行业动态 ；2:问题发现 ；3:定制改装 ；4:竞品分析 ；5:政策法规) -->
+				<prop key="type">5</prop>
+				<prop key="kspName">People CN Policy KSP</prop>
 				<prop key="timeout">6000</prop>
 				<prop key="webSite">http://auto.people.com.cn</prop>
-				<prop key="entranceUrl">http://k.autohome.com.cn/623/index_pageNum.html#dataList</prop>
+				<prop key="entranceUrl">http://k.autohome.com.cn/623/index_1.html#dataList</prop>
 				<prop key="entranceTemplate">http://auto.people.com.cn/GB/1051/index#pageNum.html</prop>
-				<prop key="xUrl">/html/body/div[6]/div[1]/dl/dt</prop>
-				<prop key="xTitleUrl">//div[@class='mouth-item']/div/div/a</prop>
-				<prop key="xTitle">//div[@class='mouth-item']/div/div/a</prop>
-				<prop key="xDate">//div[@class='mouth-item']/div/div/b/a</prop>
-				<prop key="xTime">${autohome.xtime}</prop>
-				<prop key="xAuthor">//div[@class='name-text']/p/a</prop>
+				<prop key="xUrl">//html/body/div[6]/div[1]/dl/dt</prop>
+				
+				<prop key="xTitleUrl">//a/@href</prop>
+				<prop key="xTitle">//a</prop>
+				<prop key="xDate"></prop>
+				<prop key="xTime"></prop>
+				<prop key="xAuthor"></prop>
 				<prop key="isNeedForward">true</prop>
 				<prop key="forwardAll">true</prop>
 			</props>
 		</property>
 		<property name="processorProperties">
 			<props>
-				<prop key="carModel">bj20</prop>
-				<prop key="xTitle">//div[@class='kou-tit']/h3</prop>
-				<prop key="xAuthor">${autohome.xauthor2}</prop>
-				<prop key="xTime">${autohome.xtime2}</prop>
-				<prop key="xContent">${autohome.xcontent}</prop>
-				<prop key="xContent1">${autohome.xcontent1}</prop>
-				<prop key="xContent2">${autohome.xcontent2}</prop>
-				<prop key="xReply">${autohome.xreply}</prop>
-				<prop key="carFirm">${autohome.carFirm}</prop>
-				<prop key="webSite">${autohome.website}</prop>
-				<prop key="xHits">${autohome.xhits}</prop>
-				<prop key="xReplies">${autohome.xreplies}</prop>
+				<prop key="kspId">1501</prop>
+				<!-- （1:行业动态 ；2:问题发现 ；3:定制改装 ；4:竞品分析 ；5:政策法规) -->
+				<prop key="type">5</prop>
+				<prop key="xTitle">//html/body/div[4]/h1</prop>
+				<prop key="xAuthor">//*[@id='rwb_navpath']/a[2]</prop>
+				<prop key="xTime">//html/body/div[4]/div/div[1]</prop>
+				<prop key="xContent">//*[@id='rwb_zw']</prop>
+				<prop key="webSite">http://auto.people.com.cn</prop>
+				
+				<prop key="xContent1"></prop>
+				<prop key="xContent2"></prop>
+				<prop key="xReply"></prop>
+				<prop key="carModel"></prop>
+				<prop key="carFirm"></prop>
+				<prop key="webSite">http://auto.people.com.cn</prop>
+				<prop key="xHits"></prop>
+				<prop key="xReplies"></prop>
 			</props>
 		</property>
 	</bean>

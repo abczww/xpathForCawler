@@ -51,5 +51,5 @@ public interface DaoInterface<T> {
 	 * @return the object list, if the list's size is greater than 0, that means
 	 *         got duplicated records.
 	 */
-	public List<T> checkDuplicated(T t);
+	public List<Integer> checkDuplicated(T t);
 }

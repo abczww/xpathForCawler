@@ -11,6 +11,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.cnki.ksp.beans.Article;
+import com.cnki.ksp.core.ArticleType;
 import com.cnki.ksp.dao.ArticleDao;
 import com.cnki.ksp.test.RunTests;
 
@@ -40,13 +41,11 @@ public class TestArticle {
     }
 
     private Article getTheArticle() {
-        Article artl = new Article();
-        artl.setKspId(1101);
+        Article artl = new Article(1101, "http://www.autohome.com.cn", ArticleType.PROBLEM.getType());
         artl.setGatherTime(null);
         artl.setCarModel("bj40");
         artl.setCarFirm("beijing car");
         artl.setWebsite("www.autohome.com.cn");
-        artl.setUrl("http://www.autohome.com.cn");
         artl.setAuthor("NotMe");
         artl.setDate("2017-07-20");
         artl.setTime("2017-06-21");

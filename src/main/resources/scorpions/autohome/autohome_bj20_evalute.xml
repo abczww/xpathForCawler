@@ -32,6 +32,7 @@
 		</property>
 		<property name="processorProperties">
 			<props>
+				<prop key="kspId">1101</prop>
 				<prop key="carModel">bj20</prop>
 				<prop key="xTitle">//div[@class='kou-tit']/h3</prop>
 				<prop key="xAuthor">${autohome.xauthor2}</prop>

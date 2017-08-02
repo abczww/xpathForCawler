@@ -21,7 +21,11 @@ public class XPathUtilTools {
 			if (attr != null && !attr.trim().equals("") && attr.trim().length() > 1) {
 				reValue = eles.get(0).getElement().attr("href");
 			} else {
-				reValue = eles.get(0).getElement().text();
+				if (null == eles.get(0).getElement()) {
+					reValue = eles.get(0).getTextVal();
+				} else {
+					reValue = eles.get(0).getElement().text();
+				}
 			}
 		}
 		return reValue;
@@ -33,8 +37,8 @@ public class XPathUtilTools {
 		}
 		List<JXNode> rs = xdoc.selN(xPath);
 		String content = getContentByNodeList(rs);
-		if(null == content){
-			throw new StyleChangedException("The xpath: " + xPath + " changed", "StyleChangeException");
+		if (null == content) {
+			throw new StyleChangedException("The xpath: " + xPath + " changed");
 		}
 		return content;
 	}

@@ -11,6 +11,7 @@ import org.jsoup.select.Elements;
 import org.junit.Test;
 
 import com.cnki.ksp.beans.Article;
+import com.cnki.ksp.core.ArticleType;
 import com.cnki.ksp.test.Seeds;
 
 public class JSoupTest {
@@ -71,7 +72,7 @@ public class JSoupTest {
 			Elements listdl = subcontent.getElementsByAttributeValue("class", "list_dl");
 			assert listdl.size() > 0;
 			for (Element elemt : listdl) {
-				Article art = new Article();
+				Article art = new Article(0, null, ArticleType.PROBLEM.getType());
 				art.setTitle(elemt.getElementsByAttributeValue("class", "a_topic").get(0).html());
 				art.setCreatedTime(elemt.getElementsByAttributeValue("class", "tdate").get(0).html());
 				art.setAuthor(elemt.getElementsByAttributeValue("class", "linkblack").get(0).html());

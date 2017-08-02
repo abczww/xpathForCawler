@@ -19,20 +19,20 @@ public class ObserverFactory {
 	public static final String KSP_FRAME_OBSERVER = "frameObserver";
 	public static final String KSP_CMD_OBSERVER = "cmdObserver";
 
-	public static Observer getObserverByName(String className) {
+	public static Observer getObserverByName(String typeName) {
 		if (kspObserverMap == null) {
 			kspObserverMap = new HashMap<>();
 		}
-		if (kspObserverMap.get(className) == null) {
-			if (className.equals(KSP_FRAME_OBSERVER)) {
+		if (kspObserverMap.get(typeName) == null) {
+			if (typeName.equals(KSP_FRAME_OBSERVER)) {
 				KspObserver kspObserver = KspObserver.getIntance();
-				kspObserverMap.put(className, kspObserver);
-			} else if (className.equals(KSP_CMD_OBSERVER)) {
+				kspObserverMap.put(typeName, kspObserver);
+			} else if (typeName.equals(KSP_CMD_OBSERVER)) {
 				Observer observer = KspNoWinObserver.getIntance();
-				kspObserverMap.put(className, observer);
+				kspObserverMap.put(typeName, observer);
 			}
 		}
-		return kspObserverMap.get(className);
+		return kspObserverMap.get(typeName);
 	}
 
 }

@@ -7,6 +7,8 @@ import org.jsoup.nodes.Document;
 import org.junit.Test;
 
 import com.cnki.ksp.core.XPathUtilTools;
+import com.cnki.ksp.helper.JSoupConnectionHelper;
+import com.cnki.ksp.helper.UtilHelper;
 
 import cn.wanghaomiao.xpath.model.JXDocument;
 import cn.wanghaomiao.xpath.model.JXNode;
@@ -30,5 +32,5 @@ public class TestCase01 {
 		//List<JXNode> nodes = xdoc.
 		System.out.println(content);
 	}
-
+	
 }

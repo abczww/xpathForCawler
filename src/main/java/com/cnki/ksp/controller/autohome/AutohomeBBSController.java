@@ -41,6 +41,7 @@ public class AutohomeBBSController extends AbsController {
 	private String xUrl = null;
 	private boolean isNeedForward = false;
 	private String xForward = null;
+	private int kspId = -1;
 
 	@Override
 	public void init(Observer observer) {
@@ -52,6 +53,7 @@ public class AutohomeBBSController extends AbsController {
 		isNeedForward = String.valueOf(controllerProperties.get("isNeedForward")).equals("true") ? true : false;
 		xForward = controllerProperties.getProperty("xForward");
 		articleUrls = new ArrayList<String>();
+		kspId = Integer.parseInt(String.valueOf(controllerProperties.getProperty("kspId")));
 	}
 
 	@Override
@@ -126,13 +128,15 @@ public class AutohomeBBSController extends AbsController {
 	private void analyseUrls(String url) throws Exception {
 		xdoc = JSoupConnectionHelper.getXDocumentFromUrl(url, timeout);
 		List<JXNode> rs = xdoc.selN(xUrl);
+		int type = Integer.parseInt(controllerProperties.getProperty("type"));
 		for (JXNode node : rs) {
 			XPathUtilTools xpathTool = new XPathUtilTools(xdoc);
 			String turl = xpathTool.getContentByXPath(node, "//dt/a", "href");
 			String tauthor = xpathTool.getContentByXPath(node, "//dd[1]/a", null);
 			String tdate = xpathTool.getContentByXPath(node, "//dd[1]/span", null);
 			String ttitle = xpathTool.getContentByXPath(node, "//dt/a", null);
-			Article art = new Article();
+			
+			Article art = new Article(kspId, turl, type);
 			art.setUrl(this.webSite + turl);
 			art.setAuthor(tauthor);
 			art.setDate(tdate);
@@ -156,18 +160,20 @@ public class AutohomeBBSController extends AbsController {
 	}
 
 	@Override
-	protected void getAllUrlsByXPath(String url) throws Exception {
+	protected boolean ifContinue(String url) throws Exception {
 		analyseUrls(url);
 
 		// if we need to forward and
 		if (isNeedForward) {
 			String forwardUrl = getForwardUrl(url);
 			if (null == forwardUrl) {
-				return;
+				return false;
 			}
 			observer.appendInfo(forwardUrl);
-			getAllUrlsByXPath(forwardUrl);
+			ifContinue(forwardUrl);
 		}
+
+		return true;
 	}
 
 	private String getForwardUrl(String url) throws XpathSyntaxErrorException, IOException {

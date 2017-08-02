@@ -80,7 +80,7 @@ public abstract class BaseDao<T extends BaseBean> implements DaoInterface<T> {
 	 * @see com.cnki.ksp.core.DaoInterface#checkDuplicated(java.lang.Object)
 	 */
 	@Override
-	public List<T> checkDuplicated(T t) {
+	public List<Integer> checkDuplicated(T t) {
 		return null;
 	}
 }

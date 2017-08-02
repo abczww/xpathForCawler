@@ -12,19 +12,23 @@ import com.cnki.ksp.core.BaseDao;
 @Repository("articleDao")
 public class ArticleDao extends BaseDao<Article> {
 
-	public List<Article> checkDuplicated(Article art) {
+	public List<Integer> checkDuplicated(Article art) {
 		Session session = sessionFactory.openSession();
 		StringBuilder hlsql = new StringBuilder(512);
-		hlsql.append(" from Article art where art.url=:url ");
-		hlsql.append(" and art.time = :time ");
+		hlsql.append("select art.id from Article art where art.url=:url ");
+		if (art.getTime() != null) {
+			hlsql.append(" and art.time = :time ");
+		}
 		hlsql.append(" and art.title = :title ");
 		hlsql.append(" and art.kspId = :kspId ");
-		Query<Article> query = session.createQuery(hlsql.toString(), Article.class);
+		Query<Integer> query = session.createQuery(hlsql.toString(), Integer.class);
 		query.setParameter("url", art.getUrl());
-		query.setParameter("time", art.getTime());
+		if (art.getTime() != null) {
+			query.setParameter("time", art.getTime());
+		}
 		query.setParameter("title", art.getTitle());
 		query.setParameter("kspId", art.getKspId());
-		List<Article> arts = query.list();
+		List<Integer> arts = query.list();
 		return arts;
 	}
 

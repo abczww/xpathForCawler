@@ -1,6 +1,12 @@
 package com.cnki.ksp.beans;
 
 public class Article extends BaseBean {
+	
+	public Article(int kspId, String url, int type){
+		this.kspId = kspId;
+		this.url = url;
+		this.type = type;
+	}
 
 	private static final long serialVersionUID = 565423499940305255L;
 	/** primary key, auto increase.  */
@@ -38,7 +44,7 @@ public class Article extends BaseBean {
 
 	@Override
 	public String toString() {
-		return author + ":" + time + ":" + title + ": " + content2;
+		return url + ":" + title + ": ";
 	}
 
 	public int getId() {

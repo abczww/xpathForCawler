@@ -17,6 +17,8 @@
 		<property name="controllerProperties">
 			<props>
 				<prop key="kspId">1201</prop>
+				<!-- （1:行业动态 ；2:问题发现 ；3:定制改装 ；4:竞品分析 ；5:政策法规) -->
+				<prop key="type">2</prop>
 				<prop key="kspName">${kspName.1201}</prop>
 				<prop key="timeout">${timeout}</prop>
 				<prop key="webSite">${autohome.website}</prop>
@@ -35,6 +37,9 @@
 		</property>
 		<property name="processorProperties">
 			<props>
+				<prop key="kspId">1201</prop>
+				<!-- （1:行业动态 ；2:问题发现 ；3:定制改装 ；4:竞品分析 ；5:政策法规) -->
+				<prop key="type">2</prop>
 				<prop key="carModel">${autohome.bj80.carModel}</prop>
 				<prop key="xTitle">${autohome.xtitle2}</prop>
 				<prop key="xAuthor">${autohome.xauthor2}</prop>

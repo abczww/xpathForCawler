@@ -14,8 +14,9 @@ import cn.wanghaomiao.xpath.model.JXDocument;
 public class CheckStyle {
 
 	private CheckStyle() throws Exception {
-		check_AutohomeBBSController();
-		check_AutohomeBBSProcessor();
+		//check_AutohomeBBSController();
+		//check_AutohomeBBSProcessor();
+		check_people();
 		System.out.println("Check Complete");
 	}
 
@@ -42,8 +43,7 @@ public class CheckStyle {
 		Properties prop = coller.getProcessorProperties();
 		String entranceUrl = "http://club.autohome.com.cn/bbs/thread-c-3800-64948092-1.html";
 		
-		JXDocument xdoc;
-		xdoc = JSoupConnectionHelper.getXDocumentFromUrl(entranceUrl, 5000);
+		JXDocument xdoc = JSoupConnectionHelper.getXDocumentFromUrl(entranceUrl, 5000);
 		System.out.println(xdoc);
 		XPathUtilTools xpTools = new XPathUtilTools(xdoc);
 
@@ -54,6 +54,20 @@ public class CheckStyle {
 		//checkPath(xpTools, entranceUrl, "xReply", String.valueOf(prop.getProperty("xReply")));
 		checkPath(xpTools, entranceUrl, "xHits", String.valueOf(prop.getProperty("xHits")));
 		
+	}
+	
+	private void check_people() throws Exception{
+		String url = "http://auto.people.com.cn/GB/1051/index#pageNum.html";
+		url = url.replaceAll("#pageNum", "1");
+		JXDocument xdoc = JSoupConnectionHelper.getXDocumentFromUrl(url, 5000);
+		XPathUtilTools xpTools = new XPathUtilTools(xdoc);
+		
+		String xpath = "//html/body/div[6]/div[1]/div/a[text()='下一页']/@href";
+		String nextUrl = xpTools.getContentByXPath(xpath);
+		
+		
+		
+		System.out.println(nextUrl);
 	}
 
 	private boolean checkPath(XPathUtilTools xpathTools, String url, String element, String xPath) {

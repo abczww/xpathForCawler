@@ -15,117 +15,111 @@ import com.cnki.ksp.processor.AutohomeProcessor;
 
 public abstract class AbsController implements CrawlerController, Runnable {
 
-    @Autowired
-    protected ArticleDao articleDao;
-    @Autowired
-    protected CaptureRecordDao crDao;
-    protected Observer observer;
-    /**
-     * the forward urls.
-     */
-    protected List<String> articleUrls;
-    protected Properties controllerProperties;
-    protected Properties processorProperties;
+	@Autowired
+	protected ArticleDao articleDao;
+	@Autowired
+	protected CaptureRecordDao crDao;
+	protected Observer observer;
+	/**
+	 * the forward urls.
+	 */
+	protected List<String> articleUrls;
+	protected Properties controllerProperties;
+	protected Properties processorProperties;
 
-    public void saveArticlesAndClean() throws InterruptedException {
-        for (int i = 0; i < ArticlePool.getInstance().getFailUrls().size(); i++) {
-            String url = ArticlePool.getInstance().getFailUrls().get(i);
-            Processor processor = new AutohomeProcessor(url, processorProperties, observer);
-            processor.execute();
-            Thread.sleep(3000);
-        }
-        saveArticles();
+	public void saveArticlesAndClean() throws InterruptedException {
+		saveArticles();
+	}
 
-    }
+	private int saveArticles() {
+		List<Article> arts = ArticlePool.getInstance().getAllArticles();
+		List<Article> duplicatedArts = new ArrayList<Article>();
+		for (Article art : arts) {
+			articleDao.saveOrUpdate(art);
+		}
 
-    private int saveArticles() {
-        List<Article> arts = ArticlePool.getInstance().getAllArticles();
-        List<Article> duplicatedArts = new ArrayList<Article>();
-        for (Article art : arts) {
-            if (!checkAndFindArticle(art)) {
-                articleDao.saveOrUpdate(art);
-            } else {
-                System.out.println("Find duplicated records: " + art);
-                duplicatedArts.add(art);
-            }
-        }
+		observer.appendInfo("Save %d records in all", arts.size());
+		observer.appendInfo("Found %d duplicated articles:", duplicatedArts.size());
+		for (Article art : duplicatedArts) {
+			observer.appendInfo(art.getTitle() + ": " + art.getUrl());
+		}
 
-        observer.appendInfo("Save %d records in all", arts.size());
-        observer.appendInfo("Found %d duplicated articles:", duplicatedArts.size());
-        for (Article art : duplicatedArts) {
-            observer.appendInfo(art.getTitle() + ": " + art.getUrl());
-        }
+		ArticlePool.getInstance().clear();
+		return arts.size();
 
-        ArticlePool.getInstance().clear();
-        return arts.size();
+	}
 
-    }
+	public boolean checkAndFindArticle(Article art) {
+		List<Integer> ids = articleDao.checkDuplicated(art);
+		if (ids.size() > 0) {
+			return true;
+		}
+		return false;
+	}
 
-    public boolean checkAndFindArticle(Article art) {
-        List<Article> ids = articleDao.checkDuplicated(art);
-        if (ids.size() > 0) {
-            return true;
-        }
-        return false;
-    }
+	@Override
+	public void run() {
+		try {
+			CaptureRecord cr = new CaptureRecord();
+			cr = recrod(cr);
+			execute();
+			recrod(cr);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 
-    @Override
-    public void run() {
-        try {
-            CaptureRecord cr = new CaptureRecord();
-            cr = recrod(cr);
-            execute();
-            recrod(cr);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
+	private CaptureRecord recrod(CaptureRecord cr) {
+		if (cr.getCrId() == 0) {
+			cr = new CaptureRecord();
+			cr.setCreatedBy(System.getenv("UESRNAME"));
+			cr.setKspId(Integer.parseInt(String.valueOf(controllerProperties.get("kspId"))));
+			cr.setKspName(String.valueOf(controllerProperties.get("kspName")));
+			cr.setUrl(String.valueOf(controllerProperties.get("entranceUrl")));
+		} else {
+			cr.setUpdatedBy(System.getenv("USERNAME"));
+			cr.setCaptureAccount(ArticlePool.getInstance().getAllArticles().size());
+			cr.setUpdatedTime(new Timestamp(System.currentTimeMillis()));
+		}
+		crDao.saveOrUpdate(cr);
+		return cr;
+	}
 
-    private CaptureRecord recrod(CaptureRecord cr) {
-        if (cr.getId() == 0) {
-            cr = new CaptureRecord();
-            cr.setCreatedBy(System.getenv("UESRNAME"));
-            cr.setKspId(Integer.parseInt(String.valueOf(controllerProperties.get("kspId"))));
-            cr.setKspName(String.valueOf(controllerProperties.get("kspName")));
-            cr.setUrl(String.valueOf(controllerProperties.get("entranceUrl")));
-        } else {
-            cr.setUpdatedBy(System.getenv("USERNAME"));
-            cr.setUpdatedTime(new Timestamp(System.currentTimeMillis()));
-        }
-        crDao.saveOrUpdate(cr);
-        return cr;
-    }
+	protected abstract boolean ifContinue(String url) throws Exception;
 
+	public Properties getControllerProperties() {
+		return controllerProperties;
+	}
 
-    protected abstract void getAllUrlsByXPath(String url) throws Exception;
+	public void setControllerProperties(Properties controllerProperties) {
+		this.controllerProperties = controllerProperties;
+	}
 
-    public Properties getControllerProperties() {
-        return controllerProperties;
-    }
+	public Properties getProcessorProperties() {
+		return processorProperties;
+	}
 
-    public void setControllerProperties(Properties controllerProperties) {
-        this.controllerProperties = controllerProperties;
-    }
+	public void setProcessorProperties(Properties processorProperties) {
+		this.processorProperties = processorProperties;
+	}
 
-    public Properties getProcessorProperties() {
-        return processorProperties;
-    }
+	protected void putProcessorToPool(Processor processor) {
+		// ExecutorPool.put(processor);
+	}
 
-    public void setProcessorProperties(Properties processorProperties) {
-        this.processorProperties = processorProperties;
-    }
+	public int getKspId() {
+		Object value = controllerProperties.get("kspId");
+		return null == value ? 0 : Integer.parseInt(String.valueOf(value));
+	}
 
-    protected void putProcessorToPool(Processor processor) {
-        // ExecutorPool.put(processor);
-    }
+	public String getKspName() {
+		Object value = controllerProperties.get("kspName");
+		return null == value ? "" : String.valueOf(value);
+	}
 
-    public int getKspId() {
-        Object value = controllerProperties.get("kspId");
-        return null == value ? 0 : Integer.parseInt(String.valueOf(value));
-    }
+	@Override
+	public String getTopic() {
+		return processorProperties.getProperty("kspName");
+	}
 
-    public String getKspName() {
-        Object value = controllerProperties.get("kspName");
-        return null == value ? "" : String.valueOf(value);
-    }
 }
