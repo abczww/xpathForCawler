@@ -27,7 +27,7 @@ public class ForwardController extends AbsController {
 	private boolean isNeedForward = false;
 	private int kspId = -1;
 	private String kspName = "";
-	private int saveFrequency = 5;
+	private int saveFrequency = 20;
 
 	@Override
 	public void init(Observer observer) {

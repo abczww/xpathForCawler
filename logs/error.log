@@ -8,3 +8,5 @@ Column 'website' cannot be null
 Data truncation: Data too long for column 'time' at row 1
 [ERROR] 2017-08-02 15:24:00,044 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
 Data truncation: Data too long for column 'time' at row 1
+[ERROR] 2017-08-02 16:41:59,493 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Data truncation: Data too long for column 'time' at row 1

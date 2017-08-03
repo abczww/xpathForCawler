@@ -21,7 +21,7 @@
 				<prop key="kspName">People CN Policy KSP</prop>
 				<prop key="timeout">6000</prop>
 				<prop key="webSite">http://auto.people.com.cn</prop>
-				<prop key="entranceUrl">http://k.autohome.com.cn/623/index_1.html#dataList</prop>
+				<prop key="entranceUrl">http://auto.people.com.cn/GB/1051/index1.html</prop>
 				<prop key="entranceTemplate">http://auto.people.com.cn/GB/1051/index#pageNum.html</prop>
 				<prop key="xUrl">//html/body/div[6]/div[1]/dl/dt</prop>
 				
@@ -41,7 +41,7 @@
 				<prop key="type">5</prop>
 				<prop key="xTitle">//html/body/div[4]/h1</prop>
 				<prop key="xAuthor">//*[@id='rwb_navpath']/a[2]</prop>
-				<prop key="xTime">//html/body/div[4]/div/div[1]</prop>
+				<prop key="xTime">//html/body/div[4]/div/div[1]/text()</prop>
 				<prop key="xContent">//*[@id='rwb_zw']</prop>
 				<prop key="webSite">http://auto.people.com.cn</prop>
 				

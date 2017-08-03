@@ -2922,3 +2922,403 @@ People CN Policy KSP is analysing, gets 75 articles in.
 People CN Policy KSP is analysing, gets 100 articles in.
 [INFO ] 2017-08-02 16:00:10,568 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
 get 100 urls in all.
+[INFO ] 2017-08-02 16:41:40,672 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@12bb4df8: startup date [Wed Aug 02 16:41:40 CST 2017]; root of context hierarchy
+[INFO ] 2017-08-02 16:41:40,744 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-08-02 16:41:41,097 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-08-02 16:41:41,133 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-08-02 16:41:41,167 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-08-02 16:41:41,204 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-08-02 16:41:41,230 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-08-02 16:41:41,287 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/policy/policy_people_com.xml]
+[INFO ] 2017-08-02 16:41:41,552 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-08-02 16:41:41,553 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-08-02 16:41:42,082 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-08-02 16:41:42,084 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-08-02 16:41:42,111 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-08-02 16:41:42,348 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-08-02 16:41:43,561 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-08-02 16:41:43,720 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-08-02 16:41:44,472 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-08-02 16:41:44,491 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2017-08-02 16:41:45,044 method:org.hibernate.tuple.PojoInstantiator.<init>(PojoInstantiator.java:47)
+HHH000182: No default (no-argument) constructor for class: com.cnki.ksp.beans.Article (class must be instantiated by Interceptor)
+[INFO ] 2017-08-02 16:41:50,397 method:org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47)
+HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2017-08-02 16:41:50,648 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+People CN Policy KSP is analysing, gets 25 articles in.
+[INFO ] 2017-08-02 16:41:51,882 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+People CN Policy KSP is analysing, gets 50 articles in.
+[INFO ] 2017-08-02 16:41:53,413 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+People CN Policy KSP is analysing, gets 75 articles in.
+[INFO ] 2017-08-02 16:41:54,998 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+People CN Policy KSP is analysing, gets 100 articles in.
+[INFO ] 2017-08-02 16:41:56,159 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+get 100 urls in all.
+[INFO ] 2017-08-02 16:41:56,883 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 1/100
+[INFO ] 2017-08-02 16:41:57,525 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 2/100
+[INFO ] 2017-08-02 16:41:58,168 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 3/100
+[INFO ] 2017-08-02 16:41:58,851 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 4/100
+[INFO ] 2017-08-02 16:41:59,468 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 5/100
+[WARN ] 2017-08-02 16:41:59,492 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:129)
+SQL Error: 1406, SQLState: 22001
+[ERROR] 2017-08-02 16:41:59,493 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Data truncation: Data too long for column 'time' at row 1
+[INFO ] 2017-08-02 16:45:26,633 method:org.springframework.context.support.AbstractApplicationContext.prepareRefresh(AbstractApplicationContext.java:510)
+Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@12bb4df8: startup date [Wed Aug 02 16:45:26 CST 2017]; root of context hierarchy
+[INFO ] 2017-08-02 16:45:26,700 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [applicationContext.xml]
+[INFO ] 2017-08-02 16:45:27,050 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from class path resource [scorpions/scorpions.xml]
+[INFO ] 2017-08-02 16:45:27,086 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj20_evalute.xml]
+[INFO ] 2017-08-02 16:45:27,118 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj20_scorpion.xml]
+[INFO ] 2017-08-02 16:45:27,163 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj40_scorpion.xml]
+[INFO ] 2017-08-02 16:45:27,200 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/autohome/autohome_bj80_scorpion.xml]
+[INFO ] 2017-08-02 16:45:27,236 method:org.springframework.beans.factory.xml.XmlBeanDefinitionReader.loadBeanDefinitions(XmlBeanDefinitionReader.java:317)
+Loading XML bean definitions from file [/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/policy/policy_people_com.xml]
+[INFO ] 2017-08-02 16:45:27,523 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/scorpions/scorpions.properties]
+[INFO ] 2017-08-02 16:45:27,524 method:org.springframework.core.io.support.PropertiesLoaderSupport.loadProperties(PropertiesLoaderSupport.java:172)
+Loading properties file from URL [file:/Users/windhut/Workspaces/workspace_bdap/KScorption/target/classes/dbconfig.properties]
+[INFO ] 2017-08-02 16:45:28,116 method:org.hibernate.Version.logVersion(Version.java:45)
+HHH000412: Hibernate Core {5.2.10.Final}
+[INFO ] 2017-08-02 16:45:28,118 method:org.hibernate.cfg.Environment.<clinit>(Environment.java:213)
+HHH000206: hibernate.properties not found
+[WARN ] 2017-08-02 16:45:28,167 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:91)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-configuration. Use namespace http://www.hibernate.org/dtd/hibernate-configuration instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-08-02 16:45:28,459 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[WARN ] 2017-08-02 16:45:29,857 method:org.hibernate.boot.jaxb.internal.stax.LocalXmlResourceResolver.resolveEntity(LocalXmlResourceResolver.java:75)
+HHH90000012: Recognized obsolete hibernate namespace http://hibernate.sourceforge.net/hibernate-mapping. Use namespace http://www.hibernate.org/dtd/hibernate-mapping instead.  Support for obsolete DTD/XSD namespaces may be removed at any time.
+[INFO ] 2017-08-02 16:45:30,042 method:org.hibernate.annotations.common.reflection.java.JavaReflectionManager.<clinit>(JavaReflectionManager.java:66)
+HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[INFO ] 2017-08-02 16:45:30,999 method:com.alibaba.druid.pool.DruidDataSource.init(DruidDataSource.java:715)
+{dataSource-1} inited
+[INFO ] 2017-08-02 16:45:31,018 method:org.hibernate.dialect.Dialect.<init>(Dialect.java:157)
+HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+[INFO ] 2017-08-02 16:45:31,649 method:org.hibernate.tuple.PojoInstantiator.<init>(PojoInstantiator.java:47)
+HHH000182: No default (no-argument) constructor for class: com.cnki.ksp.beans.Article (class must be instantiated by Interceptor)
+[INFO ] 2017-08-02 16:45:38,389 method:org.hibernate.hql.internal.QueryTranslatorFactoryInitiator.initiateService(QueryTranslatorFactoryInitiator.java:47)
+HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2017-08-02 16:45:38,658 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+People CN Policy KSP is analysing, gets 25 articles in.
+[INFO ] 2017-08-02 16:45:39,938 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+People CN Policy KSP is analysing, gets 50 articles in.
+[INFO ] 2017-08-02 16:45:41,512 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+People CN Policy KSP is analysing, gets 75 articles in.
+[INFO ] 2017-08-02 16:45:43,125 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+People CN Policy KSP is analysing, gets 100 articles in.
+[INFO ] 2017-08-02 16:45:44,425 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+get 100 urls in all.
+[INFO ] 2017-08-02 16:45:45,216 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 1/100
+[INFO ] 2017-08-02 16:45:46,047 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 2/100
+[INFO ] 2017-08-02 16:45:46,796 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 3/100
+[INFO ] 2017-08-02 16:45:47,547 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 4/100
+[INFO ] 2017-08-02 16:45:48,302 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 5/100
+[INFO ] 2017-08-02 16:45:48,344 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:45:48,345 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:45:49,105 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 6/100
+[INFO ] 2017-08-02 16:45:49,864 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 7/100
+[INFO ] 2017-08-02 16:45:50,686 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 8/100
+[INFO ] 2017-08-02 16:45:52,433 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 9/100
+[INFO ] 2017-08-02 16:45:54,807 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 10/100
+[INFO ] 2017-08-02 16:45:54,843 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:45:54,843 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:45:55,625 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 11/100
+[INFO ] 2017-08-02 16:45:56,392 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 12/100
+[INFO ] 2017-08-02 16:45:57,015 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 13/100
+[INFO ] 2017-08-02 16:45:57,800 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 14/100
+[INFO ] 2017-08-02 16:45:58,557 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 15/100
+[INFO ] 2017-08-02 16:45:58,585 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:45:58,586 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:45:59,384 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 16/100
+[INFO ] 2017-08-02 16:46:01,871 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 17/100
+[INFO ] 2017-08-02 16:46:02,621 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 18/100
+[INFO ] 2017-08-02 16:46:03,396 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 19/100
+[INFO ] 2017-08-02 16:46:04,171 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 20/100
+[INFO ] 2017-08-02 16:46:04,200 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:46:04,200 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:46:04,986 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 21/100
+[INFO ] 2017-08-02 16:46:05,731 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 22/100
+[INFO ] 2017-08-02 16:46:06,838 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 23/100
+[INFO ] 2017-08-02 16:46:07,615 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 24/100
+[INFO ] 2017-08-02 16:46:08,363 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 25/100
+[INFO ] 2017-08-02 16:46:08,389 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:46:08,390 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:46:09,187 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 26/100
+[INFO ] 2017-08-02 16:46:11,399 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 27/100
+[INFO ] 2017-08-02 16:46:13,766 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 28/100
+[INFO ] 2017-08-02 16:46:14,500 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 29/100
+[INFO ] 2017-08-02 16:46:15,252 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 30/100
+[INFO ] 2017-08-02 16:46:15,325 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:46:15,325 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:46:17,319 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 31/100
+[INFO ] 2017-08-02 16:46:18,071 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 32/100
+[INFO ] 2017-08-02 16:46:18,968 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 33/100
+[INFO ] 2017-08-02 16:46:19,724 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 34/100
+[INFO ] 2017-08-02 16:46:20,482 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 35/100
+[INFO ] 2017-08-02 16:46:20,510 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:46:20,510 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:46:21,537 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 36/100
+[INFO ] 2017-08-02 16:46:22,301 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 37/100
+[INFO ] 2017-08-02 16:46:23,063 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 38/100
+[INFO ] 2017-08-02 16:46:24,537 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 39/100
+[INFO ] 2017-08-02 16:46:25,349 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 40/100
+[INFO ] 2017-08-02 16:46:25,395 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:46:25,396 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:46:26,170 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 41/100
+[INFO ] 2017-08-02 16:46:26,955 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 42/100
+[INFO ] 2017-08-02 16:46:27,734 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 43/100
+[INFO ] 2017-08-02 16:46:28,519 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 44/100
+[INFO ] 2017-08-02 16:46:29,291 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+The xpath: //html/body/div[4]/h1 changed, http://finance.people.com.cn/n1/2017/0307/c1004-29128875.html
+[INFO ] 2017-08-02 16:46:29,292 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 45/100
+[INFO ] 2017-08-02 16:46:29,333 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 4 records in all
+[INFO ] 2017-08-02 16:46:29,334 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:46:31,193 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 46/100
+[INFO ] 2017-08-02 16:46:31,946 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 47/100
+[INFO ] 2017-08-02 16:46:32,695 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 48/100
+[INFO ] 2017-08-02 16:46:33,450 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 49/100
+[INFO ] 2017-08-02 16:46:34,652 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 50/100
+[INFO ] 2017-08-02 16:46:34,686 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:46:34,686 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:46:35,455 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 51/100
+[INFO ] 2017-08-02 16:46:36,230 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 52/100
+[INFO ] 2017-08-02 16:46:36,980 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 53/100
+[INFO ] 2017-08-02 16:46:39,744 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 54/100
+[INFO ] 2017-08-02 16:46:40,779 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 55/100
+[INFO ] 2017-08-02 16:46:40,811 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:46:40,811 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:46:41,559 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 56/100
+[INFO ] 2017-08-02 16:46:42,309 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 57/100
+[INFO ] 2017-08-02 16:46:44,198 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 58/100
+[INFO ] 2017-08-02 16:46:48,604 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 59/100
+[INFO ] 2017-08-02 16:46:49,792 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 60/100
+[INFO ] 2017-08-02 16:46:49,812 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:46:49,813 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:46:55,360 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 61/100
+[INFO ] 2017-08-02 16:46:56,610 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 62/100
+[INFO ] 2017-08-02 16:46:58,231 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 63/100
+[INFO ] 2017-08-02 16:46:59,051 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 64/100
+[INFO ] 2017-08-02 16:46:59,835 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 65/100
+[INFO ] 2017-08-02 16:46:59,860 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:46:59,860 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:47:05,814 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 66/100
+[INFO ] 2017-08-02 16:47:07,450 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 67/100
+[INFO ] 2017-08-02 16:47:08,253 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 68/100
+[INFO ] 2017-08-02 16:47:09,041 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 69/100
+[INFO ] 2017-08-02 16:47:10,105 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 70/100
+[INFO ] 2017-08-02 16:47:10,128 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:47:10,129 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:47:11,206 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 71/100
+[INFO ] 2017-08-02 16:47:11,970 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 72/100
+[INFO ] 2017-08-02 16:47:13,431 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 73/100
+[INFO ] 2017-08-02 16:47:14,498 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 74/100
+[INFO ] 2017-08-02 16:47:15,241 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 75/100
+[INFO ] 2017-08-02 16:47:15,266 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:47:15,267 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:47:16,040 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 76/100
+[INFO ] 2017-08-02 16:47:16,801 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 77/100
+[INFO ] 2017-08-02 16:47:17,561 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 78/100
+[INFO ] 2017-08-02 16:47:18,310 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 79/100
+[INFO ] 2017-08-02 16:47:19,134 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 80/100
+[INFO ] 2017-08-02 16:47:19,152 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:47:19,153 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:47:19,897 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 81/100
+[INFO ] 2017-08-02 16:47:20,899 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 82/100
+[INFO ] 2017-08-02 16:47:21,635 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 83/100
+[INFO ] 2017-08-02 16:47:22,402 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 84/100
+[INFO ] 2017-08-02 16:47:23,537 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 85/100
+[INFO ] 2017-08-02 16:47:23,565 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:47:23,566 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:47:24,331 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 86/100
+[INFO ] 2017-08-02 16:47:25,154 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 87/100
+[INFO ] 2017-08-02 16:47:25,916 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 88/100
+[INFO ] 2017-08-02 16:47:26,653 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 89/100
+[INFO ] 2017-08-02 16:47:28,123 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 90/100
+[INFO ] 2017-08-02 16:47:28,143 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:47:28,143 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:47:29,765 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 91/100
+[INFO ] 2017-08-02 16:47:30,551 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 92/100
+[INFO ] 2017-08-02 16:47:31,403 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 93/100
+[INFO ] 2017-08-02 16:47:32,158 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 94/100
+[INFO ] 2017-08-02 16:47:32,941 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 95/100
+[INFO ] 2017-08-02 16:47:32,964 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:47:32,964 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:47:33,727 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 96/100
+[INFO ] 2017-08-02 16:47:34,467 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 97/100
+[INFO ] 2017-08-02 16:47:35,256 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 98/100
+[INFO ] 2017-08-02 16:47:36,011 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 99/100
+[INFO ] 2017-08-02 16:47:37,237 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:23)
+getting articles from url progress: 100/100
+[INFO ] 2017-08-02 16:47:37,258 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 5 records in all
+[INFO ] 2017-08-02 16:47:37,258 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
+[INFO ] 2017-08-02 16:47:37,258 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Save 0 records in all
+[INFO ] 2017-08-02 16:47:37,258 method:com.cnki.ksp.core.observer.KspNoWinObserver.appendInfo(KspNoWinObserver.java:29)
+Found 0 duplicated articles:
