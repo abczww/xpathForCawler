@@ -11,7 +11,6 @@ import com.cnki.ksp.beans.Article;
 import com.cnki.ksp.beans.CaptureRecord;
 import com.cnki.ksp.dao.ArticleDao;
 import com.cnki.ksp.dao.CaptureRecordDao;
-import com.cnki.ksp.processor.AutohomeProcessor;
 
 public abstract class AbsController implements CrawlerController, Runnable {
 

@@ -17,7 +17,7 @@ public class CheckStyle {
 		//check_AutohomeBBSController();
 		//check_AutohomeBBSProcessor();
 		check_people();
-		System.out.println("Check Complete");
+		System.out.println("Check Complete.");
 	}
 
 	private void check_AutohomeBBSController() throws Exception {

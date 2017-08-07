@@ -26,7 +26,6 @@ import javax.swing.SwingUtilities;
 import com.cnki.ksp.controller.autohome.AutohomeBBSController;
 import com.cnki.ksp.controller.autohome.AutohomeEvaluateController;
 import com.cnki.ksp.core.AppContext;
-import com.cnki.ksp.core.CrawlerController;
 import com.cnki.ksp.core.StyleChangedException;
 import com.cnki.ksp.core.XPathUtilTools;
 import com.cnki.ksp.helper.JSoupConnectionHelper;

@@ -1,7 +1,6 @@
 package com.cnki.ksp.test.selem;
 
 import java.util.List;
-import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -39,6 +38,7 @@ public class TestSelem {
 
 		String title = "";
 		String shop = "";
+		// //*[@id="container"]/section[3]/div[2]
 		WebElement e = webDriver.findElement(By.xpath("//*[@id='container']/section[3]/div[2]"));
 		title = e.getText();
 		e = webDriver.findElement(By.xpath("//*[@id='container']/section[4]/div/div[1]/div[1]"));

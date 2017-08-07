@@ -1,0 +1,12 @@
+[ERROR] 2017-08-02 14:23:19,678 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Column 'car_model' cannot be null
+[ERROR] 2017-08-02 14:55:52,829 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Column 'website' cannot be null
+[ERROR] 2017-08-02 15:00:19,855 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Column 'website' cannot be null
+[ERROR] 2017-08-02 15:22:47,415 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Data truncation: Data too long for column 'time' at row 1
+[ERROR] 2017-08-02 15:24:00,044 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Data truncation: Data too long for column 'time' at row 1
+[ERROR] 2017-08-02 16:41:59,493 method:org.hibernate.engine.jdbc.spi.SqlExceptionHelper.logExceptions(SqlExceptionHelper.java:131)
+Data truncation: Data too long for column 'time' at row 1

@@ -15,6 +15,8 @@ public abstract class BaseDao<T extends BaseBean> implements DaoInterface<T> {
 
 	private Class<T> entityClass;
 
+	protected Session session;
+
 	@SuppressWarnings("unchecked")
 	public BaseDao() {
 		Type genType = getClass().getGenericSuperclass();
@@ -32,11 +34,15 @@ public abstract class BaseDao<T extends BaseBean> implements DaoInterface<T> {
 	 */
 	@Override
 	public T saveOrUpdate(T t) {
-		Session session = sessionFactory.openSession();
-		session.beginTransaction();
-		session.saveOrUpdate(t);
-		session.getTransaction().commit();
-		return t;
+		try {
+			session = sessionFactory.openSession();
+			session.beginTransaction();
+			session.saveOrUpdate(t);
+			session.getTransaction().commit();
+			return t;
+		} finally {
+			closeSession();
+		}
 	}
 
 	/**
@@ -46,10 +52,14 @@ public abstract class BaseDao<T extends BaseBean> implements DaoInterface<T> {
 	 */
 	@Override
 	public void delete(T t) {
-		Session session = sessionFactory.openSession();
-		session.beginTransaction();
-		session.remove(t);
-		session.getTransaction().commit();
+		try {
+			session = sessionFactory.openSession();
+			session.beginTransaction();
+			session.remove(t);
+			session.getTransaction().commit();
+		} finally {
+			session.close();
+		}
 	}
 
 	/**
@@ -59,9 +69,13 @@ public abstract class BaseDao<T extends BaseBean> implements DaoInterface<T> {
 	 */
 	@Override
 	public List<T> getAll() {
-		Session session = sessionFactory.openSession();
-		List<T> arts = session.createQuery("from " + entityClass.getName(), entityClass).getResultList();
-		return arts;
+		try {
+			session = sessionFactory.openSession();
+			List<T> arts = session.createQuery("from " + entityClass.getName(), entityClass).getResultList();
+			return arts;
+		} finally {
+			closeSession();
+		}
 	}
 
 	/**
@@ -71,7 +85,12 @@ public abstract class BaseDao<T extends BaseBean> implements DaoInterface<T> {
 	 */
 	@Override
 	public T get(Integer id) {
-		return sessionFactory.openSession().find(entityClass, id);
+		try {
+			session = sessionFactory.getCurrentSession();
+			return session.find(entityClass, id);
+		} finally {
+			session.close();
+		}
 	}
 
 	/**
@@ -82,5 +101,11 @@ public abstract class BaseDao<T extends BaseBean> implements DaoInterface<T> {
 	@Override
 	public List<Integer> checkDuplicated(T t) {
 		return null;
+	}
+
+	protected void closeSession() {
+		if (null != session && session.isOpen()) {
+			session.close();
+		}
 	}
 }

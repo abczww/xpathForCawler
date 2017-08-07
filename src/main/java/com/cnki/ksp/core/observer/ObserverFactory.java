@@ -8,7 +8,7 @@ import com.cnki.ksp.core.Observer;
 /**
  * it could generate different Observers.
  * 
- * @author windhut
+ * @author william
  * @version 2017.7
  *
  */
